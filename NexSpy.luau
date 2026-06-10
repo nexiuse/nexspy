@@ -1,6 +1,6 @@
 --[[
-    NexSpy v1.0 — Remote Spy Premium for Delta Android
-    Modufied From Cobalt
+    NexSpy v1.0 — Remote Spy Premium untuk Delta Android
+    Dibuat dengan bundler kustom dari basis kode Cobalt v2.1
 ]]
 
 local gethui = gethui or function() return game:GetService("CoreGui") end
@@ -10154,6 +10154,60 @@ local DefaultFooterButtons = {
 					else
 						wax.shared.Sonner.error("Failed to decompile script")
 						warn("Failed to decompile script", Result)
+					end
+				end,
+			},
+			{
+				Text = "View Bytecode",
+				Icon = "binary",
+				Condition = function()
+					return CurrentInfo and typeof(CurrentInfo.Origin) == "Instance" and (typeof(getscriptbytecode) == "function" or typeof(getbytecode) == "function")
+				end,
+				Callback = function()
+					local getbytecodeFunc = getscriptbytecode or getbytecode
+					if not (CurrentInfo and typeof(CurrentInfo.Origin) == "Instance" and typeof(getbytecodeFunc) == "function") then
+						return
+					end
+
+					local Success, Bytecode = pcall(getbytecodeFunc, CurrentInfo.Origin)
+					if Success then
+						local hexDump = {}
+						local hexLine = {}
+						local asciiLine = {}
+						
+						for i = 1, #Bytecode do
+							local byte = string.byte(Bytecode, i)
+							table.insert(hexLine, string.format("%02X", byte))
+							if byte >= 32 and byte <= 126 then
+								table.insert(asciiLine, string.char(byte))
+							else
+								table.insert(asciiLine, ".")
+							end
+							
+							if i % 16 == 0 then
+								table.insert(hexDump, string.format("%08X  %s  %s", i - 16, table.concat(hexLine, " "), table.concat(asciiLine)))
+								hexLine = {}
+								asciiLine = {}
+							end
+						end
+						
+						if #hexLine > 0 then
+							local padding = 16 - #hexLine
+							local padStr = string.rep("   ", padding)
+							table.insert(hexDump, string.format("%08X  %s%s  %s", #Bytecode - #hexLine, table.concat(hexLine, " "), padStr, table.concat(asciiLine)))
+						end
+						
+						local formattedResult = table.concat(hexDump, "\n")
+						local CopySuccess, Error = pcall(setclipboard, formattedResult)
+						if CopySuccess then
+							wax.shared.Sonner.success("Copied bytecode hex dump to clipboard")
+						else
+							wax.shared.Sonner.error("Failed to copy bytecode to clipboard")
+							warn("Failed to copy bytecode to clipboard", Error)
+						end
+					else
+						wax.shared.Sonner.error("Failed to get script bytecode")
+						warn("Failed to get script bytecode", Bytecode)
 					end
 				end,
 			},
