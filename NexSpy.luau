@@ -1,6 +1,6 @@
 --[[
-    NexSpy v1.0 — Remote Spy Premium untuk Delta Android
-    Dibuat dengan bundler kustom dari basis kode Cobalt v2.1
+    NexSpy v1.0 — Remote Spy Premium for Delta Android
+    Modified from Cobalt
 ]]
 
 local gethui = gethui or function() return game:GetService("CoreGui") end
