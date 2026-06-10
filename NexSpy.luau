@@ -1,6 +1,5 @@
 --[[
     NexSpy v1.0 — Remote Spy Premium untuk Delta Android
-    Dibuat dengan bundler kustom dari basis kode Cobalt v2.1
 ]]
 
 local gethui = gethui or function() return game:GetService("CoreGui") end
@@ -93,7 +92,7 @@ local function custom_require(moduleInstance)
         return unpack(module_cache[id])
     end
     local module_func = module_functions[id]
-    local results = {module_func(getgenv().Cobalt, moduleInstance, custom_require)}
+    local results = {module_func(getgenv().NexSpy, moduleInstance, custom_require)}
     module_cache[id] = results
     return unpack(results)
 end
@@ -509,8 +508,8 @@ wax.shared.Unload = function()
 		end)
 	end
 
-	getgenv().CobaltInitialized = false
-	getgenv().Cobalt = nil
+	getgenv().NexSpyInitialized = false
+	getgenv().NexSpy = nil
 
 	wax.shared.Communicator:Destroy()
 	wax.shared.ScreenGui:Destroy()
@@ -640,23 +639,23 @@ wax.shared.Connect(wax.shared.LocalPlayer.OnTeleport:Connect(function()
 		return
 	end
 
-	-- getgenv().COBALT_LATEST_URL for dev environments
-	local CobaltURL = getgenv().COBALT_LATEST_URL
-		or "https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"
+	-- getgenv().NEXSPY_LATEST_URL for dev environments
+	local CobaltURL = getgenv().NEXSPY_LATEST_URL
+		or "https://raw.githubusercontent.com/nexiuse/nexspy/refs/heads/main/NexSpy.luau"
 	wax.shared.queue_on_teleport(string.format(
 		[[
-		if getgenv().CobaltAutoExecuted then
+		if getgenv().NexSpyAutoExecuted then
 			return
 		end
 
-		getgenv().CobaltAutoExecuted = true
+		getgenv().NexSpyAutoExecuted = true
 		loadstring(game:HttpGet("%s"))()
 	]],
 		CobaltURL
 	))
 end))
 
-getgenv().Cobalt = wax
+getgenv().NexSpy = wax
 
 task.wait(1)
 if AnticheatData.Disabled then
@@ -1856,7 +1855,7 @@ for _, Hook in Hooks.Default:GetChildren() do
 	task.spawn(require, Hook)
 end
 
-getgenv().CobaltInitialized = true
+getgenv().NexSpyInitialized = true
 
 -- Actors use a different lua vm
 -- This means that our main thread metatable hooks dont apply in the actor's vm
@@ -4264,7 +4263,7 @@ local CodeGen = require(script.Parent.Parent.CodeGen.Generator)
 -- File Helper
 local FileHelperUtil = require(script.Parent.Parent.FileHelper)
 
-local PluginFiles = FileHelperUtil.new("Cobalt/Plugins")
+local PluginFiles = FileHelperUtil.new("NexSpy/Plugins")
 
 -- Templates
 local TemplatePluginData = {
@@ -6286,8 +6285,8 @@ local AssetManager = {
 	SessionLoadedFonts = {},
 }
 
-if not isfolder("Cobalt/Assets") then
-	makefolder("Cobalt/Assets")
+if not isfolder("NexSpy/Assets") then
+	makefolder("NexSpy/Assets")
 end
 
 function SafeFetchCustomContentID(Path: string)
@@ -6318,8 +6317,8 @@ function AssetManager.GetRemoteImages(Images: { [string]: string })
 
 	local NewImages = {}
 	for ClassName, Image in Images do
-		if isfile(`Cobalt/Assets/{ClassName}.png`) then
-			NewImages[ClassName] = SafeFetchCustomContentID(`Cobalt/Assets/{ClassName}.png`) or Image
+		if isfile(`NexSpy/Assets/{ClassName}.png`) then
+			NewImages[ClassName] = SafeFetchCustomContentID(`NexSpy/Assets/{ClassName}.png`) or Image
 			continue
 		end
 
@@ -6330,11 +6329,11 @@ function AssetManager.GetRemoteImages(Images: { [string]: string })
 		end
 
 		writefile(
-			`Cobalt/Assets/{ClassName}.png`,
+			`NexSpy/Assets/{ClassName}.png`,
 			IconRawData
 		)
 
-		NewImages[ClassName] = SafeFetchCustomContentID(`Cobalt/Assets/{ClassName}.png`) or Image
+		NewImages[ClassName] = SafeFetchCustomContentID(`NexSpy/Assets/{ClassName}.png`) or Image
 	end
 
 	return NewImages
@@ -6345,8 +6344,8 @@ function AssetManager.GetImage(Image: string)
 		return AssetManager.FallbackMapping[Image] or Image
 	end
 
-	if isfile(`Cobalt/Assets/{Image}.png`) then
-		return SafeFetchCustomContentID(`Cobalt/Assets/{Image}.png`) or AssetManager.FallbackMapping[Image] or Image
+	if isfile(`NexSpy/Assets/{Image}.png`) then
+		return SafeFetchCustomContentID(`NexSpy/Assets/{Image}.png`) or AssetManager.FallbackMapping[Image] or Image
 	end
 
 	local IconRawData = SafeFetchCustomImgData(`https://raw.githubusercontent.com/notpoiu/cobalt/refs/heads/main/Assets/{Image}.png`)
@@ -6355,8 +6354,8 @@ function AssetManager.GetImage(Image: string)
 		return AssetManager.FallbackMapping[Image] or Image
 	end
 
-	writefile(`Cobalt/Assets/{Image}.png`, IconRawData)
-	return SafeFetchCustomContentID(`Cobalt/Assets/{Image}.png`) or AssetManager.FallbackMapping[Image] or Image
+	writefile(`NexSpy/Assets/{Image}.png`, IconRawData)
+	return SafeFetchCustomContentID(`NexSpy/Assets/{Image}.png`) or AssetManager.FallbackMapping[Image] or Image
 end
 
 function AssetManager.GetCustomFont(FontData: {
@@ -6369,7 +6368,7 @@ function AssetManager.GetCustomFont(FontData: {
 		return FontData.FallbackId
 	end
 
-	local TTFPath = `Cobalt/Assets/{FontData.Name}.ttf`
+	local TTFPath = `NexSpy/Assets/{FontData.Name}.ttf`
 	if not isfile(TTFPath) then
 		local FontRawData = SafeFetchCustomImgData(FontData.Url)
 		if not FontRawData then return Font.fromId(FontData.FallbackId) end
@@ -6378,7 +6377,7 @@ function AssetManager.GetCustomFont(FontData: {
 	end
 
 	if not AssetManager.SessionLoadedFonts[FontData.Name] then
-		writefile(`Cobalt/Assets/{FontData.Name}.font`, wax.shared.HttpService:JSONEncode({
+		writefile(`NexSpy/Assets/{FontData.Name}.font`, wax.shared.HttpService:JSONEncode({
 			name = FontData.Name,
 			faces = {
 				{
@@ -6393,7 +6392,7 @@ function AssetManager.GetCustomFont(FontData: {
 		AssetManager.SessionLoadedFonts[FontData.Name] = true
 	end
 
-	local CustomFontId = SafeFetchCustomContentID(`Cobalt/Assets/{FontData.Name}.font`)
+	local CustomFontId = SafeFetchCustomContentID(`NexSpy/Assets/{FontData.Name}.font`)
 	if CustomFontId then
 		return Font.new(CustomFontId)
 	end
@@ -7758,8 +7757,9 @@ local ShowButton = Interface.New("TextButton", {
 	MainUICorner,
 	Parent = ScreenGui,
 })
+pcall(function() Icons.SetIcon(ShowButton:FindFirstChildOfClass("ImageLabel"), "eye") end)
 do
-	ShowButton.MouseButton1Click:Connect(function()
+ShowButton.MouseButton1Click:Connect(function()
 		ShowButton.Visible = false
 		MainFrame.Visible = true
 	end)
@@ -10932,6 +10932,7 @@ local TopBar = Interface.New("Frame", {
 	},
 })
 Interface.HideCorner(TopBar, UDim2.fromScale(1, 0.5), Vector2.yAxis)
+pcall(function() Icons.SetIcon(TopBar:FindFirstChildOfClass("ImageLabel"), "eye") end)
 
 -- Topbar Buttons
 local TopButtons = Interface.New("Frame", {
@@ -12263,7 +12264,7 @@ end
 local wax = {
     shared = {},
     version = "2.1.0",
-    envname = "Cobalt"
+    envname = "NexSpy"
 }
-getgenv().Cobalt = wax
+getgenv().NexSpy = wax
 task.spawn(module_functions[1], wax, root, custom_require)
