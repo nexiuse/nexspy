@@ -1,5 +1,6 @@
 --[[
     NexSpy v1.0 — Remote Spy Premium untuk Delta Android
+    Dibuat dengan bundler kustom dari basis kode Cobalt v2.1
 ]]
 
 local gethui = gethui or function() return game:GetService("CoreGui") end
@@ -7724,12 +7725,25 @@ local MainUICorner = Interface.New("UICorner", {
 
 local MainFrame = Interface.New("Frame", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(12, 8, 18),
+	BackgroundColor3 = Color3.fromRGB(12, 6, 20),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.fromOffset(640, 420),
 	ZIndex = 0,
 
-	MainUICorner,
+	Interface.New("UICorner", { CornerRadius = UDim.new(0, 12) }),
+	Interface.New("UIStroke", {
+		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+		Color = Color3.fromRGB(168, 50, 255),
+		Thickness = 1.5,
+		Transparency = 0.3,
+	}),
+	Interface.New("UIGradient", {
+		Color = ColorSequence.new({
+			ColorSequenceKeypoint.new(0, Color3.fromRGB(16, 8, 28)),
+			ColorSequenceKeypoint.new(1, Color3.fromRGB(8, 4, 15))
+		}),
+		Rotation = 45,
+	}),
 	Parent = ScreenGui,
 })
 
@@ -11026,12 +11040,8 @@ CreateTopButton("minus", 4, function()
 	ShowButton.Visible = true
 end)
 CreateTopSeperator(3)
-CreateTopButton("settings", 2, function()
-	OpenModal(SettingsFrame)
-end)
-CreateTopButton("blocks", 1, function()
-	OpenModal(PluginsFrame)
-end)
+-- Removed Settings Button
+-- Removed Plugins Button
 CreateTopButton("search", 0, function()
 	OpenSearch()
 end)
@@ -12255,6 +12265,144 @@ wax.shared.Connect(wax.shared.UserInputService.InputBegan:Connect(function(Input
 		end
 	end
 end))
+
+
+-- ==========================================
+-- NEXSPY PREMIUM SIDEBAR REDESIGN
+-- ==========================================
+local Sidebar = Interface.New("Frame", {
+    Name = "Sidebar",
+    BackgroundColor3 = Color3.fromRGB(15, 10, 25),
+    BackgroundTransparency = 0.2,
+    Position = UDim2.new(0, 0, 0, 36),
+    Size = UDim2.new(0, 50, 1, -36),
+    Parent = MainFrame,
+
+    Interface.New("UIStroke", {
+        ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+        Color = Color3.fromRGB(45, 20, 70),
+        Thickness = 1,
+    }),
+    Interface.New("UIListLayout", {
+        FillDirection = Enum.FillDirection.Vertical,
+        HorizontalAlignment = Enum.HorizontalAlignment.Center,
+        VerticalAlignment = Enum.VerticalAlignment.Top,
+        Padding = UDim.new(0, 10),
+    }),
+    Interface.New("UIPadding", {
+        PaddingTop = UDim.new(0, 10),
+    })
+})
+
+-- Shifting existing layouts to the right to fit the sidebar
+LeftList.Position = UDim2.new(0, 50, 0, 36)
+LeftList.Size = UDim2.new(0, 200, 1, -36)
+
+RemoteListLine.Position = UDim2.new(0, 250, 0, 36)
+RemoteListLine.Size = UDim2.new(0, 2, 1, -36)
+RemoteListLine.BackgroundColor3 = Color3.fromRGB(45, 20, 70)
+
+LogsWrapper.Position = UDim2.new(0, 252, 0, 36)
+LogsWrapper.Size = UDim2.new(1, -252, 1, -36)
+
+-- Function to create sidebar buttons
+local function CreateSidebarButton(IconName, TooltipText, Callback)
+    local Btn = Interface.New("TextButton", {
+        BackgroundColor3 = Color3.fromRGB(20, 10, 35),
+        BackgroundTransparency = 1,
+        Size = UDim2.fromOffset(36, 36),
+        Text = "",
+        Interface.New("UICorner", { CornerRadius = UDim.new(0, 6) }),
+        Interface.New("UIStroke", {
+            ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
+            Color = Color3.fromRGB(60, 30, 100),
+            Thickness = 1,
+            Transparency = 0.5
+        }),
+        Parent = Sidebar,
+    })
+
+    local Icon = Interface.NewIcon(IconName, {
+        ImageTransparency = 0.4,
+        Size = UDim2.new(1, -12, 1, -12),
+        AnchorPoint = Vector2.new(0.5, 0.5),
+        Position = UDim2.fromScale(0.5, 0.5),
+        Parent = Btn,
+    })
+
+    Btn.MouseEnter:Connect(function()
+        wax.shared.TweenService:Create(Btn, DefaultTweenInfo, {
+            BackgroundTransparency = 0.7,
+            BackgroundColor3 = Color3.fromRGB(168, 50, 255)
+        }):Play()
+        wax.shared.TweenService:Create(Icon, DefaultTweenInfo, {
+            ImageTransparency = 0
+        }):Play()
+        wax.shared.TweenService:Create(Btn.UIStroke, DefaultTweenInfo, {
+            Color = Color3.fromRGB(168, 50, 255),
+            Transparency = 0
+        }):Play()
+    end)
+
+    Btn.MouseLeave:Connect(function()
+        wax.shared.TweenService:Create(Btn, DefaultTweenInfo, {
+            BackgroundTransparency = 1,
+        }):Play()
+        wax.shared.TweenService:Create(Icon, DefaultTweenInfo, {
+            ImageTransparency = 0.4
+        }):Play()
+        wax.shared.TweenService:Create(Btn.UIStroke, DefaultTweenInfo, {
+            Color = Color3.fromRGB(60, 30, 100),
+            Transparency = 0.5
+        }):Play()
+    end)
+
+    Btn.MouseButton1Click:Connect(Callback)
+    return Btn
+end
+
+-- Create the buttons
+local SpyBtn = CreateSidebarButton("terminal", "Show Spy Logs", function()
+    CloseModal()
+end)
+
+local SettingsBtn = CreateSidebarButton("settings", "Open Settings", function()
+    OpenModal(SettingsFrame)
+end)
+
+local PluginsBtn = CreateSidebarButton("blocks", "Open Plugins", function()
+    OpenModal(PluginsFrame)
+end)
+
+local UnloadBtn = CreateSidebarButton("power", "Unload NexSpy", function()
+    wax.shared.Unload()
+end)
+
+-- Make active states clear
+local function UpdateSidebarActives()
+    local isSettingsOpen = SettingsFrame.Visible
+    local isPluginsOpen = PluginsFrame.Visible
+    
+    wax.shared.TweenService:Create(SpyBtn, DefaultTweenInfo, {
+        BackgroundTransparency = (not isSettingsOpen and not isPluginsOpen) and 0.4 or 1,
+        BackgroundColor3 = Color3.fromRGB(168, 50, 255)
+    }):Play()
+    
+    wax.shared.TweenService:Create(SettingsBtn, DefaultTweenInfo, {
+        BackgroundTransparency = isSettingsOpen and 0.4 or 1,
+        BackgroundColor3 = Color3.fromRGB(168, 50, 255)
+    }):Play()
+    
+    wax.shared.TweenService:Create(PluginsBtn, DefaultTweenInfo, {
+        BackgroundTransparency = isPluginsOpen and 0.4 or 1,
+        BackgroundColor3 = Color3.fromRGB(168, 50, 255)
+    }):Play()
+end
+
+-- Bind update active state
+SettingsFrame:GetPropertyChangedSignal("Visible"):Connect(UpdateSidebarActives)
+PluginsFrame:GetPropertyChangedSignal("Visible"):Connect(UpdateSidebarActives)
+UpdateSidebarActives()
 
 return {}
 
