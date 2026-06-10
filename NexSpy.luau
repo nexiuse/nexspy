@@ -12294,15 +12294,15 @@ local Sidebar = Interface.New("Frame", {
     })
 })
 
--- Shifting existing layouts to the right to fit the sidebar
-LeftList.Position = UDim2.new(0, 50, 0, 36)
+-- Shifting existing layouts to the right to fit the sidebar (respecting original bottom anchors)
+LeftList.Position = UDim2.new(0, 50, 1, 0)
 LeftList.Size = UDim2.new(0, 200, 1, -36)
 
-RemoteListLine.Position = UDim2.new(0, 250, 0, 36)
+RemoteListLine.Position = UDim2.new(0, 250, 1, 0)
 RemoteListLine.Size = UDim2.new(0, 2, 1, -36)
 RemoteListLine.BackgroundColor3 = Color3.fromRGB(45, 20, 70)
 
-LogsWrapper.Position = UDim2.new(0, 252, 0, 36)
+-- LogsWrapper is anchored at Vector2.one (1,1). We only need to adjust its Size, not its Position!
 LogsWrapper.Size = UDim2.new(1, -252, 1, -36)
 
 -- Function to create sidebar buttons
