@@ -80,17 +80,6 @@ local function create_instance(className, name, parent)
         end
     })
     
-    if parent then
-        local parentChildren = getmetatable(parent).__index(parent, "GetChildren")()
-        -- Parent children table index by name
-        local parentMeta = getmetatable(parent).__index
-        local pChildrenTable = debug.getmetatable(parent) and parentChildren -- fallback
-        -- We just index by name inside children
-        local pChildrenRaw = parentMeta("GetChildren")()
-        -- Wait, parent needs to know its child
-        -- So we access parent's child store directly
-    end
-    
     return inst, children
 end
 
