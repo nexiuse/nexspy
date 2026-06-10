@@ -102,6 +102,7 @@ end
 local root
 local inst_2
 local inst_4
+local inst_5
 local inst_6
 local inst_7
 local inst_8
@@ -110,168 +111,170 @@ local inst_10
 local inst_11
 local inst_12
 local inst_13
-local inst_14
-local inst_16
-local inst_18
+local inst_15
+local inst_17
 local inst_19
 local inst_20
 local inst_21
-local inst_23
-local inst_25
+local inst_22
+local inst_24
 local inst_26
-local inst_28
-local inst_30
+local inst_27
+local inst_29
 local inst_31
-local inst_33
-local inst_35
-local inst_37
-local inst_39
-local inst_41
-local inst_43
+local inst_32
+local inst_34
+local inst_36
+local inst_38
+local inst_40
+local inst_42
 local inst_44
-local inst_46
-local inst_48
+local inst_45
+local inst_47
 local inst_49
-local inst_51
-local inst_53
+local inst_50
+local inst_52
 local inst_54
-local inst_56
-local inst_58
-local inst_60
-local inst_62
-local inst_64
-local inst_66
-local inst_68
-local inst_70
-local inst_72
+local inst_55
+local inst_57
+local inst_59
+local inst_61
+local inst_63
+local inst_65
+local inst_67
+local inst_69
+local inst_71
+local inst_73
 
 root, children_root = create_instance("LocalScript", "cobalt", nil)
 inst_2, children_inst_2 = create_instance("ModuleScript", "ExecutorSupport", root)
 children_root["ExecutorSupport"] = inst_2
-inst_4, children_inst_4 = create_instance("ModuleScript", "Spy", root)
+inst_4, children_inst_4 = create_instance("Folder", "Spy", root)
 children_root["Spy"] = inst_4
-inst_6, children_inst_6 = create_instance("Folder", "Actors", inst_4)
-children_inst_4["Actors"] = inst_6
-inst_7, children_inst_7 = create_instance("StringValue", "Environment", inst_6)
-children_inst_6["Environment"] = inst_7
-inst_8, children_inst_8 = create_instance("StringValue", "Unload", inst_6)
-children_inst_6["Unload"] = inst_8
-inst_9, children_inst_9 = create_instance("Folder", "Hooks", inst_4)
-children_inst_4["Hooks"] = inst_9
-inst_10, children_inst_10 = create_instance("Folder", "Actors", inst_9)
-children_inst_9["Actors"] = inst_10
-inst_11, children_inst_11 = create_instance("StringValue", "Incoming", inst_10)
-children_inst_10["Incoming"] = inst_11
-inst_12, children_inst_12 = create_instance("StringValue", "Outgoing", inst_10)
-children_inst_10["Outgoing"] = inst_12
-inst_13, children_inst_13 = create_instance("Folder", "Default", inst_9)
-children_inst_9["Default"] = inst_13
-inst_14, children_inst_14 = create_instance("ModuleScript", "Incoming", inst_13)
-children_inst_13["Incoming"] = inst_14
-inst_16, children_inst_16 = create_instance("ModuleScript", "Outgoing", inst_13)
-children_inst_13["Outgoing"] = inst_16
-inst_18, children_inst_18 = create_instance("Folder", "Utils", root)
-children_root["Utils"] = inst_18
-inst_19, children_inst_19 = create_instance("Folder", "Anticheats", inst_18)
-children_inst_18["Anticheats"] = inst_19
-inst_20, children_inst_20 = create_instance("Folder", "impl", inst_19)
-children_inst_19["impl"] = inst_20
-inst_21, children_inst_21 = create_instance("ModuleScript", "Adonis", inst_20)
-children_inst_20["Adonis"] = inst_21
-inst_23, children_inst_23 = create_instance("ModuleScript", "Main", inst_19)
-children_inst_19["Main"] = inst_23
-inst_25, children_inst_25 = create_instance("Folder", "CodeGen", inst_18)
-children_inst_18["CodeGen"] = inst_25
-inst_26, children_inst_26 = create_instance("ModuleScript", "Generator", inst_25)
-children_inst_25["Generator"] = inst_26
-inst_28, children_inst_28 = create_instance("ModuleScript", "SessionExporter", inst_25)
-children_inst_25["SessionExporter"] = inst_28
-inst_30, children_inst_30 = create_instance("StringValue", "SessionHTMLView", inst_25)
-children_inst_25["SessionHTMLView"] = inst_30
-inst_31, children_inst_31 = create_instance("ModuleScript", "Connect", inst_18)
-children_inst_18["Connect"] = inst_31
-inst_33, children_inst_33 = create_instance("ModuleScript", "FileHelper", inst_18)
-children_inst_18["FileHelper"] = inst_33
-inst_35, children_inst_35 = create_instance("ModuleScript", "FileLog", inst_18)
-children_inst_18["FileLog"] = inst_35
-inst_37, children_inst_37 = create_instance("ModuleScript", "Hooking", inst_18)
-children_inst_18["Hooking"] = inst_37
-inst_39, children_inst_39 = create_instance("ModuleScript", "Log", inst_18)
-children_inst_18["Log"] = inst_39
-inst_41, children_inst_41 = create_instance("ModuleScript", "Pagination", inst_18)
-children_inst_18["Pagination"] = inst_41
-inst_43, children_inst_43 = create_instance("Folder", "Plugins", inst_18)
-children_inst_18["Plugins"] = inst_43
-inst_44, children_inst_44 = create_instance("ModuleScript", "Manager", inst_43)
-children_inst_43["Manager"] = inst_44
-inst_46, children_inst_46 = create_instance("ModuleScript", "SaveManager", inst_18)
-children_inst_18["SaveManager"] = inst_46
-inst_48, children_inst_48 = create_instance("Folder", "Serializer", inst_18)
-children_inst_18["Serializer"] = inst_48
-inst_49, children_inst_49 = create_instance("ModuleScript", "LuaEncode", inst_48)
-children_inst_48["LuaEncode"] = inst_49
-inst_51, children_inst_51 = create_instance("ModuleScript", "Signal", inst_18)
-children_inst_18["Signal"] = inst_51
-inst_53, children_inst_53 = create_instance("Folder", "UI", inst_18)
-children_inst_18["UI"] = inst_53
-inst_54, children_inst_54 = create_instance("ModuleScript", "Animations", inst_53)
-children_inst_53["Animations"] = inst_54
-inst_56, children_inst_56 = create_instance("ModuleScript", "AssetManager", inst_53)
-children_inst_53["AssetManager"] = inst_56
-inst_58, children_inst_58 = create_instance("ModuleScript", "Drag", inst_53)
-children_inst_53["Drag"] = inst_58
-inst_60, children_inst_60 = create_instance("ModuleScript", "Helper", inst_53)
-children_inst_53["Helper"] = inst_60
-inst_62, children_inst_62 = create_instance("ModuleScript", "Highlighter", inst_53)
-children_inst_53["Highlighter"] = inst_62
-inst_64, children_inst_64 = create_instance("ModuleScript", "Icons", inst_53)
-children_inst_53["Icons"] = inst_64
-inst_66, children_inst_66 = create_instance("ModuleScript", "Interface", inst_53)
-children_inst_53["Interface"] = inst_66
-inst_68, children_inst_68 = create_instance("ModuleScript", "Resize", inst_53)
-children_inst_53["Resize"] = inst_68
-inst_70, children_inst_70 = create_instance("ModuleScript", "Sonner", inst_53)
-children_inst_53["Sonner"] = inst_70
-inst_72, children_inst_72 = create_instance("ModuleScript", "Window", root)
-children_root["Window"] = inst_72
+inst_5, children_inst_5 = create_instance("Folder", "Actors", inst_4)
+children_inst_4["Actors"] = inst_5
+inst_6, children_inst_6 = create_instance("StringValue", "Environment", inst_5)
+children_inst_5["Environment"] = inst_6
+inst_7, children_inst_7 = create_instance("StringValue", "Unload", inst_5)
+children_inst_5["Unload"] = inst_7
+inst_8, children_inst_8 = create_instance("Folder", "Hooks", inst_4)
+children_inst_4["Hooks"] = inst_8
+inst_9, children_inst_9 = create_instance("Folder", "Actors", inst_8)
+children_inst_8["Actors"] = inst_9
+inst_10, children_inst_10 = create_instance("StringValue", "Incoming", inst_9)
+children_inst_9["Incoming"] = inst_10
+inst_11, children_inst_11 = create_instance("StringValue", "Outgoing", inst_9)
+children_inst_9["Outgoing"] = inst_11
+inst_12, children_inst_12 = create_instance("Folder", "Default", inst_8)
+children_inst_8["Default"] = inst_12
+inst_13, children_inst_13 = create_instance("ModuleScript", "Incoming", inst_12)
+children_inst_12["Incoming"] = inst_13
+inst_15, children_inst_15 = create_instance("ModuleScript", "Outgoing", inst_12)
+children_inst_12["Outgoing"] = inst_15
+inst_17, children_inst_17 = create_instance("ModuleScript", "Init", inst_4)
+children_inst_4["Init"] = inst_17
+inst_19, children_inst_19 = create_instance("Folder", "Utils", root)
+children_root["Utils"] = inst_19
+inst_20, children_inst_20 = create_instance("Folder", "Anticheats", inst_19)
+children_inst_19["Anticheats"] = inst_20
+inst_21, children_inst_21 = create_instance("Folder", "impl", inst_20)
+children_inst_20["impl"] = inst_21
+inst_22, children_inst_22 = create_instance("ModuleScript", "Adonis", inst_21)
+children_inst_21["Adonis"] = inst_22
+inst_24, children_inst_24 = create_instance("ModuleScript", "Main", inst_20)
+children_inst_20["Main"] = inst_24
+inst_26, children_inst_26 = create_instance("Folder", "CodeGen", inst_19)
+children_inst_19["CodeGen"] = inst_26
+inst_27, children_inst_27 = create_instance("ModuleScript", "Generator", inst_26)
+children_inst_26["Generator"] = inst_27
+inst_29, children_inst_29 = create_instance("ModuleScript", "SessionExporter", inst_26)
+children_inst_26["SessionExporter"] = inst_29
+inst_31, children_inst_31 = create_instance("StringValue", "SessionHTMLView", inst_26)
+children_inst_26["SessionHTMLView"] = inst_31
+inst_32, children_inst_32 = create_instance("ModuleScript", "Connect", inst_19)
+children_inst_19["Connect"] = inst_32
+inst_34, children_inst_34 = create_instance("ModuleScript", "FileHelper", inst_19)
+children_inst_19["FileHelper"] = inst_34
+inst_36, children_inst_36 = create_instance("ModuleScript", "FileLog", inst_19)
+children_inst_19["FileLog"] = inst_36
+inst_38, children_inst_38 = create_instance("ModuleScript", "Hooking", inst_19)
+children_inst_19["Hooking"] = inst_38
+inst_40, children_inst_40 = create_instance("ModuleScript", "Log", inst_19)
+children_inst_19["Log"] = inst_40
+inst_42, children_inst_42 = create_instance("ModuleScript", "Pagination", inst_19)
+children_inst_19["Pagination"] = inst_42
+inst_44, children_inst_44 = create_instance("Folder", "Plugins", inst_19)
+children_inst_19["Plugins"] = inst_44
+inst_45, children_inst_45 = create_instance("ModuleScript", "Manager", inst_44)
+children_inst_44["Manager"] = inst_45
+inst_47, children_inst_47 = create_instance("ModuleScript", "SaveManager", inst_19)
+children_inst_19["SaveManager"] = inst_47
+inst_49, children_inst_49 = create_instance("Folder", "Serializer", inst_19)
+children_inst_19["Serializer"] = inst_49
+inst_50, children_inst_50 = create_instance("ModuleScript", "LuaEncode", inst_49)
+children_inst_49["LuaEncode"] = inst_50
+inst_52, children_inst_52 = create_instance("ModuleScript", "Signal", inst_19)
+children_inst_19["Signal"] = inst_52
+inst_54, children_inst_54 = create_instance("Folder", "UI", inst_19)
+children_inst_19["UI"] = inst_54
+inst_55, children_inst_55 = create_instance("ModuleScript", "Animations", inst_54)
+children_inst_54["Animations"] = inst_55
+inst_57, children_inst_57 = create_instance("ModuleScript", "AssetManager", inst_54)
+children_inst_54["AssetManager"] = inst_57
+inst_59, children_inst_59 = create_instance("ModuleScript", "Drag", inst_54)
+children_inst_54["Drag"] = inst_59
+inst_61, children_inst_61 = create_instance("ModuleScript", "Helper", inst_54)
+children_inst_54["Helper"] = inst_61
+inst_63, children_inst_63 = create_instance("ModuleScript", "Highlighter", inst_54)
+children_inst_54["Highlighter"] = inst_63
+inst_65, children_inst_65 = create_instance("ModuleScript", "Icons", inst_54)
+children_inst_54["Icons"] = inst_65
+inst_67, children_inst_67 = create_instance("ModuleScript", "Interface", inst_54)
+children_inst_54["Interface"] = inst_67
+inst_69, children_inst_69 = create_instance("ModuleScript", "Resize", inst_54)
+children_inst_54["Resize"] = inst_69
+inst_71, children_inst_71 = create_instance("ModuleScript", "Sonner", inst_54)
+children_inst_54["Sonner"] = inst_71
+inst_73, children_inst_73 = create_instance("ModuleScript", "Window", root)
+children_root["Window"] = inst_73
 
 -- Assign String Values
-inst_7.Value = "--[[\n\n    Wax Environment replicated for actor env\n\n]]\n\nif getgenv().CobaltInitialized == true then\n\treturn\nend\n\ngetgenv().CobaltInitialized = true\n\ntype ActorData = {\n\tToken: string,\n\n\tIgnorePlayerModule: boolean,\n\tLogBlockedRemotes: boolean,\n\tUseAlternativeHooks: boolean,\n\tIgnoredRemotesDropdown: { [string]: boolean },\n\n\tExecutorSupport: { [string]: { IsWorking: boolean } },\n}\n\nlocal Data: ActorData = COBALT_ACTOR_DATA\n\nlocal ChannelId, CurrentActor = ...\nlocal RelayChannel = get_comm_channel(ChannelId)\n\nlocal wax = { shared = {} }\n\nwax.shared.ExecutorSupport = Data.ExecutorSupport\n\nfor _, Service in pairs({\n\t\"Players\",\n\t\"HttpService\",\n}) do\n\twax.shared[Service] = cloneref(game:GetService(Service))\nend\n\nwax.shared.Connections = {}\n\nwax.shared.Connect = function(Connection)\n\ttable.insert(wax.shared.Connections, Connection)\n\treturn Connection\nend\n\nwax.shared.Disconnect = function(Connection)\n\tConnection:Disconnect()\n\n\tlocal Index = table.find(wax.shared.Connections, Connection)\n\tif Index then\n\t\ttable.remove(wax.shared.Connections, Index)\n\tend\n\n\treturn true\nend\n\nwax.shared.LocalPlayer = wax.shared.Players.LocalPlayer\nlocal ContendingPlayerScripts = cloneref(wax.shared.LocalPlayer:QueryDescendants(\"PlayerScripts\")[1] or wax.shared.LocalPlayer)\nif ContendingPlayerScripts:IsA(\"PlayerScripts\") then\n\twax.shared.PlayerScripts = ContendingPlayerScripts\nelse\n\twax.shared.PlayerScripts = nil\n\n\tlocal ChildAddedConnection\n\tChildAddedConnection = wax.shared.Connect(wax.shared.LocalPlayer.ChildAdded:Connect(function(Child)\n\t\tif Child:IsA(\"PlayerScripts\") then\n\t\t\twax.shared.PlayerScripts = cloneref(Child)\n\t\t\twax.shared.Disconnect(ChildAddedConnection)\n\t\tend\n\tend))\nend\n\nwax.shared.ExecutorName = string.split(identifyexecutor(), \" \")[1]\n\nwax.shared.newcclosure = wax.shared.ExecutorName == \"AWP\"\n\t\tand function(f)\n\t\t\tlocal env = getfenv(f)\n\t\t\tlocal x = setmetatable({\n\t\t\t\t__F = f,\n\t\t\t}, {\n\t\t\t\t__index = env,\n\t\t\t\t__newindex = env,\n\t\t\t})\n\n\t\t\tlocal nf = function(...)\n\t\t\t\treturn __F(...)\n\t\t\tend\n\t\t\tsetfenv(nf, x) -- set func env (env of nf gets deoptimized)\n\t\t\treturn newcclosure(nf)\n\t\tend\n\tor newcclosure\n\nwax.shared.getrawmetatable = wax.shared.ExecutorSupport[\"getrawmetatable\"].IsWorking\n\t\tand (getrawmetatable or debug.getmetatable)\n\tor function()\n\t\treturn setmetatable({}, {\n\t\t\t__index = function()\n\t\t\t\treturn function() end\n\t\t\tend,\n\t\t})\n\tend\n\nwax.shared.restorefunction = function(Function: (...any) -> ...any, Silent: boolean?)\n\tlocal Original = wax.shared.Hooks[Function]\n\n\tif Silent and not Original then\n\t\treturn\n\tend\n\n\tassert(Original, \"Function not hooked\")\n\n\tif restorefunction and isfunctionhooked(Function) then\n\t\trestorefunction(Function)\n\telse\n\t\twax.shared.Hooking.HookFunction(Function, Original)\n\tend\n\n\twax.shared.Hooks[Function] = nil\nend\n\nlocal Hooking = {}\n\nwax.shared.AlternativeEnabled = Data.UseAlternativeHooks\n\nHooking.HookFunction = function(Original, Replacement)\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking and iscclosure(Original) and islclosure(Replacement) then\n\t\treturn oth.hook(Original, Replacement)\n\tend\n\n\tif islclosure(Replacement) then\n\t\tReplacement = wax.shared.newcclosure(Replacement)\n\tend\n\n\tif not wax.shared.ExecutorSupport[\"hookfunction\"].IsWorking then\n\t\treturn Original\n\tend\n\n\treturn hookfunction(Original, Replacement)\nend\n\nHooking.HookMetaMethod = function(object, method, hook)\n\tlocal Metatable = wax.shared.getrawmetatable(object)\n\tlocal originalMethod = rawget(Metatable, method)\n\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\treturn oth.hook(originalMethod, hook)\n\tend\n\n\tif islclosure(hook) then\n\t\thook = wax.shared.newcclosure(hook)\n\tend\n\n\tif\n\t\tData.UseAlternativeHooks\n\t\tor (\n\t\t\tnot wax.shared.ExecutorSupport[\"hookmetamethod\"].IsWorking\n\t\t\tand wax.shared.ExecutorSupport[\"getrawmetatable\"].IsWorking\n\t\t)\n\tthen\n\t\t-- FIX: Bungkus setreadonly dengan pcall\n\t\t-- Beberapa executor Android tidak support setreadonly dengan benar → tanpa ini = crash\n\t\tlocal setreadonlySuccess = pcall(function()\n\t\t\tsetreadonly(Metatable, false)\n\t\t\trawset(Metatable, method, hook)\n\t\t\tsetreadonly(Metatable, true)\n\t\tend)\n\n\t\tif not setreadonlySuccess then\n\t\t\tpcall(rawset, Metatable, method, hook)\n\t\tend\n\n\t\treturn originalMethod\n\tend\n\n\tif not wax.shared.ExecutorSupport[\"hookmetamethod\"].IsWorking then\n\t\tif method == \"__index\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\treturn object[tostring(math.random())]\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\telseif method == \"__newindex\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\tobject[tostring(math.random())] = true\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\telseif method == \"__namecall\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\tobject:Mustard()\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\tend\n\n\t\treturn nil\n\tend\n\n\treturn hookmetamethod(object, method, hook)\nend\n\nwax.shared.Hooking = Hooking\n\nwax.shared.Hooks = {}\nwax.shared.Settings = {\n\tIgnorePlayerModule = { Value = Data.IgnorePlayerModule },\n\tLogBlockedRemotes = { Value = Data.LogBlockedRemotes },\n\tIgnoredRemotesDropdown = { Value = Data.IgnoredRemotesDropdown },\n}\n\nwax.shared.IsPlayerModule = function(Origin: LocalScript | ModuleScript, Instance: Instance): boolean\n\tif Instance and Instance.ClassName ~= \"BindableEvent\" then\n\t\treturn false\n\tend\n\n\tif not Origin or typeof(Origin) ~= \"Instance\" or not Origin.IsA(Origin, \"LuaSourceContainer\") then\n\t\treturn false\n\tend\n\n\tlocal PlayerModule = Origin and Origin.FindFirstAncestor(Origin, \"PlayerModule\") or nil\n\tif not PlayerModule then\n\t\treturn false\n\tend\n\n\tif PlayerModule.Parent == nil then\n\t\treturn true\n\tend\n\n\tif wax.shared.PlayerScripts then\n\t\treturn compareinstances(PlayerModule.Parent, wax.shared.PlayerScripts)\n\tend\n\n\treturn false\nend\nwax.shared.ShouldIgnore = function(Instance, Origin)\n\treturn wax.shared.Settings.IgnoredRemotesDropdown.Value[Instance.ClassName] == true\n\t\tor (wax.shared.Settings.IgnorePlayerModule.Value and wax.shared.IsPlayerModule(Origin, Instance))\nend\n\nlocal OnUnload\n\nlocal RelayConnection\nRelayConnection = RelayChannel.Event:Connect(function(Type, ...)\n\tif Type == \"Unload\" then\n\t\tRelayConnection:Disconnect()\n\t\twax.shared.Unloaded = true\n\t\tfor _, Connection in wax.shared.Connections do\n\t\t\twax.shared.Disconnect(Connection)\n\t\tend\n\n\t\tif OnUnload then\n\t\t\tOnUnload()\n\t\tend\n\telseif Type == \"MainBlock\" then\n\t\tlocal Instance, EventType = ...\n\t\tlocal Log = wax.shared.Logs[EventType][Instance]\n\t\tif Log then\n\t\t\tLog:Block()\n\t\tend\n\telseif Type == \"MainIgnore\" then\n\t\tlocal Instance, EventType = ...\n\t\tlocal Log = wax.shared.Logs[EventType][Instance]\n\t\tif Log then\n\t\t\tLog:Ignore()\n\t\tend\n\telseif Type == \"MainSettingsSync\" then\n\t\tlocal Setting, Value = ...\n\t\tif wax.shared.Settings[Setting] then\n\t\t\twax.shared.Settings[Setting].Value = Value\n\t\tend\n\tend\nend)\n\nwax.shared.Unloaded = false\nwax.shared.Communicator = RelayChannel\n\nwax.shared.Log = {}\ndo\n\tlocal Log = wax.shared.Log\n\tLog.__index = Log\n\n\tfunction Log.new(Instance, Type, Method, Index, CallingScript)\n\t\tlocal NewLog = setmetatable({\n\t\t\tInstance = Instance,\n\t\t\tType = Type,\n\t\t\tMethod = Method,\n\t\t\tIndex = Index,\n\t\t\tCalls = {},\n\t\t\tIgnored = false,\n\t\t\tBlocked = false,\n\t\t}, Log)\n\n\t\treturn NewLog\n\tend\n\n\tlocal FunctionToMetatadata\n\n\tlocal GenerateUUID = wax.shared.HttpService.GenerateGUID\n\tlocal function GenerateId()\n\t\treturn GenerateUUID(wax.shared.HttpService, false)\n\tend\n\n\tlocal function CreateTraversalState(Refs)\n\t\treturn {\n\t\t\tCyclicRefs = Refs or {},\n\t\t\tTableIds = setmetatable({}, { __mode = \"k\" }),\n\t\t\tFunctions = setmetatable({}, { __mode = \"k\" }),\n\t\t}\n\tend\n\n\tlocal function FixTable(Table, State)\n\t\tif not Table then\n\t\t\treturn nil\n\t\tend\n\n\t\tif not State or not State.CyclicRefs then\n\t\t\tState = CreateTraversalState(State)\n\t\tend\n\n\t\tlocal CyclicRefs = State.CyclicRefs\n\t\tlocal TableId = State.TableIds[Table]\n\t\tif not TableId then\n\t\t\tTableId = GenerateId()\n\t\t\tState.TableIds[Table] = TableId\n\t\tend\n\n\t\tlocal OutputTable = {}\n\t\tCyclicRefs[TableId] = OutputTable\n\n\t\tlocal ContainsCyclicRef = false\n\n\t\tfor Key, Value in Table do\n\t\t\tif type(Value) == \"table\" then\n\t\t\t\tlocal ExistingId = State.TableIds[Value]\n\t\t\t\tif ExistingId then\n\t\t\t\t\tContainsCyclicRef = true\n\n\t\t\t\t\tOutputTable[Key] = {\n\t\t\t\t\t\t__CyclicRef = true,\n\t\t\t\t\t\t__Id = ExistingId,\n\t\t\t\t\t}\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tif getmetatable(Value) then\n\t\t\t\t\tOutputTable[Key] =\n\t\t\t\t\t\t\"Cobalt: Impossible to bridge table with metatable from actor Environment to main Environment\"\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tlocal Result, _, ContainsCyclic = FixTable(Value, State)\n\t\t\t\tif not Result then\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tOutputTable[Key] = Result\n\t\t\t\tContainsCyclicRef = ContainsCyclicRef or ContainsCyclic\n\t\t\telseif type(Value) == \"function\" then\n\t\t\t\tOutputTable[Key] = FunctionToMetatadata(Value, State)\n\t\t\telse\n\t\t\t\tOutputTable[Key] = Value\n\t\t\tend\n\t\tend\n\n\t\treturn OutputTable, CyclicRefs, ContainsCyclicRef\n\tend\n\n\tFunctionToMetatadata = function(Function, State)\n\t\tif not Function then\n\t\t\treturn nil\n\t\tend\n\n\t\tif not State or not State.CyclicRefs then\n\t\t\tState = CreateTraversalState()\n\t\tend\n\n\t\tlocal Metadata = {\n\t\t\tAddress = tostring(Function),\n\t\t\tName = debug.info(Function, \"n\"),\n\t\t\tSource = debug.info(Function, \"s\"),\n\t\t\tIsC = iscclosure(Function),\n\t\t}\n\n\t\tif State.Functions[Function] then\n\t\t\tMetadata[\"Recursive\"] = true\n\t\t\tMetadata[\"Validation\"] = Data.Token\n\t\t\tMetadata[\"__Function\"] = true\n\n\t\t\treturn Metadata\n\t\tend\n\n\t\tState.Functions[Function] = true\n\n\t\tif not iscclosure(Function) then\n\t\t\tMetadata[\"Upvalues\"] = FixTable(debug.getupvalues(Function), State)\n\t\t\tMetadata[\"Constants\"] = FixTable(debug.getconstants(Function), State)\n\t\t\tMetadata[\"Protos\"] = FixTable(debug.getprotos(Function), State)\n\t\t\t\n\t\t\tif getfunctionhash then\n\t\t\t\tMetadata[\"FunctionHash\"] = getfunctionhash(Function)\n\t\t\tend\n\t\tend\n\n\t\t-- to validate that this function was generated by FunctionToMetatadata\n\t\tMetadata[\"Validation\"] = Data.Token\n\t\tMetadata[\"__Function\"] = true\n\n\t\treturn Metadata\n\tend\n\n\tfunction DeepClone(orig, copies)\n\t\tcopies = copies or {}\n\t\tif typeof(orig) == \"Instance\" then\n\t\t\treturn cloneref(orig)\n\t\telseif typeof(orig) == \"userdata\" then\n\t\t\tif getmetatable(orig) then\n\t\t\t\treturn newproxy(true)\n\t\t\telse\n\t\t\t\treturn newproxy()\n\t\t\tend\n\t\telseif typeof(orig) == \"function\" then\n\t\t\tif clonefunction then\n\t\t\t\treturn clonefunction(orig)\n\t\t\tend\n\n\t\t\treturn orig\n\t\telseif type(orig) ~= \"table\" then\n\t\t\treturn orig\n\t\telseif copies[orig] then\n\t\t\treturn copies[orig]\n\t\tend\n\n\t\tlocal copy = {}\n\t\tcopies[orig] = copy\n\t\tfor k, v in next, orig do\n\t\t\tcopy[DeepClone(k, copies)] = DeepClone(v, copies)\n\t\tend\n\t\treturn copy\n\tend\n\n\tlocal ClassesConnectionsToggle = {\n\t\tRemoteEvent = \"OnClientEvent\",\n\t\tUnreliableRemoteEvent = \"OnClientEvent\",\n\t\tBindableEvent = \"Event\",\n\t}\n\n\tfunction Log:SetConnectionsEnabled(enabled: boolean)\n\t\tif not self.Instance or not ClassesConnectionsToggle[self.Instance.ClassName] then\n\t\t\treturn\n\t\tend\n\n\t\tlocal ConnectionName = ClassesConnectionsToggle[self.Instance.ClassName]\n\t\tif self.Type ~= \"Incoming\" or not ConnectionName then\n\t\t\treturn\n\t\tend\n\n\t\tlocal LoggingFunctions = wax.shared.IncomingLogConnectionFunctions\n\t\tfor _, Connection in getconnections(self.Instance[ConnectionName]) do\n\t\t\tif LoggingFunctions and LoggingFunctions[Connection.Function] then\n\t\t\t\tcontinue\n\t\t\tend\n\n\t\t\tif enabled then\n\t\t\t\tConnection:Enable()\n\t\t\telse\n\t\t\t\tConnection:Disable()\n\t\t\tend\n\t\tend\n\tend\n\n\tfunction Log:Call(RawInfo)\n\t\tif self.Instance == wax.shared.Communicator then\n\t\t\treturn\n\t\tend\n\n\t\tRawInfo[\"Actor\"] = CurrentActor\n\t\tlocal Info = DeepClone(RawInfo)\n\n\t\t--// Fix Arguments \\\\--\n\t\tlocal OldArguments = Info.Arguments\n\t\tInfo.Arguments = {\n\t\t\tData = OldArguments,\n\t\t\tn = OldArguments.n or rawlen(OldArguments),\n\t\t}\n\n\t\tif Info.OriginalInvokeArgs then\n\t\t\tlocal OldOriginalInvokeArgs = Info.OriginalInvokeArgs\n\t\t\tInfo.OriginalInvokeArgs = {\n\t\t\t\tData = OldOriginalInvokeArgs,\n\t\t\t\tn = OldOriginalInvokeArgs.n or rawlen(OldOriginalInvokeArgs),\n\t\t\t}\n\t\tend\n\n\t\t-- FIX: Bungkus seluruh serialisasi + fire dengan pcall\n\t\t-- Jika FixTable crash karena cyclic/metatable aneh → tidak force close game\n\t\tlocal identity = getthreadidentity()\n\t\tlocal fireSuccess, fireErr = pcall(function()\n\t\t\tsetthreadidentity(8)\n\t\t\tlocal FixedInfo, CyclicRefs = FixTable(Info)\n\t\t\twax.shared.Communicator.Fire(wax.shared.Communicator, \"ActorCall\", self.Instance, self.Type, FixedInfo, CyclicRefs)\n\t\tend)\n\t\tsetthreadidentity(identity) -- selalu restore identity\n\t\tif not fireSuccess then\n\t\t\t-- Gagal kirim ke main thread, tapi game tidak crash\n\t\t\twarn(\"[Cobalt Actor] Failed to relay remote call:\", tostring(fireErr))\n\t\tend\n\tend\n\n\tfunction Log:Ignore()\n\t\tself.Ignored = not self.Ignored\n\tend\n\n\tfunction Log:Block()\n\t\tself.Blocked = not self.Blocked\n\t\tself:SetConnectionsEnabled(not self.Blocked)\n\tend\nend\n\nwax.shared.Logs = {\n\tOutgoing = {},\n\tIncoming = {},\n}\n\nwax.shared.NewLog = function(Instance, Type, Method, Index, CallingScript)\n\tlocal NewLog = wax.shared.Log.new(Instance, Type, Method, Index, CallingScript)\n\twax.shared.Logs[Type][Instance] = NewLog\n\treturn NewLog\nend\n"
-inst_8.Value = "local getrawmetatable = getrawmetatable or debug.getmetatable\n\nwax.shared.Communicator.Event:Connect(function(Type, ...)\n\tif Type ~= \"Unload\" then\n\t\treturn\n\tend\n\n\tlocal gameMetatable = getrawmetatable(game)\n\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\tpcall(oth.unhook, gameMetatable.__namecall)\n\t\tpcall(oth.unhook, gameMetatable.__newindex)\n\telse\n\t\tif wax.shared.ExecutorSupport[\"restorefunction\"].IsWorking and not wax.shared.AlternativeEnabled then\n\t\t\tpcall(restorefunction, gameMetatable.__namecall)\n\t\t\tpcall(restorefunction, gameMetatable.__newindex)\n\t\telse\n\t\t\twax.shared.Hooking.HookMetaMethod(game, \"__namecall\", wax.shared.NamecallHook)\n\t\t\twax.shared.Hooking.HookMetaMethod(game, \"__newindex\", wax.shared.NewIndexHook)\n\t\tend\n\tend\n\n\tfor Function, Original in pairs(wax.shared.Hooks) do\n\t\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\t\ttask.spawn(pcall, oth.unhook, Function)\n\t\telseif wax.shared.ExecutorSupport[\"restorefunction\"].IsWorking then\n\t\t\ttask.spawn(pcall, wax.shared.restorefunction, Function)\n\t\telse\n\t\t\tpcall(wax.shared.Hooking.HookFunction, Function, Original)\n\t\tend\n\tend\n\n\ttask.defer(function()\n\t\tgetgenv().CobaltInitialized = false\n\tend)\nend)\n"
-inst_11.Value = "../Default/Incoming.luau"
-inst_12.Value = "../Default/Outgoing.luau"
-inst_30.Value = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Cobalt - Session Viewer</title>\n    <link\n      rel=\"icon\"\n      type=\"image/png\"\n      href=\"https://cobalt-xil.pages.dev/Assets/Logo.png\"\n    />\n    <style>\n      :root {\n        --bg-color: #0b0b0b;\n        --surface-color: #161b22;\n        --border-color: #30363d;\n        --text-primary: #c9d1d9;\n        --text-secondary: #8b949e;\n        --accent-blue: #58a6ff;\n        --accent-green: #3fb950;\n        --accent-orange: #d29922;\n        --accent-red: #ff7b72;\n        --font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n          Helvetica, Arial, sans-serif;\n      }\n\n      body {\n        background-color: var(--bg-color);\n        color: var(--text-primary);\n        font-family: var(--font-family);\n        margin: 0;\n        padding: 0;\n        font-size: 13px;\n        height: 100vh;\n        display: flex;\n        flex-direction: column;\n        overflow: hidden;\n      }\n\n      /* Top Header */\n      .app-header {\n        height: 50px;\n        border-bottom: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        padding: 0 20px;\n        background-color: var(--bg-color);\n        flex-shrink: 0;\n        z-index: 10;\n      }\n\n      .brand {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n        font-size: 16px;\n        font-weight: 600;\n        color: #fff;\n      }\n\n      .brand-icon {\n        width: 20px;\n        height: 20px;\n        background-image: url(\"https://cobalt-xil.pages.dev/Assets/Logo.png\");\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .session-container {\n        position: relative;\n        display: flex;\n        flex-direction: column;\n        align-items: flex-end;\n      }\n\n      .session-info {\n        color: var(--text-secondary);\n        font-family: monospace;\n        font-size: 12px;\n        cursor: pointer;\n        padding: 2px 5px;\n        border-radius: 4px;\n        transition: background-color 0.2s ease;\n        user-select: none;\n      }\n\n      .session-info:hover {\n        background-color: #1c2128;\n      }\n\n      .session-id {\n        color: #fff;\n      }\n\n      .session-tooltip {\n        position: absolute;\n        top: 100%;\n        right: 0;\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        padding: 10px;\n        z-index: 100;\n        width: 250px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        margin-top: 5px;\n        opacity: 0;\n        transform: translateY(-10px);\n        pointer-events: none;\n        visibility: hidden;\n        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;\n      }\n\n      .session-tooltip::before {\n        content: \"\";\n        position: absolute;\n        top: -10px;\n        left: 0;\n        width: 100%;\n        height: 10px;\n        background: transparent;\n      }\n\n      .session-container:hover .session-tooltip,\n      .session-tooltip.visible {\n        opacity: 1;\n        transform: translateY(0);\n        pointer-events: auto;\n        visibility: visible;\n      }\n\n      .tooltip-row {\n        display: flex;\n        justify-content: space-between;\n        margin-bottom: 5px;\n        font-size: 11px;\n      }\n\n      .tooltip-label {\n        color: var(--text-secondary);\n      }\n\n      .tooltip-value {\n        color: var(--text-primary);\n        font-family: monospace;\n        user-select: text;\n      }\n\n      /* Mobile Responsiveness */\n      @media (max-width: 768px) {\n        .app-header {\n          height: auto;\n          flex-wrap: wrap;\n          padding: 10px;\n          gap: 10px;\n        }\n\n        .brand {\n          font-size: 14px;\n        }\n\n        .session-container {\n          align-items: flex-start;\n          display: none;\n          /* Hide session info on mobile to save space */\n        }\n\n        .trace-toolbar {\n          height: auto;\n          flex-wrap: wrap;\n          padding: 10px;\n          gap: 10px;\n          justify-content: space-between;\n        }\n\n        /* Hide non-essential info on mobile */\n        .trace-toolbar > div:first-child,\n        #statsLabel {\n          display: none;\n        }\n\n        .search-widget {\n          width: 100%;\n          order: 3;\n          margin-top: 5px;\n        }\n\n        .view-toggle {\n          width: 100%;\n          display: flex;\n        }\n\n        .view-btn {\n          flex: 1;\n          text-align: center;\n        }\n\n        .row-list {\n          width: 60vw;\n          /* Use viewport width to prevent runaway expansion */\n        }\n\n        .col-list {\n          width: 60vw;\n          flex: none;\n        }\n\n        .details-panel.visible {\n          position: fixed;\n          top: 0;\n          left: 0;\n          width: 100%;\n          height: 100%;\n          z-index: 1000;\n          border-left: none;\n        }\n\n        .details-header-top {\n          margin-top: 10px;\n        }\n\n        /* Fix Details Header Overflow */\n        .details-title-group {\n          min-width: 0;\n          flex: 1;\n          margin-right: 10px;\n        }\n\n        .details-name-large {\n          white-space: nowrap;\n          overflow: hidden;\n          text-overflow: ellipsis;\n        }\n\n        .details-actions {\n          flex-shrink: 0;\n        }\n\n        /* Allow wrapping for paths on mobile */\n        .details-path-row,\n        .origin-row,\n        .remote-path-copy {\n          white-space: normal !important;\n          word-break: break-all;\n        }\n      }\n\n      /* Scrollbars */\n      ::-webkit-scrollbar {\n        width: 10px;\n        height: 10px;\n      }\n\n      ::-webkit-scrollbar-track {\n        background: #0d1117;\n      }\n\n      ::-webkit-scrollbar-thumb {\n        background: #30363d;\n        border-radius: 5px;\n        border: 2px solid #0d1117;\n      }\n\n      ::-webkit-scrollbar-thumb:hover {\n        background: #8b949e;\n      }\n\n      ::-webkit-scrollbar-corner {\n        background: var(--bg-color);\n      }\n\n      /* Heatmap Styles */\n      .heatmap-container {\n        flex: 1;\n        display: none;\n        flex-direction: column;\n        overflow: hidden;\n        background-color: var(--bg-color);\n        position: relative;\n      }\n\n      .heatmap-container.visible {\n        display: flex;\n      }\n\n      .heatmap-canvas {\n        flex: 1;\n        width: 100%;\n        height: 100%;\n      }\n\n      .view-toggle {\n        display: flex;\n        background: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 4px;\n        overflow: hidden;\n      }\n\n      .view-btn {\n        padding: 4px 12px;\n        font-size: 12px;\n        cursor: pointer;\n        color: var(--text-secondary);\n        background: transparent;\n        border: none;\n        transition: all 0.2s;\n      }\n\n      .view-btn.active {\n        background: var(--accent-blue);\n        color: white;\n      }\n\n      .view-btn:hover:not(.active) {\n        background: #30363d;\n      }\n\n      /* Main Layout */\n      .main-container {\n        display: flex;\n        flex: 1;\n        overflow: hidden;\n      }\n\n      /* Left Panel: Trace View */\n      .trace-panel {\n        flex: 1;\n        display: flex;\n        flex-direction: column;\n        border-right: 1px solid var(--border-color);\n        min-width: 0;\n        overflow: hidden;\n      }\n\n      .trace-toolbar {\n        height: 40px;\n        border-bottom: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        padding: 0 10px;\n        gap: 10px;\n        background-color: var(--bg-color);\n        flex-shrink: 0;\n      }\n\n      .search-widget {\n        display: flex;\n        flex-direction: column;\n        background-color: var(--bg-color);\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        width: 320px;\n        position: relative;\n        transition: border-color 0.2s ease, border-radius 0.2s ease;\n        box-sizing: border-box;\n      }\n\n      .search-widget:focus-within {\n        border-color: var(--accent-blue);\n      }\n\n      .search-widget:focus-within > .search-options {\n        border-color: var(--accent-blue);\n      }\n\n      .search-widget.expanded {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n        border-bottom-color: transparent;\n      }\n\n      .search-row {\n        display: flex;\n        align-items: center;\n        padding: 4px;\n      }\n\n      .search-chevron {\n        cursor: pointer;\n        padding: 2px;\n        color: var(--text-secondary);\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: transform 0.2s ease, color 0.2s ease;\n        width: 20px;\n        height: 20px;\n        border-radius: 4px;\n      }\n\n      .search-chevron:hover {\n        background-color: rgba(255, 255, 255, 0.1);\n        color: var(--text-primary);\n      }\n\n      .search-chevron.expanded {\n        transform: rotate(90deg);\n      }\n\n      .search-input-container {\n        flex: 1;\n        display: flex;\n        align-items: center;\n        margin-left: 4px;\n      }\n\n      .search-input {\n        background: transparent;\n        border: none;\n        color: var(--text-primary);\n        font-size: 12px;\n        width: 100%;\n        outline: none;\n        height: 20px;\n      }\n\n      .search-options {\n        transition: border-color 0.2s ease, border-radius 0.2s ease;\n        display: none;\n        padding: 10px;\n        border: 1px solid var(--border-color);\n        border-top: none;\n        background-color: var(--bg-color);\n        flex-direction: column;\n        gap: 12px;\n        position: absolute;\n        top: 100%;\n        left: -1px;\n        right: -1px;\n        z-index: 100;\n        border-bottom-left-radius: 6px;\n        border-bottom-right-radius: 6px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);\n        box-sizing: border-box;\n      }\n\n      .search-options.visible {\n        display: flex;\n      }\n\n      .time-range-row {\n        display: flex;\n        align-items: center;\n        gap: 8px;\n        font-size: 11px;\n        color: var(--text-secondary);\n      }\n\n      .filter-options-row {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 8px;\n        padding-top: 8px;\n        border-top: 1px solid var(--border-color);\n      }\n\n      .filter-checkbox-label {\n        display: flex;\n        align-items: center;\n        gap: 4px;\n        font-size: 11px;\n        color: var(--text-secondary);\n        cursor: pointer;\n        user-select: none;\n      }\n\n      .filter-checkbox-label:hover {\n        color: var(--text-primary);\n      }\n\n      .filter-checkbox {\n        accent-color: var(--accent-blue);\n      }\n\n      .time-input-styled {\n        background-color: #161b22;\n        border: 1px solid var(--border-color);\n        color: var(--text-primary);\n        border-radius: 4px;\n        padding: 4px 8px;\n        width: 60px;\n        outline: none;\n        font-size: 11px;\n        transition: border-color 0.2s ease;\n        margin: 0 2px;\n      }\n\n      .time-input-styled:focus {\n        border-color: var(--accent-blue);\n      }\n\n      .unit-select {\n        background-color: #161b22;\n        border: 1px solid var(--border-color);\n        color: var(--text-primary);\n        border-radius: 4px;\n        outline: none;\n        font-size: 11px;\n        padding: 3px 6px;\n        cursor: pointer;\n        transition: border-color 0.2s ease;\n      }\n\n      .unit-select:focus {\n        border-color: var(--accent-blue);\n      }\n\n      .trace-header-row {\n        display: flex;\n        height: 30px;\n        border-bottom: 1px solid var(--border-color);\n        background-color: var(--surface-color);\n        font-size: 11px;\n        color: var(--text-secondary);\n        line-height: 30px;\n        flex-shrink: 0;\n      }\n\n      .col-list {\n        width: 300px;\n        padding-left: 15px;\n        border-right: 1px solid var(--border-color);\n        flex-shrink: 0;\n        z-index: 5;\n        background-color: var(--surface-color);\n        box-sizing: border-box;\n        /* Match row-list */\n      }\n\n      .col-timeline {\n        flex: 1;\n        position: relative;\n        overflow: hidden;\n        min-width: calc(100vw - 300px);\n      }\n\n      .timeline-ruler {\n        position: relative;\n        top: 0;\n        left: 0;\n        height: 100%;\n        pointer-events: none;\n      }\n\n      .tick {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        border-left: 1px solid #30363d;\n        font-size: 10px;\n        color: #484f58;\n        padding-left: 4px;\n      }\n\n      .trace-rows {\n        flex: 1;\n        overflow: auto;\n        /* Ensure both scrollbars appear */\n        position: relative;\n        contain: strict;\n      }\n\n      .virtual-spacer {\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 1px;\n      }\n\n      .virtual-content {\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n      }\n\n      .trace-row {\n        display: flex;\n        height: 28px;\n        /* align-items: center;  Removed to allow children to stretch */\n        cursor: pointer;\n        /* border-bottom: 1px solid #1c2128; Moved to children */\n        width: fit-content;\n        min-width: 100%;\n        transition: background-color 0.1s ease;\n        box-sizing: border-box;\n      }\n\n      .trace-row:hover {\n        background-color: #1c2128;\n      }\n\n      .trace-row.selected {\n        background-color: rgba(88, 166, 255, 0.1);\n      }\n\n      .trace-row.hidden {\n        display: none;\n      }\n\n      .trace-row:hover * {\n        background-color: #1c2128;\n      }\n\n      .trace-row.selected * {\n        background-color: #1c2333;\n      }\n\n      .row-list {\n        width: 300px;\n        padding-left: 15px;\n        /* Use box-shadow for sticky border to prevent it from disappearing */\n        box-shadow: 1px 0 0 0 var(--border-color);\n        border-right: none;\n        border-bottom: 1px solid #1c2128;\n        /* Added border here */\n        display: flex;\n        align-items: center;\n        overflow: hidden;\n        flex-shrink: 0;\n        box-sizing: border-box;\n        position: sticky;\n        left: 0;\n        background-color: var(--bg-color);\n        z-index: 2;\n        transition: background-color 0.1s ease;\n        height: 100%;\n      }\n\n      .row-timeline {\n        flex: 1;\n        position: relative;\n        height: 100%;\n        overflow: hidden;\n        border-bottom: 1px solid #1c2128;\n        /* Added border here */\n        box-sizing: border-box;\n        /* Ensure border is inside height */\n      }\n\n      .type-icon {\n        width: 16px;\n        height: 16px;\n        margin-right: 8px;\n        flex-shrink: 0;\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .remote-name {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        color: var(--text-primary);\n        font-size: 12px;\n      }\n\n      .timeline-marker {\n        position: absolute;\n        top: 10px;\n        height: 8px;\n        min-width: 4px;\n        border-radius: 4px;\n        opacity: 0.9;\n      }\n\n      .timeline-marker.incoming {\n        background: linear-gradient(90deg, var(--accent-green), #2ea043);\n      }\n\n      .timeline-marker.outgoing {\n        background: linear-gradient(90deg, var(--accent-orange), #b08800);\n      }\n\n      /* Right Panel: Details */\n      .details-panel {\n        width: 0;\n        opacity: 0;\n        background-color: var(--bg-color);\n        border-left: 0 solid var(--border-color);\n        display: flex;\n        flex-direction: column;\n        padding: 0;\n        box-sizing: border-box;\n        overflow-y: auto;\n        overflow-x: hidden;\n        position: relative;\n        flex-shrink: 0;\n        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease,\n          padding 0.3s ease;\n      }\n\n      .details-panel.visible {\n        width: 450px;\n        opacity: 1;\n        padding: 20px;\n        border-left: 1px solid var(--border-color);\n      }\n\n      /* Header */\n      .details-header-top {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        margin-bottom: 10px;\n      }\n\n      .details-title-group {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n      }\n\n      .details-icon-large {\n        width: 32px;\n        height: 32px;\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .details-name-large {\n        font-size: 20px;\n        font-weight: 600;\n        color: #fff;\n      }\n\n      .details-actions {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n      }\n\n      .close-btn {\n        cursor: pointer;\n        color: var(--text-secondary);\n        font-size: 20px;\n        transition: color 0.2s ease;\n        line-height: 1;\n      }\n\n      .close-btn:hover {\n        color: #fff;\n      }\n\n      /* Unified Badge Style */\n      .badge-pill {\n        padding: 4px 12px;\n        border-radius: 20px;\n        font-size: 11px;\n        font-weight: 600;\n        text-transform: uppercase;\n        border: 1px solid;\n        letter-spacing: 0.5px;\n        white-space: nowrap;\n      }\n\n      .badge-pill.incoming {\n        color: var(--accent-green);\n        border-color: var(--accent-green);\n      }\n\n      .badge-pill.outgoing {\n        color: var(--accent-orange);\n        border-color: var(--accent-orange);\n      }\n\n      .badge-pill.executor {\n        color: var(--accent-green);\n        border-color: var(--accent-green);\n      }\n\n      .badge-pill.actor {\n        color: var(--accent-red);\n        border-color: var(--accent-red);\n        background: repeating-linear-gradient(\n          45deg,\n          transparent,\n          transparent 2px,\n          rgba(255, 123, 114, 0.1) 2px,\n          rgba(255, 123, 114, 0.1) 4px\n        );\n      }\n\n      .badge-pill.blocked {\n        color: var(--accent-red);\n        border-color: var(--accent-red);\n      }\n\n      .details-path-row {\n        color: var(--text-secondary);\n        font-size: 12px;\n        margin-bottom: 20px;\n        font-family: monospace;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        height: 1.2em;\n      }\n\n      .remote-path-copy {\n        cursor: pointer;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n        transition: color 0.2s ease;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        display: block;\n        width: 25%;\n      }\n\n      .remote-path-copy:hover {\n        color: var(--accent-blue);\n      }\n\n      /* Info Grid 2 */\n      .info-grid-2 {\n        display: flex;\n        gap: 20px;\n        margin-bottom: 25px;\n      }\n\n      .info-item-2 h4 {\n        margin: 0 0 6px 0;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n      }\n\n      .info-item-2 div {\n        font-size: 11px;\n        color: var(--text-primary);\n        font-family: monospace;\n      }\n\n      /* Info Grid */\n      .info-grid {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        gap: 20px;\n        margin-bottom: 25px;\n      }\n\n      .info-item h4 {\n        margin: 0 0 6px 0;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n      }\n\n      .info-item div {\n        font-size: 14px;\n        color: var(--text-primary);\n        font-family: monospace;\n      }\n\n      .clickable-path {\n        border-bottom: 1px dashed var(--text-secondary);\n        cursor: pointer;\n        transition: color 0.2s, border-color 0.2s;\n      }\n\n      .clickable-path:hover {\n        color: var(--accent-blue);\n        border-color: var(--accent-blue);\n      }\n\n      /* Content Boxes */\n      .content-box {\n        border: 1px solid var(--border-color);\n        border-radius: 8px;\n        padding: 15px;\n        margin-bottom: 20px;\n        position: relative;\n        background-color: rgba(22, 27, 34, 0.5);\n      }\n\n      .box-title {\n        position: absolute;\n        top: -10px;\n        left: 10px;\n        background-color: var(--bg-color);\n        padding: 0 5px;\n        font-size: 11px;\n        color: var(--text-secondary);\n      }\n\n      .caller-header {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n        margin-bottom: 15px;\n      }\n\n      .caller-icon {\n        color: var(--text-secondary);\n        display: flex;\n        align-items: center;\n        justify-content: center;\n      }\n\n      .caller-icon svg {\n        width: 24px;\n        height: 24px;\n      }\n\n      .caller-info {\n        flex: 1;\n        min-width: 0;\n        /* Critical for flex child truncation */\n      }\n\n      .caller-name {\n        color: var(--accent-blue);\n        font-family: monospace;\n        font-size: 14px;\n        margin-bottom: 2px;\n      }\n\n      .caller-source {\n        color: var(--text-secondary);\n        font-size: 11px;\n        font-family: monospace;\n        height: 1.2em;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        display: block;\n      }\n\n      .flags-row {\n        display: flex;\n        gap: 10px;\n        margin-bottom: 10px;\n        align-items: center;\n      }\n\n      .origin-row {\n        font-size: 12px;\n        color: var(--text-primary);\n        font-family: monospace;\n        display: block;\n        white-space: nowrap;\n        height: 1.2em;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        width: 35%;\n      }\n\n      /* Arguments */\n      .args-content {\n        font-family: \"Consolas\", \"Monaco\", monospace;\n        font-size: 12px;\n        white-space: pre-wrap;\n        overflow-x: auto;\n        color: #e0e0e0;\n        max-height: 300px;\n        overflow-y: auto;\n        line-height: 1.5;\n      }\n\n      /* Copy Button with Animation */\n      .copy-icon-btn {\n        position: absolute;\n        top: 10px;\n        right: 10px;\n        background: transparent;\n        border: 1px solid var(--border-color);\n        border-radius: 4px;\n        color: var(--text-secondary);\n        cursor: pointer;\n        width: 28px;\n        height: 28px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: all 0.2s;\n        overflow: hidden;\n        /* Ensure check icon doesn't spill out */\n      }\n\n      .copy-icon-btn:hover {\n        border-color: var(--text-primary);\n        color: var(--text-primary);\n        background-color: var(--surface-color);\n      }\n\n      .copy-icon-btn svg {\n        width: 14px;\n        height: 14px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%) scale(1);\n        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n      }\n\n      .copy-icon-btn .icon-check {\n        transform: translate(-50%, -50%) scale(0);\n        color: var(--accent-green);\n      }\n\n      .copy-icon-btn.copied .icon-copy {\n        transform: translate(-50%, -50%) scale(0);\n      }\n\n      .copy-icon-btn.copied .icon-check {\n        transform: translate(-50%, -50%) scale(1);\n      }\n\n      /* Dropdown */\n      .dropdown-menu {\n        position: absolute;\n        top: 42px;\n        /* Button height + spacing */\n        right: 10px;\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        width: 160px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        z-index: 50;\n        display: none;\n        overflow: hidden;\n      }\n\n      .dropdown-menu.visible {\n        display: block;\n      }\n\n      .dropdown-item {\n        padding: 8px 12px;\n        font-size: 12px;\n        color: var(--text-primary);\n        cursor: pointer;\n        transition: background-color 0.2s;\n        display: flex;\n        align-items: center;\n        gap: 8px;\n      }\n\n      .dropdown-item:hover {\n        background-color: var(--accent-blue);\n        color: #fff;\n      }\n\n      .dropdown-item svg {\n        width: 14px;\n        height: 14px;\n        opacity: 0.7;\n      }\n\n      /* Toast Notification */\n      .toast-container {\n        position: fixed;\n        bottom: 30px;\n        left: 50%;\n        transform: translateX(-50%) translateY(20px);\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        padding: 8px 16px;\n        color: #fff;\n        font-size: 12px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        opacity: 0;\n        transition: opacity 0.3s, transform 0.3s;\n        pointer-events: none;\n        z-index: 1000;\n        display: flex;\n        align-items: center;\n        gap: 8px;\n      }\n\n      .toast-container.visible {\n        opacity: 1;\n        transform: translateX(-50%) translateY(0);\n      }\n\n      .toast-container svg {\n        width: 16px;\n        height: 16px;\n        color: var(--accent-green);\n      }\n\n      /* Syntax Highlighting */\n      .hl-str {\n        color: #a5d6ff;\n      }\n\n      .hl-num {\n        color: #79c0ff;\n      }\n\n      .hl-bool {\n        color: #ff7b72;\n      }\n\n      .hl-key {\n        color: #7ee787;\n      }\n\n      .hl-nil {\n        color: #ff7b72;\n      }\n\n      .footer {\n        height: 25px;\n        border-top: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        padding: 0 20px;\n        background-color: var(--bg-color);\n        color: var(--text-secondary);\n        font-size: 11px;\n        flex-shrink: 0;\n      }\n    </style>\n  </head>\n\n  <body>\n    <div class=\"app-header\">\n      <a\n        href=\"https://github.com/notpoiu/cobalt/tree/main\"\n        target=\"_blank\"\n        style=\"text-decoration: none\"\n      >\n        <div class=\"brand\">\n          <div class=\"brand-icon\"></div>\n          Cobalt - Session Viewer\n        </div>\n      </a>\n      <div class=\"session-container\">\n        <div class=\"session-info\">\n          Session / <span class=\"session-id\">{{SESSION_ID}}</span>\n        </div>\n        <div class=\"session-tooltip\">\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Start Time (tick)</span>\n            <span class=\"tooltip-value\">{{START_TIME}}</span>\n          </div>\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Place ID</span>\n            <span class=\"tooltip-value\">{{PLACE_ID}}</span>\n          </div>\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Job ID</span>\n            <span class=\"tooltip-value\">{{JOB_ID}}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"main-container\">\n      <!-- LEFT PANEL WRAPPER -->\n      <div\n        class=\"left-panel-wrapper\"\n        style=\"\n          flex: 1;\n          display: flex;\n          flex-direction: column;\n          border-right: 1px solid var(--border-color);\n          min-width: 0;\n          overflow: hidden;\n        \"\n      >\n        <!-- SHARED TOOLBAR -->\n        <div class=\"trace-toolbar\">\n          <div\n            style=\"\n              font-size: 11px;\n              color: var(--text-secondary);\n              margin-right: 20px;\n            \"\n          >\n            Started: {{DATE}}\n          </div>\n          <div style=\"flex: 1\"></div>\n          <div class=\"view-toggle\">\n            <button class=\"view-btn active\" onclick=\"switchView('timeline')\">\n              Timeline\n            </button>\n            <button class=\"view-btn\" onclick=\"switchView('heatmap')\">\n              Heatmap\n            </button>\n          </div>\n          <div class=\"divider\"></div>\n          <div class=\"search-widget\">\n            <div class=\"search-row\">\n              <div\n                class=\"search-chevron\"\n                onclick=\"toggleSearchOptions()\"\n                id=\"searchChevron\"\n              >\n                <svg\n                  width=\"16\"\n                  height=\"16\"\n                  viewBox=\"0 0 16 16\"\n                  fill=\"currentColor\"\n                >\n                  <path\n                    d=\"M6 4l4 4-4 4\"\n                    stroke=\"currentColor\"\n                    stroke-width=\"1.5\"\n                    fill=\"none\"\n                  />\n                </svg>\n              </div>\n              <div class=\"search-input-container\">\n                <input\n                  type=\"text\"\n                  class=\"search-input\"\n                  id=\"filterInput\"\n                  placeholder=\"Filter events...\"\n                  oninput=\"handleFilterInput()\"\n                />\n              </div>\n            </div>\n            <div class=\"search-options\" id=\"searchOptions\">\n              <div class=\"time-range-row\">\n                <span>Time Range:</span>\n                <input\n                  type=\"number\"\n                  class=\"time-input-styled\"\n                  id=\"minTimeInput\"\n                  placeholder=\"Start\"\n                  oninput=\"handleTimeInput()\"\n                />\n                <span>-</span>\n                <input\n                  type=\"number\"\n                  class=\"time-input-styled\"\n                  id=\"maxTimeInput\"\n                  placeholder=\"End\"\n                  oninput=\"handleTimeInput()\"\n                />\n                <select\n                  class=\"unit-select\"\n                  id=\"timeUnitSelect\"\n                  onchange=\"handleTimeInput()\"\n                >\n                  <option value=\"1\">s</option>\n                  <option value=\"0.001\">ms</option>\n                </select>\n              </div>\n              <div class=\"filter-options-row\">\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterIncoming\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Incoming</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterOutgoing\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Outgoing</label\n                >\n                <div\n                  style=\"\n                    width: 1px;\n                    height: 14px;\n                    background: var(--border-color);\n                    margin: 0 4px;\n                  \"\n                ></div>\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterActor\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Actor</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterNonActor\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Non-Actor</label\n                >\n                <div\n                  style=\"\n                    width: 1px;\n                    height: 14px;\n                    background: var(--border-color);\n                    margin: 0 4px;\n                  \"\n                ></div>\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterArgs\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Args</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterProto\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Proto</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterConst\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Const</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterHash\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Hash</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterSource\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Source</label\n                >\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <!-- TIMELINE VIEW -->\n        <div class=\"trace-panel\" id=\"timelinePanel\" style=\"border-right: none\">\n          <div class=\"trace-header-row\">\n            <div class=\"col-list\">Remote</div>\n            <div class=\"col-timeline\" id=\"timelineHeader\">\n              <div class=\"timeline-ruler\" id=\"ruler\"></div>\n            </div>\n          </div>\n\n          <div class=\"trace-rows\" id=\"rowsContainer\">\n            <div id=\"virtualSpacer\" class=\"virtual-spacer\"></div>\n            <div id=\"virtualContent\" class=\"virtual-content\"></div>\n          </div>\n        </div>\n\n        <!-- HEATMAP VIEW -->\n        <div class=\"heatmap-container\" id=\"heatmapPanel\">\n          <div\n            id=\"heatmapScroll\"\n            style=\"\n              width: 100%;\n              height: 100%;\n              overflow-x: auto;\n              overflow-y: hidden;\n              position: relative;\n            \"\n          >\n            <div\n              id=\"heatmapSpacer\"\n              style=\"\n                height: 1px;\n                width: 100%;\n                position: absolute;\n                top: 0;\n                left: 0;\n                pointer-events: none;\n              \"\n            ></div>\n            <canvas\n              id=\"heatmapCanvas\"\n              class=\"heatmap-canvas\"\n              style=\"\n                position: sticky;\n                left: 0;\n                top: 0;\n                width: 100%;\n                height: 100%;\n              \"\n            ></canvas>\n          </div>\n          <div\n            id=\"heatmapTooltip\"\n            class=\"heatmap-tooltip\"\n            style=\"\n              display: none;\n              position: absolute;\n              background: #1c2128;\n              border: 1px solid #30363d;\n              padding: 4px 8px;\n              border-radius: 4px;\n              font-size: 11px;\n              color: #c9d1d9;\n              pointer-events: none;\n              z-index: 100;\n            \"\n          ></div>\n        </div>\n      </div>\n\n      <!-- RIGHT PANEL -->\n      <div class=\"details-panel\" id=\"detailsPanel\">\n        <div id=\"detailsContent\"></div>\n      </div>\n    </div>\n\n    <div class=\"footer\">\n      <div>Ended: {{END_DATE}}</div>\n      <span\n        id=\"statsLabel\"\n        style=\"\n          color: var(--text-secondary);\n          font-size: 11px;\n          margin-right: 10px;\n        \"\n      >\n        {{EVENT_COUNT}} Events • {{TOTAL_DURATION}}s\n      </span>\n    </div>\n\n    <!-- Toast Notification -->\n    <div id=\"toast\" class=\"toast-container\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width=\"24\"\n        height=\"24\"\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke=\"currentColor\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        class=\"lucide lucide-check\"\n      >\n        <path d=\"M20 6 9 17l-5-5\" />\n      </svg>\n      <span id=\"toastMessage\">Copied to clipboard</span>\n    </div>\n\n    <!-- Data Script -->\n    <script type=\"application/json\" id=\"dictionary-data\">\n      {{DICTIONARY_JSON}}\n    </script>\n    <script type=\"application/json\" id=\"event-data\">\n      {{EVENTS_JSON}}\n    </script>\n\n    <script>\n      // Data Parsing\n      let startTime = {{START_TIME}}; // Seconds\n      const totalDuration = {{DURATION}};\n      const dictionary = JSON.parse(document.getElementById('dictionary-data').textContent);\n      const rawEvents = JSON.parse(document.getElementById('event-data').textContent);\n\n      // Reconstruct Events\n      const allEvents = rawEvents.map(e => ({\n        name: dictionary[e[0]],\n        className: dictionary[e[1]],\n        path: dictionary[e[2]],\n        type: dictionary[e[3]],\n        timestamp: e[4],\n        origin: dictionary[e[5]],\n\n        args: dictionary[e[6]],\n        method: dictionary[e[7]],\n\n        funcName: dictionary[e[8]],\n        funcLine: e[9],\n        funcSource: dictionary[e[10]],\n        isExecutor: e[11] === 1,\n        isActor: e[12] === 1,\n\n        funcHash: dictionary[e[13]],\n        upvalues: dictionary[e[14]],\n        protos: dictionary[e[15]],\n        constants: dictionary[e[16]],\n        isBlocked: e[17] === 1\n      }));\n\n      if (allEvents.length > 0) {\n        const minTimestamp = Math.min(...allEvents.map(e => e.timestamp));\n        if (minTimestamp < startTime) {\n          startTime = minTimestamp;\n        }\n      }\n\n      // Preprocess events\n      allEvents.forEach(evt => {\n        evt.relTime = Math.max(0, evt.timestamp - startTime);\n\n        const typeLower = evt.type.toLowerCase();\n        const methodLower = evt.method ? evt.method.toLowerCase() : '';\n\n        if (methodLower.includes('client') || typeLower.includes('client')) {\n          evt.typeClass = 'incoming';\n        } else {\n          evt.typeClass = 'outgoing';\n        }\n      });\n\n      // State\n      let filteredEvents = allEvents;\n      let zoomLevel = 1;\n      let selectedEvent = null;\n      let filterTimeout = null;\n      let filterMinTime = 0;\n      let filterMaxTime = totalDuration;\n\n      // Initialize Time Inputs\n      document.getElementById('minTimeInput').value = \"0\";\n      document.getElementById('maxTimeInput').value = totalDuration.toFixed(2);\n\n      // Virtual Scroll State\n      let lastStartIndex = -1;\n      let lastEndIndex = -1;\n      let isScrolling = false;\n\n      // DOM Elements\n      const rowsContainer = document.getElementById('rowsContainer');\n      const virtualSpacer = document.getElementById('virtualSpacer');\n      const virtualContent = document.getElementById('virtualContent');\n      const rulerContainer = document.getElementById('ruler');\n      const detailsPanel = document.getElementById('detailsPanel');\n      const detailsContent = document.getElementById('detailsContent');\n      const timelineHeader = document.getElementById('timelineHeader');\n      const statsLabel = document.getElementById('statsLabel');\n\n\n      // Heatmap State\n      let currentView = 'timeline';\n      let heatmapZoom = 1;\n      let detailsWasVisible = false;\n      const heatmapCanvas = document.getElementById('heatmapCanvas');\n      const heatmapTooltip = document.getElementById('heatmapTooltip');\n\n      const timelinePanel = document.getElementById('timelinePanel');\n      const heatmapPanel = document.getElementById('heatmapPanel');\n\n      // Heatmap Interaction\n      heatmapCanvas.addEventListener('wheel', (e) => {\n        if (currentView !== 'heatmap') return;\n        e.preventDefault();\n\n        const delta = e.deltaY > 0 ? 1.1 : 0.9;\n        heatmapZoom = Math.max(1, Math.min(50, heatmapZoom * delta));\n        renderHeatmap();\n      }, { passive: false });\n\n      heatmapCanvas.addEventListener('mousemove', (e) => {\n        if (currentView !== 'heatmap') return;\n        const rect = heatmapCanvas.getBoundingClientRect();\n        const x = e.clientX - rect.left;\n        const y = e.clientY - rect.top;\n\n        if (!window.lastHeatmapData) return;\n\n        const { sortedRemotes, rowHeight, binWidth, remotes, maxBinCount, timeBins, binDuration, margin, scrollLeft } = window.lastHeatmapData;\n        const width = heatmapPanel.clientWidth;\n        const height = heatmapPanel.clientHeight;\n\n        if (x < margin.left || x > width - margin.right || y < margin.top || y > height - margin.bottom) {\n          heatmapTooltip.style.display = 'none';\n          return;\n        }\n\n        const rowIndex = Math.floor((y - margin.top) / rowHeight);\n\n        // Calculate colIndex based on virtual position (x + scrollLeft)\n        const colIndex = Math.floor((x - margin.left + scrollLeft) / binWidth);\n\n        if (rowIndex >= 0 && rowIndex < sortedRemotes.length && colIndex >= 0 && colIndex < timeBins) {\n          const remote = sortedRemotes[rowIndex];\n          // Calculate count for this bin\n          let count = 0;\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            if (binIndex === colIndex) count++;\n          });\n\n          heatmapTooltip.style.display = 'block';\n          heatmapTooltip.innerHTML = `<b>${remote}</b><br>Time: ${(colIndex * binDuration).toFixed(1)}s<br>Count: ${count}`;\n\n          const tooltipWidth = heatmapTooltip.offsetWidth;\n          const panelWidth = heatmapPanel.clientWidth;\n\n          let leftPos = x + 10;\n          if (leftPos + tooltipWidth > panelWidth - 10) {\n            leftPos = x - tooltipWidth - 10;\n          }\n\n          heatmapTooltip.style.left = leftPos + 'px';\n          heatmapTooltip.style.top = (y + 10) + 'px';\n        } else {\n          heatmapTooltip.style.display = 'none';\n        }\n      });\n\n      heatmapCanvas.addEventListener('mouseleave', () => {\n        heatmapTooltip.style.display = 'none';\n      });\n\n      document.getElementById('heatmapScroll').addEventListener('scroll', () => {\n        if (currentView === 'heatmap') {\n          renderHeatmap();\n        }\n      });\n\n      function switchView(view) {\n        currentView = view;\n        document.querySelectorAll('.view-btn').forEach(btn => {\n          btn.classList.toggle('active', btn.innerText.toLowerCase() === view);\n        });\n\n        if (view === 'timeline') {\n          timelinePanel.style.display = 'flex';\n          heatmapPanel.classList.remove('visible');\n\n          if (detailsWasVisible) {\n            detailsPanel.classList.add('visible');\n          }\n\n          renderVirtualRows(true);\n        } else {\n          if (detailsPanel.classList.contains('visible')) {\n            detailsWasVisible = true;\n            detailsPanel.classList.remove('visible');\n          } else {\n            detailsWasVisible = false;\n          }\n\n          timelinePanel.style.display = 'none';\n          heatmapPanel.classList.add('visible');\n          renderHeatmap();\n        }\n      }\n\n      function renderHeatmap() {\n        const ctx = heatmapCanvas.getContext('2d');\n        const containerWidth = heatmapPanel.clientWidth;\n        const height = heatmapPanel.clientHeight;\n        const scrollLeft = document.getElementById('heatmapScroll').scrollLeft;\n\n        // Calculate total virtual width\n        const totalWidth = containerWidth * heatmapZoom;\n\n        // Update Spacer\n        document.getElementById('heatmapSpacer').style.width = totalWidth + 'px';\n\n        const dpr = window.devicePixelRatio || 1;\n\n        // Canvas is always viewport size\n        heatmapCanvas.width = containerWidth * dpr;\n        heatmapCanvas.height = height * dpr;\n        ctx.scale(dpr, dpr);\n\n        ctx.fillStyle = '#0d1117';\n        ctx.fillRect(0, 0, containerWidth, height);\n\n        if (filteredEvents.length === 0) return;\n\n        const remotes = {};\n        filteredEvents.forEach(evt => {\n          if (!remotes[evt.name]) remotes[evt.name] = [];\n          remotes[evt.name].push(evt);\n        });\n\n        const sortedRemotes = Object.keys(remotes).sort((a, b) => remotes[b].length - remotes[a].length);\n\n        const margin = { top: 30, right: 20, bottom: 20, left: 150 };\n\n        // Virtual chart width\n        const chartWidth = totalWidth - margin.left - margin.right;\n        const chartHeight = height - margin.top - margin.bottom;\n\n        // Apply Zoom to time bins\n        const timeBins = Math.floor(100 * heatmapZoom);\n        const binWidth = chartWidth / timeBins;\n        const binDuration = totalDuration / timeBins;\n\n        // Adjust row height to fit\n        const rowHeight = Math.min(30, chartHeight / sortedRemotes.length);\n\n        // Store data for tooltip (adjusted for virtual scroll)\n        window.lastHeatmapData = { sortedRemotes, rowHeight, binWidth, remotes, timeBins, binDuration, margin, scrollLeft };\n\n        ctx.strokeStyle = '#30363d';\n        ctx.lineWidth = 1;\n\n        ctx.font = '11px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif';\n        ctx.textAlign = 'right';\n        ctx.textBaseline = 'middle';\n\n        let maxBinCount = 0;\n        sortedRemotes.forEach(remote => {\n          const bins = new Array(timeBins).fill(0);\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            bins[binIndex]++;\n          });\n          maxBinCount = Math.max(maxBinCount, ...bins);\n        });\n\n        // Update Legend Labels\n        window.lastHeatmapData.maxBinCount = maxBinCount;\n        window.lastHeatmapData.maxBinCount = maxBinCount;\n\n        sortedRemotes.forEach((remote, i) => {\n          const y = margin.top + (i * rowHeight);\n\n          // Draw Label (Fixed position)\n          ctx.fillStyle = '#8b949e';\n          ctx.fillText(remote.length > 20 ? remote.slice(0, 18) + '...' : remote, margin.left - 10, y + rowHeight / 2);\n\n          // Draw Line\n          ctx.beginPath();\n          ctx.moveTo(margin.left, y);\n          ctx.lineTo(containerWidth - margin.right, y);\n          ctx.stroke();\n\n          const bins = new Array(timeBins).fill(0);\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            bins[binIndex]++;\n          });\n\n          bins.forEach((count, binIndex) => {\n            if (count === 0) return;\n\n            // Calculate virtual X\n            const virtualX = margin.left + (binIndex * binWidth);\n\n            // Apply scroll offset\n            const screenX = virtualX - scrollLeft;\n\n            // Only draw if visible\n            if (screenX + binWidth < margin.left || screenX > containerWidth - margin.right) return;\n\n            // Clamp to chart area\n            const drawX = Math.max(margin.left, screenX);\n            const drawWidth = Math.min(binWidth, (containerWidth - margin.right) - drawX);\n\n            const intensity = count / maxBinCount;\n            const hue = (1 - intensity) * 240;\n            ctx.fillStyle = `hsla(${hue}, 70%, 50%, 0.8)`;\n\n            ctx.fillRect(drawX, y + 2, drawWidth - 1, rowHeight - 4);\n          });\n        });\n\n        ctx.fillStyle = '#8b949e';\n        ctx.textAlign = 'center';\n        ctx.textBaseline = 'top';\n\n        const numTicks = 5 * Math.ceil(heatmapZoom);\n\n        for (let i = 0; i <= numTicks; i++) {\n          const virtualX = margin.left + (chartWidth * (i / numTicks));\n          const screenX = virtualX - scrollLeft;\n\n          if (screenX < margin.left || screenX > containerWidth - margin.right) continue;\n\n          const time = (totalDuration * (i / numTicks)).toFixed(1) + 's';\n          ctx.fillText(time, screenX, margin.top - 20);\n\n          ctx.beginPath();\n          ctx.moveTo(screenX, margin.top);\n          ctx.lineTo(screenX, height - margin.bottom);\n          ctx.stroke();\n        }\n      }\n\n      // Resize observer for heatmap\n      new ResizeObserver(() => {\n        if (currentView === 'heatmap' && heatmapPanel.classList.contains('visible')) {\n          renderHeatmap();\n        }\n      }).observe(heatmapPanel);\n\n      // Window resize handler for timeline\n      window.addEventListener('resize', () => {\n        if (currentView === 'timeline') {\n          renderVirtualRows(true);\n          renderRuler();\n        }\n      });\n\n      // Virtual Scroll Config\n      const ROW_HEIGHT = 29; // 28px + 1px border\n      const BUFFER_SIZE = 5;\n\n      function formatTime(seconds) {\n        if (seconds < 1) return (seconds * 1000).toFixed(1) + 'ms';\n        return seconds.toFixed(2) + 's';\n      }\n\n      function formatAbsTime(timestamp) {\n        const date = new Date(timestamp * 1000);\n        return date.toLocaleTimeString();\n      }\n\n      function getIconUrl(className) {\n        return `https://robloxapi.github.io/ref/icons/dark/${className}.png`;\n      }\n\n      function escapeHtml(text) {\n        if (!text) return '';\n        return text\n          .replace(/&/g, \"&amp;\")\n          .replace(/</g, \"&lt;\")\n          .replace(/>/g, \"&gt;\")\n          .replace(/\"/g, \"&quot;\")\n          .replace(/'/g, \"&#039;\");\n      }\n\n      function syntaxHighlight(text) {\n        if (!text) return '';\n\n        text = escapeHtml(text);\n        return text\n          .replace(/&quot;((?:[^&]|&(?!(quot;)))*)&quot;/g, '<span class=\"hl-str\">\"$1\"</span>')\n          .replace(/\\b(\\d+(\\.\\d+)?)\\b/g, '<span class=\"hl-num\">$1</span>')\n          .replace(/\\b(true|false)\\b/g, '<span class=\"hl-bool\">$1</span>')\n          .replace(/\\b(nil)\\b/g, '<span class=\"hl-nil\">$1</span>');\n      }\n\n      // Toast Logic\n      function showToast(message) {\n        const toast = document.getElementById('toast');\n        const msgSpan = document.getElementById('toastMessage');\n        msgSpan.innerText = message;\n        toast.classList.add('visible');\n        setTimeout(() => {\n          toast.classList.remove('visible');\n        }, 2000);\n      }\n\n      function copyText(text, message = \"Copied to clipboard\") {\n        navigator.clipboard.writeText(text).then(() => {\n          showToast(message);\n        });\n      }\n\n      function copyArgs(btn) {\n        if (selectedEvent) {\n          navigator.clipboard.writeText(selectedEvent.args).then(() => {\n            btn.classList.add('copied');\n            setTimeout(() => btn.classList.remove('copied'), 2000);\n          });\n        }\n      }\n\n      function toggleCallerDropdown(e) {\n        e.stopPropagation();\n        const menu = document.getElementById('callerDropdown');\n        if (menu) {\n          menu.classList.toggle('visible');\n        }\n      }\n\n      function copyCallerData(type) {\n        if (!selectedEvent) return;\n        let text = \"\";\n        let msg = \"Copied to clipboard\";\n        switch (type) {\n          case 'hash':\n            text = selectedEvent.funcHash || \"N/A\";\n            msg = \"Function Hash copied\";\n            break;\n          case 'upvalues':\n            text = selectedEvent.upvalues || \"{}\";\n            msg = \"Upvalues copied\";\n            break;\n          case 'protos':\n            text = selectedEvent.protos || \"[]\";\n            msg = \"Protos copied\";\n            break;\n          case 'path':\n            text = selectedEvent.origin || \"N/A\";\n            msg = \"Script Path copied\";\n            break;\n          case 'source':\n            text = selectedEvent.funcSource || \"N/A\";\n            msg = \"Source copied\";\n            break;\n        }\n        copyText(text, msg);\n        document.getElementById('callerDropdown').classList.remove('visible');\n      }\n\n      // Render Ruler\n      function renderRuler() {\n        rulerContainer.innerHTML = '';\n        const tickCount = Math.max(5, Math.floor(5 * zoomLevel));\n        for (let i = 0; i <= tickCount; i++) {\n          const pct = (i / tickCount) * 100;\n          const time = (totalDuration * (i / tickCount));\n          const tick = document.createElement('div');\n          tick.className = 'tick';\n          tick.style.left = pct + '%';\n          tick.innerText = formatTime(time);\n          rulerContainer.appendChild(tick);\n        }\n      }\n\n      // Scroll Sync\n      rowsContainer.addEventListener('scroll', () => {\n        timelineHeader.scrollLeft = rowsContainer.scrollLeft;\n      });\n\n      // Virtual Rendering\n      function renderVirtualRows(force = false) {\n        const scrollTop = rowsContainer.scrollTop;\n        const containerHeight = rowsContainer.clientHeight;\n\n        const totalHeight = filteredEvents.length * ROW_HEIGHT;\n        virtualSpacer.style.height = totalHeight + 'px';\n\n        const startIndex = Math.floor(scrollTop / ROW_HEIGHT);\n        const endIndex = Math.min(filteredEvents.length, Math.ceil((scrollTop + containerHeight) / ROW_HEIGHT) + BUFFER_SIZE);\n\n        if (!force && startIndex === lastStartIndex && endIndex === lastEndIndex) {\n          return;\n        }\n\n        lastStartIndex = startIndex;\n        lastEndIndex = endIndex;\n\n        const visibleEvents = filteredEvents.slice(Math.max(0, startIndex - BUFFER_SIZE), endIndex);\n        const startOffset = Math.max(0, startIndex - BUFFER_SIZE) * ROW_HEIGHT;\n\n        virtualContent.style.transform = `translateY(${startOffset}px)`;\n\n        const fragment = document.createDocumentFragment();\n        const zoomWidth = (100 * zoomLevel) + '%';\n\n        // Sync Ruler Width\n        document.getElementById('ruler').style.width = zoomWidth;\n\n        visibleEvents.forEach((evt) => {\n          const row = document.createElement('div');\n          row.className = 'trace-row';\n          if (selectedEvent === evt) row.classList.add('selected');\n\n          row.evtData = evt;\n          row.onclick = function () { selectRow(this, evt); };\n\n          const listCol = document.createElement('div');\n          listCol.className = 'row-list';\n          listCol.innerHTML = `\n                    <div class=\"type-icon\" style=\"background-image: url('${getIconUrl(evt.className)}')\"></div>\n                    <div class=\"remote-name\" title=\"${evt.name}\">${evt.name}</div>\n                `;\n\n          const timelineCol = document.createElement('div');\n          timelineCol.className = 'row-timeline';\n          timelineCol.style.width = zoomWidth;\n          timelineCol.style.flex = 'none';\n\n          const marker = document.createElement('div');\n          marker.className = `timeline-marker ${evt.typeClass}`;\n\n          let leftPct = ((evt.relTime) / totalDuration) * 100;\n          if (leftPct > 99) leftPct = 99;\n\n          let widthPct = (0.05 / totalDuration) * 100;\n          if (widthPct < 1) widthPct = 1;\n\n          marker.style.left = leftPct + '%';\n          marker.style.width = widthPct + '%';\n\n          timelineCol.appendChild(marker);\n          row.appendChild(listCol);\n          row.appendChild(timelineCol);\n          fragment.appendChild(row);\n        });\n\n        virtualContent.innerHTML = '';\n        virtualContent.appendChild(fragment);\n      }\n\n      // Ctrl+F Handler\n      document.addEventListener('keydown', function (e) {\n        if ((e.ctrlKey || e.metaKey) && e.key === 'f') {\n          e.preventDefault();\n          const filterInput = document.getElementById('filterInput');\n          filterInput.focus();\n          filterInput.select();\n        }\n      });\n\n      // Initial Render\n      renderVirtualRows();\n      renderRuler();\n\n      function selectRow(el, evt) {\n        const prev = virtualContent.querySelector('.trace-row.selected');\n        if (prev) prev.classList.remove('selected');\n\n        el.classList.add('selected');\n        selectedEvent = evt;\n\n        detailsPanel.classList.add('visible');\n\n        const isIncoming = evt.typeClass === 'incoming';\n        const badgeClass = isIncoming ? 'incoming' : 'outgoing';\n\n        // Flags with Unified Style\n        let flagsHtml = '';\n        if (evt.isExecutor) {\n          flagsHtml += `<div class=\"badge-pill executor\">Executor</div>`;\n        }\n        if (evt.isActor) {\n          flagsHtml += `<div class=\"badge-pill actor\">Actor</div>`;\n        }\n        if (evt.isBlocked) {\n          flagsHtml += `<div class=\"badge-pill blocked\">Blocked</div>`;\n        }\n        if (!flagsHtml) flagsHtml = '<span style=\"color:var(--text-secondary); font-size:11px;\">None</span>';\n\n        const highlightedArgs = syntaxHighlight(evt.args);\n\n        // Icons\n        const copyIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-copy icon-copy\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg>`;\n        const checkIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check icon-check\"><path d=\"M20 6 9 17l-5-5\"/></svg>`;\n        const parenthesesIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-parentheses\"><path d=\"M8 21s-4-3-4-9 4-9 4-9\"/><path d=\"M16 3s4 3 4 9-4 9-4 9\"/></svg>`;\n\n        // Dropdown Icons\n        const hashIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-hash\"><line x1=\"4\" x2=\"20\" y1=\"9\" y2=\"9\"/><line x1=\"4\" x2=\"20\" y1=\"15\" y2=\"15\"/><line x1=\"10\" x2=\"8\" y1=\"3\" y2=\"21\"/><line x1=\"16\" x2=\"14\" y1=\"3\" y2=\"21\"/></svg>`;\n        const upvaluesIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-a-arrow-up\"><path d=\"m14 11 4-4 4 4\"/><path d=\"M18 16V7\"/><path d=\"m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16\"/><path d=\"M3.304 13h6.392\"/></svg>`;\n        const protosIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-square-function\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/><path d=\"M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3\"/><path d=\"M9 11.2h5.7\"/></svg>`;\n        const pathIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-route\"><circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15\"/><circle cx=\"18\" cy=\"5\" r=\"3\"/></svg>`;\n        const sourceIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-code\"><path d=\"m16 18 6-6-6-6\"/><path d=\"m8 6-6 6 6 6\"/></svg>`;\n        const boxIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-box\"><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22v-9\"/></svg>`;\n\n        detailsContent.innerHTML = `\n                <div class=\"details-header-top\">\n                    <div class=\"details-title-group\">\n                        <div class=\"details-icon-large\" style=\"background-image: url('${getIconUrl(evt.className)}')\"></div>\n                        <div class=\"details-name-large\">${escapeHtml(evt.name)}</div>\n                    </div>\n                    <div class=\"details-actions\">\n                        <div class=\"badge-pill ${badgeClass}\">${evt.typeClass.toUpperCase()}</div>\n                        <div class=\"close-btn\" onclick=\"closeDetails()\">×</div>\n                    </div>\n                </div>\n\n                <div class=\"details-path-row\" onclick=\"copyText('${escapeHtml(evt.path).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Remote Path copied')\" title=\"Click to copy path\"><span class=\"clickable-path\">${escapeHtml(evt.path)}</span></div>\n\n                <div class=\"info-grid\">\n                    <div class=\"info-item\">\n                        <h4>Method</h4>\n                        <div>${escapeHtml(evt.method)}</div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>Timestamp</h4>\n                        <div>${formatAbsTime(evt.timestamp)} <span style=\"color:var(--text-secondary)\">(+${formatTime(evt.relTime)})</span></div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>ClassName</h4>\n                        <div>${escapeHtml(evt.className)}</div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>Remote Path</h4>\n                        <div class=\"remote-path-copy clickable-path\" onclick=\"copyText('${escapeHtml(evt.path).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Remote Path copied')\" title=\"Click to copy path\">${escapeHtml(evt.path)}</div>\n                    </div>\n                </div>\n\n                <div class=\"content-box\">\n                    <div class=\"box-title\">Caller Data</div>\n                    <button class=\"copy-icon-btn\" onclick=\"toggleCallerDropdown(event)\" title=\"Copy Caller Info\">${copyIcon}</button>\n\n                    <div id=\"callerDropdown\" class=\"dropdown-menu\">\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('hash')\">${hashIcon} Function Hash</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('upvalues')\">${upvaluesIcon} Upvalues</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('protos')\">${protosIcon} Protos</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('constants')\">${boxIcon} Constants</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('path')\">${pathIcon} Script Path</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('source')\">${sourceIcon} Func Source</div>\n                    </div>\n\n                    <div class=\"caller-header\">\n                        <div class=\"caller-icon\">${parenthesesIcon}</div>\n                        <div class=\"caller-info\">\n                            <div class=\"caller-name\">${escapeHtml(evt.funcName)} <span class=\"caller-source\">:${evt.funcLine}</span></div>\n                            <div class=\"caller-source\">${escapeHtml(evt.funcSource)}</div>\n                        </div>\n                    </div>\n\n                    <div class=\"info-grid-2\" style=\"margin-bottom:0; gap:10px;\">\n                         <div class=\"info-item-2\" style=\"margin-right: 100px;\">\n                            <h4>Flags</h4>\n                            <div class=\"flags-row\">${flagsHtml}</div>\n                         </div>\n                         <div class=\"info-item-2\">\n                            <h4>Origin</h4>\n                            <div class=\"origin-row clickable-path\" onclick=\"copyText('${escapeHtml(evt.origin).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Origin copied')\" title=\"Click to copy origin\">${escapeHtml(evt.origin)}</div>\n                         </div>\n                    </div>\n                </div>\n\n                <div class=\"content-box\">\n                    <div class=\"box-title\">Arguments</div>\n                    <button class=\"copy-icon-btn\" onclick=\"copyArgs(this)\" title=\"Copy Arguments\">\n                        ${copyIcon}\n                        ${checkIcon}\n                    </button>\n                    <div class=\"args-content\">${highlightedArgs}</div>\n                </div>\n            `;\n      }\n\n      function closeDetails() {\n        detailsPanel.classList.remove('visible');\n        const prev = virtualContent.querySelector('.trace-row.selected');\n        if (prev) prev.classList.remove('selected');\n        selectedEvent = null;\n      }\n\n      function handleFilterInput() {\n        if (filterTimeout) clearTimeout(filterTimeout);\n        filterTimeout = setTimeout(applyFilters, 300);\n      }\n\n      function toggleSearchOptions() {\n        const widget = document.getElementById('searchChevron').closest('.search-widget');\n        const options = document.getElementById('searchOptions');\n        const chevron = document.getElementById('searchChevron');\n\n        options.classList.toggle('visible');\n        chevron.classList.toggle('expanded');\n        widget.classList.toggle('expanded');\n      }\n\n      function handleTimeInput() {\n        const minVal = parseFloat(document.getElementById('minTimeInput').value);\n        const maxVal = parseFloat(document.getElementById('maxTimeInput').value);\n        const unit = parseFloat(document.getElementById('timeUnitSelect').value);\n\n        filterMinTime = isNaN(minVal) ? 0 : minVal * unit;\n        filterMaxTime = isNaN(maxVal) ? totalDuration : maxVal * unit;\n\n        if (filterTimeout) clearTimeout(filterTimeout);\n        filterTimeout = setTimeout(applyFilters, 300);\n      }\n\n      function applyFilters() {\n        const query = document.getElementById('filterInput').value.toLowerCase();\n        const checkIncoming = document.getElementById('filterIncoming').checked;\n        const checkOutgoing = document.getElementById('filterOutgoing').checked;\n        const checkActor = document.getElementById('filterActor').checked;\n        const checkNonActor = document.getElementById('filterNonActor').checked;\n        const checkArgs = document.getElementById('filterArgs').checked;\n        const checkProto = document.getElementById('filterProto').checked;\n        const checkConst = document.getElementById('filterConst').checked;\n        const checkHash = document.getElementById('filterHash').checked;\n        const checkSource = document.getElementById('filterSource').checked;\n\n        filteredEvents = allEvents.filter(evt => {\n          // Filter by Type (Incoming/Outgoing)\n          if (checkIncoming || checkOutgoing) {\n            const isIncoming = evt.typeClass === 'incoming';\n            const isOutgoing = evt.typeClass === 'outgoing';\n            if (!((checkIncoming && isIncoming) || (checkOutgoing && isOutgoing))) {\n              return false;\n            }\n          }\n\n          // Filter by Actor Status\n          if (checkActor || checkNonActor) {\n            const isActor = evt.isActor;\n            const isNonActor = !evt.isActor;\n            if (!((checkActor && isActor) || (checkNonActor && isNonActor))) {\n              return false;\n            }\n          }\n\n          let matchesText = !query;\n\n          if (!matchesText) {\n            // Default search: Name and Type\n            if (evt.name.toLowerCase().includes(query) || evt.type.toLowerCase().includes(query)) {\n              matchesText = true;\n            }\n            // Advanced search options\n            else {\n              if (checkArgs && evt.args && evt.args.toLowerCase().includes(query)) matchesText = true;\n              else if (checkProto && evt.protos && evt.protos.toLowerCase().includes(query)) matchesText = true;\n              else if (checkConst && evt.constants && evt.constants.toLowerCase().includes(query)) matchesText = true;\n              else if (checkHash && evt.funcHash && evt.funcHash.toLowerCase().includes(query)) matchesText = true;\n              else if (checkSource && evt.funcSource && evt.funcSource.toLowerCase().includes(query)) matchesText = true;\n            }\n          }\n\n          const matchesTime = evt.relTime >= filterMinTime && evt.relTime <= filterMaxTime;\n\n          return matchesText && matchesTime;\n        });\n\n        // Update Stats\n        statsLabel.innerText = `${filteredEvents.length} Events • ${totalDuration.toFixed(2)}s`;\n\n        // Reset Scroll\n        rowsContainer.scrollTop = 0;\n        lastStartIndex = -1;\n        lastEndIndex = -1;\n\n        if (currentView === 'timeline') {\n          renderVirtualRows(true);\n        } else {\n          renderHeatmap();\n        }\n      } function updateZoom() {\n        const width = (100 * zoomLevel) + '%';\n        rulerContainer.style.width = width;\n        renderRuler();\n        lastStartIndex = -1;\n        renderVirtualRows(true);\n      }\n\n      rowsContainer.addEventListener('wheel', (e) => {\n        if (e.ctrlKey) {\n          e.preventDefault();\n          if (e.deltaY < 0) {\n            zoomLevel = Math.min(zoomLevel * 1.1, 20);\n          } else {\n            zoomLevel = Math.max(zoomLevel / 1.1, 1);\n          }\n          updateZoom();\n        }\n      });\n\n      rowsContainer.addEventListener('scroll', () => {\n        timelineHeader.scrollLeft = rowsContainer.scrollLeft;\n\n        if (!isScrolling) {\n          window.requestAnimationFrame(() => {\n            renderVirtualRows();\n            isScrolling = false;\n          });\n          isScrolling = true;\n        }\n      });\n\n      const sessionInfo = document.querySelector('.session-info');\n      const tooltip = document.querySelector('.session-tooltip');\n\n      sessionInfo.addEventListener('click', (e) => {\n        e.stopPropagation();\n        tooltip.classList.toggle('visible');\n      });\n\n      tooltip.addEventListener('click', (e) => {\n        e.stopPropagation();\n      });\n\n      document.addEventListener('click', () => {\n        tooltip.classList.remove('visible');\n        const dropdown = document.getElementById('callerDropdown');\n        if (dropdown) dropdown.classList.remove('visible');\n      });\n    </script>\n  </body>\n</html>\n"
+inst_6.Value = "--[[\n\n    Wax Environment replicated for actor env\n\n]]\n\nif getgenv().CobaltInitialized == true then\n\treturn\nend\n\ngetgenv().CobaltInitialized = true\n\ntype ActorData = {\n\tToken: string,\n\n\tIgnorePlayerModule: boolean,\n\tLogBlockedRemotes: boolean,\n\tUseAlternativeHooks: boolean,\n\tIgnoredRemotesDropdown: { [string]: boolean },\n\n\tExecutorSupport: { [string]: { IsWorking: boolean } },\n}\n\nlocal Data: ActorData = COBALT_ACTOR_DATA\n\nlocal ChannelId, CurrentActor = ...\nlocal RelayChannel = get_comm_channel(ChannelId)\n\nlocal wax = { shared = {} }\n\nwax.shared.ExecutorSupport = Data.ExecutorSupport\n\nfor _, Service in pairs({\n\t\"Players\",\n\t\"HttpService\",\n}) do\n\twax.shared[Service] = cloneref(game:GetService(Service))\nend\n\nwax.shared.Connections = {}\n\nwax.shared.Connect = function(Connection)\n\ttable.insert(wax.shared.Connections, Connection)\n\treturn Connection\nend\n\nwax.shared.Disconnect = function(Connection)\n\tConnection:Disconnect()\n\n\tlocal Index = table.find(wax.shared.Connections, Connection)\n\tif Index then\n\t\ttable.remove(wax.shared.Connections, Index)\n\tend\n\n\treturn true\nend\n\nwax.shared.LocalPlayer = wax.shared.Players.LocalPlayer\nlocal ContendingPlayerScripts = cloneref(wax.shared.LocalPlayer:QueryDescendants(\"PlayerScripts\")[1] or wax.shared.LocalPlayer)\nif ContendingPlayerScripts:IsA(\"PlayerScripts\") then\n\twax.shared.PlayerScripts = ContendingPlayerScripts\nelse\n\twax.shared.PlayerScripts = nil\n\n\tlocal ChildAddedConnection\n\tChildAddedConnection = wax.shared.Connect(wax.shared.LocalPlayer.ChildAdded:Connect(function(Child)\n\t\tif Child:IsA(\"PlayerScripts\") then\n\t\t\twax.shared.PlayerScripts = cloneref(Child)\n\t\t\twax.shared.Disconnect(ChildAddedConnection)\n\t\tend\n\tend))\nend\n\nwax.shared.ExecutorName = string.split(identifyexecutor(), \" \")[1]\n\nwax.shared.newcclosure = wax.shared.ExecutorName == \"AWP\"\n\t\tand function(f)\n\t\t\tlocal env = getfenv(f)\n\t\t\tlocal x = setmetatable({\n\t\t\t\t__F = f,\n\t\t\t}, {\n\t\t\t\t__index = env,\n\t\t\t\t__newindex = env,\n\t\t\t})\n\n\t\t\tlocal nf = function(...)\n\t\t\t\treturn __F(...)\n\t\t\tend\n\t\t\tsetfenv(nf, x) -- set func env (env of nf gets deoptimized)\n\t\t\treturn newcclosure(nf)\n\t\tend\n\tor newcclosure\n\nwax.shared.getrawmetatable = wax.shared.ExecutorSupport[\"getrawmetatable\"].IsWorking\n\t\tand (getrawmetatable or debug.getmetatable)\n\tor function()\n\t\treturn setmetatable({}, {\n\t\t\t__index = function()\n\t\t\t\treturn function() end\n\t\t\tend,\n\t\t})\n\tend\n\nwax.shared.restorefunction = function(Function: (...any) -> ...any, Silent: boolean?)\n\tlocal Original = wax.shared.Hooks[Function]\n\n\tif Silent and not Original then\n\t\treturn\n\tend\n\n\tassert(Original, \"Function not hooked\")\n\n\tif restorefunction and isfunctionhooked(Function) then\n\t\trestorefunction(Function)\n\telse\n\t\twax.shared.Hooking.HookFunction(Function, Original)\n\tend\n\n\twax.shared.Hooks[Function] = nil\nend\n\nlocal Hooking = {}\n\nwax.shared.AlternativeEnabled = Data.UseAlternativeHooks\n\nHooking.HookFunction = function(Original, Replacement)\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking and iscclosure(Original) and islclosure(Replacement) then\n\t\treturn oth.hook(Original, Replacement)\n\tend\n\n\tif islclosure(Replacement) then\n\t\tReplacement = wax.shared.newcclosure(Replacement)\n\tend\n\n\tif not wax.shared.ExecutorSupport[\"hookfunction\"].IsWorking then\n\t\treturn Original\n\tend\n\n\treturn hookfunction(Original, Replacement)\nend\n\nHooking.HookMetaMethod = function(object, method, hook)\n\tlocal Metatable = wax.shared.getrawmetatable(object)\n\tlocal originalMethod = rawget(Metatable, method)\n\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\treturn oth.hook(originalMethod, hook)\n\tend\n\n\tif islclosure(hook) then\n\t\thook = wax.shared.newcclosure(hook)\n\tend\n\n\tif\n\t\tData.UseAlternativeHooks\n\t\tor (\n\t\t\tnot wax.shared.ExecutorSupport[\"hookmetamethod\"].IsWorking\n\t\t\tand wax.shared.ExecutorSupport[\"getrawmetatable\"].IsWorking\n\t\t)\n\tthen\n\t\t-- FIX: Bungkus setreadonly dengan pcall\n\t\t-- Beberapa executor Android tidak support setreadonly dengan benar → tanpa ini = crash\n\t\tlocal setreadonlySuccess = pcall(function()\n\t\t\tsetreadonly(Metatable, false)\n\t\t\trawset(Metatable, method, hook)\n\t\t\tsetreadonly(Metatable, true)\n\t\tend)\n\n\t\tif not setreadonlySuccess then\n\t\t\tpcall(rawset, Metatable, method, hook)\n\t\tend\n\n\t\treturn originalMethod\n\tend\n\n\tif not wax.shared.ExecutorSupport[\"hookmetamethod\"].IsWorking then\n\t\tif method == \"__index\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\treturn object[tostring(math.random())]\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\telseif method == \"__newindex\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\tobject[tostring(math.random())] = true\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\telseif method == \"__namecall\" then\n\t\t\tlocal _, Metamethod = xpcall(function()\n\t\t\t\tobject:Mustard()\n\t\t\tend, function(err)\n\t\t\t\treturn debug.info(2, \"f\")\n\t\t\tend)\n\n\t\t\treturn Metamethod\n\t\tend\n\n\t\treturn nil\n\tend\n\n\treturn hookmetamethod(object, method, hook)\nend\n\nwax.shared.Hooking = Hooking\n\nwax.shared.Hooks = {}\nwax.shared.Settings = {\n\tIgnorePlayerModule = { Value = Data.IgnorePlayerModule },\n\tLogBlockedRemotes = { Value = Data.LogBlockedRemotes },\n\tIgnoredRemotesDropdown = { Value = Data.IgnoredRemotesDropdown },\n}\n\nwax.shared.IsPlayerModule = function(Origin: LocalScript | ModuleScript, Instance: Instance): boolean\n\tif Instance and Instance.ClassName ~= \"BindableEvent\" then\n\t\treturn false\n\tend\n\n\tif not Origin or typeof(Origin) ~= \"Instance\" or not Origin.IsA(Origin, \"LuaSourceContainer\") then\n\t\treturn false\n\tend\n\n\tlocal PlayerModule = Origin and Origin.FindFirstAncestor(Origin, \"PlayerModule\") or nil\n\tif not PlayerModule then\n\t\treturn false\n\tend\n\n\tif PlayerModule.Parent == nil then\n\t\treturn true\n\tend\n\n\tif wax.shared.PlayerScripts then\n\t\treturn compareinstances(PlayerModule.Parent, wax.shared.PlayerScripts)\n\tend\n\n\treturn false\nend\nwax.shared.ShouldIgnore = function(Instance, Origin)\n\treturn wax.shared.Settings.IgnoredRemotesDropdown.Value[Instance.ClassName] == true\n\t\tor (wax.shared.Settings.IgnorePlayerModule.Value and wax.shared.IsPlayerModule(Origin, Instance))\nend\n\nlocal OnUnload\n\nlocal RelayConnection\nRelayConnection = RelayChannel.Event:Connect(function(Type, ...)\n\tif Type == \"Unload\" then\n\t\tRelayConnection:Disconnect()\n\t\twax.shared.Unloaded = true\n\t\tfor _, Connection in wax.shared.Connections do\n\t\t\twax.shared.Disconnect(Connection)\n\t\tend\n\n\t\tif OnUnload then\n\t\t\tOnUnload()\n\t\tend\n\telseif Type == \"MainBlock\" then\n\t\tlocal Instance, EventType = ...\n\t\tlocal Log = wax.shared.Logs[EventType][Instance]\n\t\tif Log then\n\t\t\tLog:Block()\n\t\tend\n\telseif Type == \"MainIgnore\" then\n\t\tlocal Instance, EventType = ...\n\t\tlocal Log = wax.shared.Logs[EventType][Instance]\n\t\tif Log then\n\t\t\tLog:Ignore()\n\t\tend\n\telseif Type == \"MainSettingsSync\" then\n\t\tlocal Setting, Value = ...\n\t\tif wax.shared.Settings[Setting] then\n\t\t\twax.shared.Settings[Setting].Value = Value\n\t\tend\n\tend\nend)\n\nwax.shared.Unloaded = false\nwax.shared.Communicator = RelayChannel\n\nwax.shared.Log = {}\ndo\n\tlocal Log = wax.shared.Log\n\tLog.__index = Log\n\n\tfunction Log.new(Instance, Type, Method, Index, CallingScript)\n\t\tlocal NewLog = setmetatable({\n\t\t\tInstance = Instance,\n\t\t\tType = Type,\n\t\t\tMethod = Method,\n\t\t\tIndex = Index,\n\t\t\tCalls = {},\n\t\t\tIgnored = false,\n\t\t\tBlocked = false,\n\t\t}, Log)\n\n\t\treturn NewLog\n\tend\n\n\tlocal FunctionToMetatadata\n\n\tlocal GenerateUUID = wax.shared.HttpService.GenerateGUID\n\tlocal function GenerateId()\n\t\treturn GenerateUUID(wax.shared.HttpService, false)\n\tend\n\n\tlocal function CreateTraversalState(Refs)\n\t\treturn {\n\t\t\tCyclicRefs = Refs or {},\n\t\t\tTableIds = setmetatable({}, { __mode = \"k\" }),\n\t\t\tFunctions = setmetatable({}, { __mode = \"k\" }),\n\t\t}\n\tend\n\n\tlocal function FixTable(Table, State)\n\t\tif not Table then\n\t\t\treturn nil\n\t\tend\n\n\t\tif not State or not State.CyclicRefs then\n\t\t\tState = CreateTraversalState(State)\n\t\tend\n\n\t\tlocal CyclicRefs = State.CyclicRefs\n\t\tlocal TableId = State.TableIds[Table]\n\t\tif not TableId then\n\t\t\tTableId = GenerateId()\n\t\t\tState.TableIds[Table] = TableId\n\t\tend\n\n\t\tlocal OutputTable = {}\n\t\tCyclicRefs[TableId] = OutputTable\n\n\t\tlocal ContainsCyclicRef = false\n\n\t\tfor Key, Value in Table do\n\t\t\tif type(Value) == \"table\" then\n\t\t\t\tlocal ExistingId = State.TableIds[Value]\n\t\t\t\tif ExistingId then\n\t\t\t\t\tContainsCyclicRef = true\n\n\t\t\t\t\tOutputTable[Key] = {\n\t\t\t\t\t\t__CyclicRef = true,\n\t\t\t\t\t\t__Id = ExistingId,\n\t\t\t\t\t}\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tif getmetatable(Value) then\n\t\t\t\t\tOutputTable[Key] =\n\t\t\t\t\t\t\"Cobalt: Impossible to bridge table with metatable from actor Environment to main Environment\"\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tlocal Result, _, ContainsCyclic = FixTable(Value, State)\n\t\t\t\tif not Result then\n\t\t\t\t\tcontinue\n\t\t\t\tend\n\n\t\t\t\tOutputTable[Key] = Result\n\t\t\t\tContainsCyclicRef = ContainsCyclicRef or ContainsCyclic\n\t\t\telseif type(Value) == \"function\" then\n\t\t\t\tOutputTable[Key] = FunctionToMetatadata(Value, State)\n\t\t\telse\n\t\t\t\tOutputTable[Key] = Value\n\t\t\tend\n\t\tend\n\n\t\treturn OutputTable, CyclicRefs, ContainsCyclicRef\n\tend\n\n\tFunctionToMetatadata = function(Function, State)\n\t\tif not Function then\n\t\t\treturn nil\n\t\tend\n\n\t\tif not State or not State.CyclicRefs then\n\t\t\tState = CreateTraversalState()\n\t\tend\n\n\t\tlocal Metadata = {\n\t\t\tAddress = tostring(Function),\n\t\t\tName = debug.info(Function, \"n\"),\n\t\t\tSource = debug.info(Function, \"s\"),\n\t\t\tIsC = iscclosure(Function),\n\t\t}\n\n\t\tif State.Functions[Function] then\n\t\t\tMetadata[\"Recursive\"] = true\n\t\t\tMetadata[\"Validation\"] = Data.Token\n\t\t\tMetadata[\"__Function\"] = true\n\n\t\t\treturn Metadata\n\t\tend\n\n\t\tState.Functions[Function] = true\n\n\t\tif not iscclosure(Function) then\n\t\t\tMetadata[\"Upvalues\"] = FixTable(debug.getupvalues(Function), State)\n\t\t\tMetadata[\"Constants\"] = FixTable(debug.getconstants(Function), State)\n\t\t\tMetadata[\"Protos\"] = FixTable(debug.getprotos(Function), State)\n\t\t\t\n\t\t\tif getfunctionhash then\n\t\t\t\tMetadata[\"FunctionHash\"] = getfunctionhash(Function)\n\t\t\tend\n\t\tend\n\n\t\t-- to validate that this function was generated by FunctionToMetatadata\n\t\tMetadata[\"Validation\"] = Data.Token\n\t\tMetadata[\"__Function\"] = true\n\n\t\treturn Metadata\n\tend\n\n\tfunction DeepClone(orig, copies)\n\t\tcopies = copies or {}\n\t\tif typeof(orig) == \"Instance\" then\n\t\t\treturn cloneref(orig)\n\t\telseif typeof(orig) == \"userdata\" then\n\t\t\tif getmetatable(orig) then\n\t\t\t\treturn newproxy(true)\n\t\t\telse\n\t\t\t\treturn newproxy()\n\t\t\tend\n\t\telseif typeof(orig) == \"function\" then\n\t\t\tif clonefunction then\n\t\t\t\treturn clonefunction(orig)\n\t\t\tend\n\n\t\t\treturn orig\n\t\telseif type(orig) ~= \"table\" then\n\t\t\treturn orig\n\t\telseif copies[orig] then\n\t\t\treturn copies[orig]\n\t\tend\n\n\t\tlocal copy = {}\n\t\tcopies[orig] = copy\n\t\tfor k, v in next, orig do\n\t\t\tcopy[DeepClone(k, copies)] = DeepClone(v, copies)\n\t\tend\n\t\treturn copy\n\tend\n\n\tlocal ClassesConnectionsToggle = {\n\t\tRemoteEvent = \"OnClientEvent\",\n\t\tUnreliableRemoteEvent = \"OnClientEvent\",\n\t\tBindableEvent = \"Event\",\n\t}\n\n\tfunction Log:SetConnectionsEnabled(enabled: boolean)\n\t\tif not self.Instance or not ClassesConnectionsToggle[self.Instance.ClassName] then\n\t\t\treturn\n\t\tend\n\n\t\tlocal ConnectionName = ClassesConnectionsToggle[self.Instance.ClassName]\n\t\tif self.Type ~= \"Incoming\" or not ConnectionName then\n\t\t\treturn\n\t\tend\n\n\t\tlocal LoggingFunctions = wax.shared.IncomingLogConnectionFunctions\n\t\tfor _, Connection in getconnections(self.Instance[ConnectionName]) do\n\t\t\tif LoggingFunctions and LoggingFunctions[Connection.Function] then\n\t\t\t\tcontinue\n\t\t\tend\n\n\t\t\tif enabled then\n\t\t\t\tConnection:Enable()\n\t\t\telse\n\t\t\t\tConnection:Disable()\n\t\t\tend\n\t\tend\n\tend\n\n\tfunction Log:Call(RawInfo)\n\t\tif self.Instance == wax.shared.Communicator then\n\t\t\treturn\n\t\tend\n\n\t\tRawInfo[\"Actor\"] = CurrentActor\n\t\tlocal Info = DeepClone(RawInfo)\n\n\t\t--// Fix Arguments \\\\--\n\t\tlocal OldArguments = Info.Arguments\n\t\tInfo.Arguments = {\n\t\t\tData = OldArguments,\n\t\t\tn = OldArguments.n or rawlen(OldArguments),\n\t\t}\n\n\t\tif Info.OriginalInvokeArgs then\n\t\t\tlocal OldOriginalInvokeArgs = Info.OriginalInvokeArgs\n\t\t\tInfo.OriginalInvokeArgs = {\n\t\t\t\tData = OldOriginalInvokeArgs,\n\t\t\t\tn = OldOriginalInvokeArgs.n or rawlen(OldOriginalInvokeArgs),\n\t\t\t}\n\t\tend\n\n\t\t-- FIX: Bungkus seluruh serialisasi + fire dengan pcall\n\t\t-- Jika FixTable crash karena cyclic/metatable aneh → tidak force close game\n\t\tlocal identity = getthreadidentity()\n\t\tlocal fireSuccess, fireErr = pcall(function()\n\t\t\tsetthreadidentity(8)\n\t\t\tlocal FixedInfo, CyclicRefs = FixTable(Info)\n\t\t\twax.shared.Communicator.Fire(wax.shared.Communicator, \"ActorCall\", self.Instance, self.Type, FixedInfo, CyclicRefs)\n\t\tend)\n\t\tsetthreadidentity(identity) -- selalu restore identity\n\t\tif not fireSuccess then\n\t\t\t-- Gagal kirim ke main thread, tapi game tidak crash\n\t\t\twarn(\"[Cobalt Actor] Failed to relay remote call:\", tostring(fireErr))\n\t\tend\n\tend\n\n\tfunction Log:Ignore()\n\t\tself.Ignored = not self.Ignored\n\tend\n\n\tfunction Log:Block()\n\t\tself.Blocked = not self.Blocked\n\t\tself:SetConnectionsEnabled(not self.Blocked)\n\tend\nend\n\nwax.shared.Logs = {\n\tOutgoing = {},\n\tIncoming = {},\n}\n\nwax.shared.NewLog = function(Instance, Type, Method, Index, CallingScript)\n\tlocal NewLog = wax.shared.Log.new(Instance, Type, Method, Index, CallingScript)\n\twax.shared.Logs[Type][Instance] = NewLog\n\treturn NewLog\nend\n"
+inst_7.Value = "local getrawmetatable = getrawmetatable or debug.getmetatable\n\nwax.shared.Communicator.Event:Connect(function(Type, ...)\n\tif Type ~= \"Unload\" then\n\t\treturn\n\tend\n\n\tlocal gameMetatable = getrawmetatable(game)\n\n\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\tpcall(oth.unhook, gameMetatable.__namecall)\n\t\tpcall(oth.unhook, gameMetatable.__newindex)\n\telse\n\t\tif wax.shared.ExecutorSupport[\"restorefunction\"].IsWorking and not wax.shared.AlternativeEnabled then\n\t\t\tpcall(restorefunction, gameMetatable.__namecall)\n\t\t\tpcall(restorefunction, gameMetatable.__newindex)\n\t\telse\n\t\t\twax.shared.Hooking.HookMetaMethod(game, \"__namecall\", wax.shared.NamecallHook)\n\t\t\twax.shared.Hooking.HookMetaMethod(game, \"__newindex\", wax.shared.NewIndexHook)\n\t\tend\n\tend\n\n\tfor Function, Original in pairs(wax.shared.Hooks) do\n\t\tif wax.shared.ExecutorSupport[\"oth\"].IsWorking then\n\t\t\ttask.spawn(pcall, oth.unhook, Function)\n\t\telseif wax.shared.ExecutorSupport[\"restorefunction\"].IsWorking then\n\t\t\ttask.spawn(pcall, wax.shared.restorefunction, Function)\n\t\telse\n\t\t\tpcall(wax.shared.Hooking.HookFunction, Function, Original)\n\t\tend\n\tend\n\n\ttask.defer(function()\n\t\tgetgenv().CobaltInitialized = false\n\tend)\nend)\n"
+inst_10.Value = "../Default/Incoming.luau"
+inst_11.Value = "../Default/Outgoing.luau"
+inst_31.Value = "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Cobalt - Session Viewer</title>\n    <link\n      rel=\"icon\"\n      type=\"image/png\"\n      href=\"https://cobalt-xil.pages.dev/Assets/Logo.png\"\n    />\n    <style>\n      :root {\n        --bg-color: #0b0b0b;\n        --surface-color: #161b22;\n        --border-color: #30363d;\n        --text-primary: #c9d1d9;\n        --text-secondary: #8b949e;\n        --accent-blue: #58a6ff;\n        --accent-green: #3fb950;\n        --accent-orange: #d29922;\n        --accent-red: #ff7b72;\n        --font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n          Helvetica, Arial, sans-serif;\n      }\n\n      body {\n        background-color: var(--bg-color);\n        color: var(--text-primary);\n        font-family: var(--font-family);\n        margin: 0;\n        padding: 0;\n        font-size: 13px;\n        height: 100vh;\n        display: flex;\n        flex-direction: column;\n        overflow: hidden;\n      }\n\n      /* Top Header */\n      .app-header {\n        height: 50px;\n        border-bottom: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        padding: 0 20px;\n        background-color: var(--bg-color);\n        flex-shrink: 0;\n        z-index: 10;\n      }\n\n      .brand {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n        font-size: 16px;\n        font-weight: 600;\n        color: #fff;\n      }\n\n      .brand-icon {\n        width: 20px;\n        height: 20px;\n        background-image: url(\"https://cobalt-xil.pages.dev/Assets/Logo.png\");\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .session-container {\n        position: relative;\n        display: flex;\n        flex-direction: column;\n        align-items: flex-end;\n      }\n\n      .session-info {\n        color: var(--text-secondary);\n        font-family: monospace;\n        font-size: 12px;\n        cursor: pointer;\n        padding: 2px 5px;\n        border-radius: 4px;\n        transition: background-color 0.2s ease;\n        user-select: none;\n      }\n\n      .session-info:hover {\n        background-color: #1c2128;\n      }\n\n      .session-id {\n        color: #fff;\n      }\n\n      .session-tooltip {\n        position: absolute;\n        top: 100%;\n        right: 0;\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        padding: 10px;\n        z-index: 100;\n        width: 250px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        margin-top: 5px;\n        opacity: 0;\n        transform: translateY(-10px);\n        pointer-events: none;\n        visibility: hidden;\n        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;\n      }\n\n      .session-tooltip::before {\n        content: \"\";\n        position: absolute;\n        top: -10px;\n        left: 0;\n        width: 100%;\n        height: 10px;\n        background: transparent;\n      }\n\n      .session-container:hover .session-tooltip,\n      .session-tooltip.visible {\n        opacity: 1;\n        transform: translateY(0);\n        pointer-events: auto;\n        visibility: visible;\n      }\n\n      .tooltip-row {\n        display: flex;\n        justify-content: space-between;\n        margin-bottom: 5px;\n        font-size: 11px;\n      }\n\n      .tooltip-label {\n        color: var(--text-secondary);\n      }\n\n      .tooltip-value {\n        color: var(--text-primary);\n        font-family: monospace;\n        user-select: text;\n      }\n\n      /* Mobile Responsiveness */\n      @media (max-width: 768px) {\n        .app-header {\n          height: auto;\n          flex-wrap: wrap;\n          padding: 10px;\n          gap: 10px;\n        }\n\n        .brand {\n          font-size: 14px;\n        }\n\n        .session-container {\n          align-items: flex-start;\n          display: none;\n          /* Hide session info on mobile to save space */\n        }\n\n        .trace-toolbar {\n          height: auto;\n          flex-wrap: wrap;\n          padding: 10px;\n          gap: 10px;\n          justify-content: space-between;\n        }\n\n        /* Hide non-essential info on mobile */\n        .trace-toolbar > div:first-child,\n        #statsLabel {\n          display: none;\n        }\n\n        .search-widget {\n          width: 100%;\n          order: 3;\n          margin-top: 5px;\n        }\n\n        .view-toggle {\n          width: 100%;\n          display: flex;\n        }\n\n        .view-btn {\n          flex: 1;\n          text-align: center;\n        }\n\n        .row-list {\n          width: 60vw;\n          /* Use viewport width to prevent runaway expansion */\n        }\n\n        .col-list {\n          width: 60vw;\n          flex: none;\n        }\n\n        .details-panel.visible {\n          position: fixed;\n          top: 0;\n          left: 0;\n          width: 100%;\n          height: 100%;\n          z-index: 1000;\n          border-left: none;\n        }\n\n        .details-header-top {\n          margin-top: 10px;\n        }\n\n        /* Fix Details Header Overflow */\n        .details-title-group {\n          min-width: 0;\n          flex: 1;\n          margin-right: 10px;\n        }\n\n        .details-name-large {\n          white-space: nowrap;\n          overflow: hidden;\n          text-overflow: ellipsis;\n        }\n\n        .details-actions {\n          flex-shrink: 0;\n        }\n\n        /* Allow wrapping for paths on mobile */\n        .details-path-row,\n        .origin-row,\n        .remote-path-copy {\n          white-space: normal !important;\n          word-break: break-all;\n        }\n      }\n\n      /* Scrollbars */\n      ::-webkit-scrollbar {\n        width: 10px;\n        height: 10px;\n      }\n\n      ::-webkit-scrollbar-track {\n        background: #0d1117;\n      }\n\n      ::-webkit-scrollbar-thumb {\n        background: #30363d;\n        border-radius: 5px;\n        border: 2px solid #0d1117;\n      }\n\n      ::-webkit-scrollbar-thumb:hover {\n        background: #8b949e;\n      }\n\n      ::-webkit-scrollbar-corner {\n        background: var(--bg-color);\n      }\n\n      /* Heatmap Styles */\n      .heatmap-container {\n        flex: 1;\n        display: none;\n        flex-direction: column;\n        overflow: hidden;\n        background-color: var(--bg-color);\n        position: relative;\n      }\n\n      .heatmap-container.visible {\n        display: flex;\n      }\n\n      .heatmap-canvas {\n        flex: 1;\n        width: 100%;\n        height: 100%;\n      }\n\n      .view-toggle {\n        display: flex;\n        background: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 4px;\n        overflow: hidden;\n      }\n\n      .view-btn {\n        padding: 4px 12px;\n        font-size: 12px;\n        cursor: pointer;\n        color: var(--text-secondary);\n        background: transparent;\n        border: none;\n        transition: all 0.2s;\n      }\n\n      .view-btn.active {\n        background: var(--accent-blue);\n        color: white;\n      }\n\n      .view-btn:hover:not(.active) {\n        background: #30363d;\n      }\n\n      /* Main Layout */\n      .main-container {\n        display: flex;\n        flex: 1;\n        overflow: hidden;\n      }\n\n      /* Left Panel: Trace View */\n      .trace-panel {\n        flex: 1;\n        display: flex;\n        flex-direction: column;\n        border-right: 1px solid var(--border-color);\n        min-width: 0;\n        overflow: hidden;\n      }\n\n      .trace-toolbar {\n        height: 40px;\n        border-bottom: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        padding: 0 10px;\n        gap: 10px;\n        background-color: var(--bg-color);\n        flex-shrink: 0;\n      }\n\n      .search-widget {\n        display: flex;\n        flex-direction: column;\n        background-color: var(--bg-color);\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        width: 320px;\n        position: relative;\n        transition: border-color 0.2s ease, border-radius 0.2s ease;\n        box-sizing: border-box;\n      }\n\n      .search-widget:focus-within {\n        border-color: var(--accent-blue);\n      }\n\n      .search-widget:focus-within > .search-options {\n        border-color: var(--accent-blue);\n      }\n\n      .search-widget.expanded {\n        border-bottom-left-radius: 0;\n        border-bottom-right-radius: 0;\n        border-bottom-color: transparent;\n      }\n\n      .search-row {\n        display: flex;\n        align-items: center;\n        padding: 4px;\n      }\n\n      .search-chevron {\n        cursor: pointer;\n        padding: 2px;\n        color: var(--text-secondary);\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: transform 0.2s ease, color 0.2s ease;\n        width: 20px;\n        height: 20px;\n        border-radius: 4px;\n      }\n\n      .search-chevron:hover {\n        background-color: rgba(255, 255, 255, 0.1);\n        color: var(--text-primary);\n      }\n\n      .search-chevron.expanded {\n        transform: rotate(90deg);\n      }\n\n      .search-input-container {\n        flex: 1;\n        display: flex;\n        align-items: center;\n        margin-left: 4px;\n      }\n\n      .search-input {\n        background: transparent;\n        border: none;\n        color: var(--text-primary);\n        font-size: 12px;\n        width: 100%;\n        outline: none;\n        height: 20px;\n      }\n\n      .search-options {\n        transition: border-color 0.2s ease, border-radius 0.2s ease;\n        display: none;\n        padding: 10px;\n        border: 1px solid var(--border-color);\n        border-top: none;\n        background-color: var(--bg-color);\n        flex-direction: column;\n        gap: 12px;\n        position: absolute;\n        top: 100%;\n        left: -1px;\n        right: -1px;\n        z-index: 100;\n        border-bottom-left-radius: 6px;\n        border-bottom-right-radius: 6px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);\n        box-sizing: border-box;\n      }\n\n      .search-options.visible {\n        display: flex;\n      }\n\n      .time-range-row {\n        display: flex;\n        align-items: center;\n        gap: 8px;\n        font-size: 11px;\n        color: var(--text-secondary);\n      }\n\n      .filter-options-row {\n        display: flex;\n        flex-wrap: wrap;\n        gap: 8px;\n        padding-top: 8px;\n        border-top: 1px solid var(--border-color);\n      }\n\n      .filter-checkbox-label {\n        display: flex;\n        align-items: center;\n        gap: 4px;\n        font-size: 11px;\n        color: var(--text-secondary);\n        cursor: pointer;\n        user-select: none;\n      }\n\n      .filter-checkbox-label:hover {\n        color: var(--text-primary);\n      }\n\n      .filter-checkbox {\n        accent-color: var(--accent-blue);\n      }\n\n      .time-input-styled {\n        background-color: #161b22;\n        border: 1px solid var(--border-color);\n        color: var(--text-primary);\n        border-radius: 4px;\n        padding: 4px 8px;\n        width: 60px;\n        outline: none;\n        font-size: 11px;\n        transition: border-color 0.2s ease;\n        margin: 0 2px;\n      }\n\n      .time-input-styled:focus {\n        border-color: var(--accent-blue);\n      }\n\n      .unit-select {\n        background-color: #161b22;\n        border: 1px solid var(--border-color);\n        color: var(--text-primary);\n        border-radius: 4px;\n        outline: none;\n        font-size: 11px;\n        padding: 3px 6px;\n        cursor: pointer;\n        transition: border-color 0.2s ease;\n      }\n\n      .unit-select:focus {\n        border-color: var(--accent-blue);\n      }\n\n      .trace-header-row {\n        display: flex;\n        height: 30px;\n        border-bottom: 1px solid var(--border-color);\n        background-color: var(--surface-color);\n        font-size: 11px;\n        color: var(--text-secondary);\n        line-height: 30px;\n        flex-shrink: 0;\n      }\n\n      .col-list {\n        width: 300px;\n        padding-left: 15px;\n        border-right: 1px solid var(--border-color);\n        flex-shrink: 0;\n        z-index: 5;\n        background-color: var(--surface-color);\n        box-sizing: border-box;\n        /* Match row-list */\n      }\n\n      .col-timeline {\n        flex: 1;\n        position: relative;\n        overflow: hidden;\n        min-width: calc(100vw - 300px);\n      }\n\n      .timeline-ruler {\n        position: relative;\n        top: 0;\n        left: 0;\n        height: 100%;\n        pointer-events: none;\n      }\n\n      .tick {\n        position: absolute;\n        top: 0;\n        bottom: 0;\n        border-left: 1px solid #30363d;\n        font-size: 10px;\n        color: #484f58;\n        padding-left: 4px;\n      }\n\n      .trace-rows {\n        flex: 1;\n        overflow: auto;\n        /* Ensure both scrollbars appear */\n        position: relative;\n        contain: strict;\n      }\n\n      .virtual-spacer {\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 1px;\n      }\n\n      .virtual-content {\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n      }\n\n      .trace-row {\n        display: flex;\n        height: 28px;\n        /* align-items: center;  Removed to allow children to stretch */\n        cursor: pointer;\n        /* border-bottom: 1px solid #1c2128; Moved to children */\n        width: fit-content;\n        min-width: 100%;\n        transition: background-color 0.1s ease;\n        box-sizing: border-box;\n      }\n\n      .trace-row:hover {\n        background-color: #1c2128;\n      }\n\n      .trace-row.selected {\n        background-color: rgba(88, 166, 255, 0.1);\n      }\n\n      .trace-row.hidden {\n        display: none;\n      }\n\n      .trace-row:hover * {\n        background-color: #1c2128;\n      }\n\n      .trace-row.selected * {\n        background-color: #1c2333;\n      }\n\n      .row-list {\n        width: 300px;\n        padding-left: 15px;\n        /* Use box-shadow for sticky border to prevent it from disappearing */\n        box-shadow: 1px 0 0 0 var(--border-color);\n        border-right: none;\n        border-bottom: 1px solid #1c2128;\n        /* Added border here */\n        display: flex;\n        align-items: center;\n        overflow: hidden;\n        flex-shrink: 0;\n        box-sizing: border-box;\n        position: sticky;\n        left: 0;\n        background-color: var(--bg-color);\n        z-index: 2;\n        transition: background-color 0.1s ease;\n        height: 100%;\n      }\n\n      .row-timeline {\n        flex: 1;\n        position: relative;\n        height: 100%;\n        overflow: hidden;\n        border-bottom: 1px solid #1c2128;\n        /* Added border here */\n        box-sizing: border-box;\n        /* Ensure border is inside height */\n      }\n\n      .type-icon {\n        width: 16px;\n        height: 16px;\n        margin-right: 8px;\n        flex-shrink: 0;\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .remote-name {\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        color: var(--text-primary);\n        font-size: 12px;\n      }\n\n      .timeline-marker {\n        position: absolute;\n        top: 10px;\n        height: 8px;\n        min-width: 4px;\n        border-radius: 4px;\n        opacity: 0.9;\n      }\n\n      .timeline-marker.incoming {\n        background: linear-gradient(90deg, var(--accent-green), #2ea043);\n      }\n\n      .timeline-marker.outgoing {\n        background: linear-gradient(90deg, var(--accent-orange), #b08800);\n      }\n\n      /* Right Panel: Details */\n      .details-panel {\n        width: 0;\n        opacity: 0;\n        background-color: var(--bg-color);\n        border-left: 0 solid var(--border-color);\n        display: flex;\n        flex-direction: column;\n        padding: 0;\n        box-sizing: border-box;\n        overflow-y: auto;\n        overflow-x: hidden;\n        position: relative;\n        flex-shrink: 0;\n        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease,\n          padding 0.3s ease;\n      }\n\n      .details-panel.visible {\n        width: 450px;\n        opacity: 1;\n        padding: 20px;\n        border-left: 1px solid var(--border-color);\n      }\n\n      /* Header */\n      .details-header-top {\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        margin-bottom: 10px;\n      }\n\n      .details-title-group {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n      }\n\n      .details-icon-large {\n        width: 32px;\n        height: 32px;\n        background-size: contain;\n        background-repeat: no-repeat;\n        background-position: center;\n      }\n\n      .details-name-large {\n        font-size: 20px;\n        font-weight: 600;\n        color: #fff;\n      }\n\n      .details-actions {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n      }\n\n      .close-btn {\n        cursor: pointer;\n        color: var(--text-secondary);\n        font-size: 20px;\n        transition: color 0.2s ease;\n        line-height: 1;\n      }\n\n      .close-btn:hover {\n        color: #fff;\n      }\n\n      /* Unified Badge Style */\n      .badge-pill {\n        padding: 4px 12px;\n        border-radius: 20px;\n        font-size: 11px;\n        font-weight: 600;\n        text-transform: uppercase;\n        border: 1px solid;\n        letter-spacing: 0.5px;\n        white-space: nowrap;\n      }\n\n      .badge-pill.incoming {\n        color: var(--accent-green);\n        border-color: var(--accent-green);\n      }\n\n      .badge-pill.outgoing {\n        color: var(--accent-orange);\n        border-color: var(--accent-orange);\n      }\n\n      .badge-pill.executor {\n        color: var(--accent-green);\n        border-color: var(--accent-green);\n      }\n\n      .badge-pill.actor {\n        color: var(--accent-red);\n        border-color: var(--accent-red);\n        background: repeating-linear-gradient(\n          45deg,\n          transparent,\n          transparent 2px,\n          rgba(255, 123, 114, 0.1) 2px,\n          rgba(255, 123, 114, 0.1) 4px\n        );\n      }\n\n      .badge-pill.blocked {\n        color: var(--accent-red);\n        border-color: var(--accent-red);\n      }\n\n      .details-path-row {\n        color: var(--text-secondary);\n        font-size: 12px;\n        margin-bottom: 20px;\n        font-family: monospace;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        height: 1.2em;\n      }\n\n      .remote-path-copy {\n        cursor: pointer;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n        transition: color 0.2s ease;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        display: block;\n        width: 25%;\n      }\n\n      .remote-path-copy:hover {\n        color: var(--accent-blue);\n      }\n\n      /* Info Grid 2 */\n      .info-grid-2 {\n        display: flex;\n        gap: 20px;\n        margin-bottom: 25px;\n      }\n\n      .info-item-2 h4 {\n        margin: 0 0 6px 0;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n      }\n\n      .info-item-2 div {\n        font-size: 11px;\n        color: var(--text-primary);\n        font-family: monospace;\n      }\n\n      /* Info Grid */\n      .info-grid {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        gap: 20px;\n        margin-bottom: 25px;\n      }\n\n      .info-item h4 {\n        margin: 0 0 6px 0;\n        color: var(--text-secondary);\n        font-size: 12px;\n        font-weight: normal;\n      }\n\n      .info-item div {\n        font-size: 14px;\n        color: var(--text-primary);\n        font-family: monospace;\n      }\n\n      .clickable-path {\n        border-bottom: 1px dashed var(--text-secondary);\n        cursor: pointer;\n        transition: color 0.2s, border-color 0.2s;\n      }\n\n      .clickable-path:hover {\n        color: var(--accent-blue);\n        border-color: var(--accent-blue);\n      }\n\n      /* Content Boxes */\n      .content-box {\n        border: 1px solid var(--border-color);\n        border-radius: 8px;\n        padding: 15px;\n        margin-bottom: 20px;\n        position: relative;\n        background-color: rgba(22, 27, 34, 0.5);\n      }\n\n      .box-title {\n        position: absolute;\n        top: -10px;\n        left: 10px;\n        background-color: var(--bg-color);\n        padding: 0 5px;\n        font-size: 11px;\n        color: var(--text-secondary);\n      }\n\n      .caller-header {\n        display: flex;\n        align-items: center;\n        gap: 10px;\n        margin-bottom: 15px;\n      }\n\n      .caller-icon {\n        color: var(--text-secondary);\n        display: flex;\n        align-items: center;\n        justify-content: center;\n      }\n\n      .caller-icon svg {\n        width: 24px;\n        height: 24px;\n      }\n\n      .caller-info {\n        flex: 1;\n        min-width: 0;\n        /* Critical for flex child truncation */\n      }\n\n      .caller-name {\n        color: var(--accent-blue);\n        font-family: monospace;\n        font-size: 14px;\n        margin-bottom: 2px;\n      }\n\n      .caller-source {\n        color: var(--text-secondary);\n        font-size: 11px;\n        font-family: monospace;\n        height: 1.2em;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        display: block;\n      }\n\n      .flags-row {\n        display: flex;\n        gap: 10px;\n        margin-bottom: 10px;\n        align-items: center;\n      }\n\n      .origin-row {\n        font-size: 12px;\n        color: var(--text-primary);\n        font-family: monospace;\n        display: block;\n        white-space: nowrap;\n        height: 1.2em;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        width: 35%;\n      }\n\n      /* Arguments */\n      .args-content {\n        font-family: \"Consolas\", \"Monaco\", monospace;\n        font-size: 12px;\n        white-space: pre-wrap;\n        overflow-x: auto;\n        color: #e0e0e0;\n        max-height: 300px;\n        overflow-y: auto;\n        line-height: 1.5;\n      }\n\n      /* Copy Button with Animation */\n      .copy-icon-btn {\n        position: absolute;\n        top: 10px;\n        right: 10px;\n        background: transparent;\n        border: 1px solid var(--border-color);\n        border-radius: 4px;\n        color: var(--text-secondary);\n        cursor: pointer;\n        width: 28px;\n        height: 28px;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: all 0.2s;\n        overflow: hidden;\n        /* Ensure check icon doesn't spill out */\n      }\n\n      .copy-icon-btn:hover {\n        border-color: var(--text-primary);\n        color: var(--text-primary);\n        background-color: var(--surface-color);\n      }\n\n      .copy-icon-btn svg {\n        width: 14px;\n        height: 14px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate(-50%, -50%) scale(1);\n        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n      }\n\n      .copy-icon-btn .icon-check {\n        transform: translate(-50%, -50%) scale(0);\n        color: var(--accent-green);\n      }\n\n      .copy-icon-btn.copied .icon-copy {\n        transform: translate(-50%, -50%) scale(0);\n      }\n\n      .copy-icon-btn.copied .icon-check {\n        transform: translate(-50%, -50%) scale(1);\n      }\n\n      /* Dropdown */\n      .dropdown-menu {\n        position: absolute;\n        top: 42px;\n        /* Button height + spacing */\n        right: 10px;\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        width: 160px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        z-index: 50;\n        display: none;\n        overflow: hidden;\n      }\n\n      .dropdown-menu.visible {\n        display: block;\n      }\n\n      .dropdown-item {\n        padding: 8px 12px;\n        font-size: 12px;\n        color: var(--text-primary);\n        cursor: pointer;\n        transition: background-color 0.2s;\n        display: flex;\n        align-items: center;\n        gap: 8px;\n      }\n\n      .dropdown-item:hover {\n        background-color: var(--accent-blue);\n        color: #fff;\n      }\n\n      .dropdown-item svg {\n        width: 14px;\n        height: 14px;\n        opacity: 0.7;\n      }\n\n      /* Toast Notification */\n      .toast-container {\n        position: fixed;\n        bottom: 30px;\n        left: 50%;\n        transform: translateX(-50%) translateY(20px);\n        background-color: #1c2128;\n        border: 1px solid var(--border-color);\n        border-radius: 6px;\n        padding: 8px 16px;\n        color: #fff;\n        font-size: 12px;\n        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);\n        opacity: 0;\n        transition: opacity 0.3s, transform 0.3s;\n        pointer-events: none;\n        z-index: 1000;\n        display: flex;\n        align-items: center;\n        gap: 8px;\n      }\n\n      .toast-container.visible {\n        opacity: 1;\n        transform: translateX(-50%) translateY(0);\n      }\n\n      .toast-container svg {\n        width: 16px;\n        height: 16px;\n        color: var(--accent-green);\n      }\n\n      /* Syntax Highlighting */\n      .hl-str {\n        color: #a5d6ff;\n      }\n\n      .hl-num {\n        color: #79c0ff;\n      }\n\n      .hl-bool {\n        color: #ff7b72;\n      }\n\n      .hl-key {\n        color: #7ee787;\n      }\n\n      .hl-nil {\n        color: #ff7b72;\n      }\n\n      .footer {\n        height: 25px;\n        border-top: 1px solid var(--border-color);\n        display: flex;\n        align-items: center;\n        justify-content: space-between;\n        padding: 0 20px;\n        background-color: var(--bg-color);\n        color: var(--text-secondary);\n        font-size: 11px;\n        flex-shrink: 0;\n      }\n    </style>\n  </head>\n\n  <body>\n    <div class=\"app-header\">\n      <a\n        href=\"https://github.com/notpoiu/cobalt/tree/main\"\n        target=\"_blank\"\n        style=\"text-decoration: none\"\n      >\n        <div class=\"brand\">\n          <div class=\"brand-icon\"></div>\n          Cobalt - Session Viewer\n        </div>\n      </a>\n      <div class=\"session-container\">\n        <div class=\"session-info\">\n          Session / <span class=\"session-id\">{{SESSION_ID}}</span>\n        </div>\n        <div class=\"session-tooltip\">\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Start Time (tick)</span>\n            <span class=\"tooltip-value\">{{START_TIME}}</span>\n          </div>\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Place ID</span>\n            <span class=\"tooltip-value\">{{PLACE_ID}}</span>\n          </div>\n          <div class=\"tooltip-row\">\n            <span class=\"tooltip-label\">Job ID</span>\n            <span class=\"tooltip-value\">{{JOB_ID}}</span>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"main-container\">\n      <!-- LEFT PANEL WRAPPER -->\n      <div\n        class=\"left-panel-wrapper\"\n        style=\"\n          flex: 1;\n          display: flex;\n          flex-direction: column;\n          border-right: 1px solid var(--border-color);\n          min-width: 0;\n          overflow: hidden;\n        \"\n      >\n        <!-- SHARED TOOLBAR -->\n        <div class=\"trace-toolbar\">\n          <div\n            style=\"\n              font-size: 11px;\n              color: var(--text-secondary);\n              margin-right: 20px;\n            \"\n          >\n            Started: {{DATE}}\n          </div>\n          <div style=\"flex: 1\"></div>\n          <div class=\"view-toggle\">\n            <button class=\"view-btn active\" onclick=\"switchView('timeline')\">\n              Timeline\n            </button>\n            <button class=\"view-btn\" onclick=\"switchView('heatmap')\">\n              Heatmap\n            </button>\n          </div>\n          <div class=\"divider\"></div>\n          <div class=\"search-widget\">\n            <div class=\"search-row\">\n              <div\n                class=\"search-chevron\"\n                onclick=\"toggleSearchOptions()\"\n                id=\"searchChevron\"\n              >\n                <svg\n                  width=\"16\"\n                  height=\"16\"\n                  viewBox=\"0 0 16 16\"\n                  fill=\"currentColor\"\n                >\n                  <path\n                    d=\"M6 4l4 4-4 4\"\n                    stroke=\"currentColor\"\n                    stroke-width=\"1.5\"\n                    fill=\"none\"\n                  />\n                </svg>\n              </div>\n              <div class=\"search-input-container\">\n                <input\n                  type=\"text\"\n                  class=\"search-input\"\n                  id=\"filterInput\"\n                  placeholder=\"Filter events...\"\n                  oninput=\"handleFilterInput()\"\n                />\n              </div>\n            </div>\n            <div class=\"search-options\" id=\"searchOptions\">\n              <div class=\"time-range-row\">\n                <span>Time Range:</span>\n                <input\n                  type=\"number\"\n                  class=\"time-input-styled\"\n                  id=\"minTimeInput\"\n                  placeholder=\"Start\"\n                  oninput=\"handleTimeInput()\"\n                />\n                <span>-</span>\n                <input\n                  type=\"number\"\n                  class=\"time-input-styled\"\n                  id=\"maxTimeInput\"\n                  placeholder=\"End\"\n                  oninput=\"handleTimeInput()\"\n                />\n                <select\n                  class=\"unit-select\"\n                  id=\"timeUnitSelect\"\n                  onchange=\"handleTimeInput()\"\n                >\n                  <option value=\"1\">s</option>\n                  <option value=\"0.001\">ms</option>\n                </select>\n              </div>\n              <div class=\"filter-options-row\">\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterIncoming\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Incoming</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterOutgoing\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Outgoing</label\n                >\n                <div\n                  style=\"\n                    width: 1px;\n                    height: 14px;\n                    background: var(--border-color);\n                    margin: 0 4px;\n                  \"\n                ></div>\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterActor\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Actor</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterNonActor\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Non-Actor</label\n                >\n                <div\n                  style=\"\n                    width: 1px;\n                    height: 14px;\n                    background: var(--border-color);\n                    margin: 0 4px;\n                  \"\n                ></div>\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterArgs\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Args</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterProto\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Proto</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterConst\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Const</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterHash\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Hash</label\n                >\n                <label class=\"filter-checkbox-label\"\n                  ><input\n                    type=\"checkbox\"\n                    class=\"filter-checkbox\"\n                    id=\"filterSource\"\n                    onchange=\"handleFilterInput()\"\n                  />\n                  Source</label\n                >\n              </div>\n            </div>\n          </div>\n        </div>\n\n        <!-- TIMELINE VIEW -->\n        <div class=\"trace-panel\" id=\"timelinePanel\" style=\"border-right: none\">\n          <div class=\"trace-header-row\">\n            <div class=\"col-list\">Remote</div>\n            <div class=\"col-timeline\" id=\"timelineHeader\">\n              <div class=\"timeline-ruler\" id=\"ruler\"></div>\n            </div>\n          </div>\n\n          <div class=\"trace-rows\" id=\"rowsContainer\">\n            <div id=\"virtualSpacer\" class=\"virtual-spacer\"></div>\n            <div id=\"virtualContent\" class=\"virtual-content\"></div>\n          </div>\n        </div>\n\n        <!-- HEATMAP VIEW -->\n        <div class=\"heatmap-container\" id=\"heatmapPanel\">\n          <div\n            id=\"heatmapScroll\"\n            style=\"\n              width: 100%;\n              height: 100%;\n              overflow-x: auto;\n              overflow-y: hidden;\n              position: relative;\n            \"\n          >\n            <div\n              id=\"heatmapSpacer\"\n              style=\"\n                height: 1px;\n                width: 100%;\n                position: absolute;\n                top: 0;\n                left: 0;\n                pointer-events: none;\n              \"\n            ></div>\n            <canvas\n              id=\"heatmapCanvas\"\n              class=\"heatmap-canvas\"\n              style=\"\n                position: sticky;\n                left: 0;\n                top: 0;\n                width: 100%;\n                height: 100%;\n              \"\n            ></canvas>\n          </div>\n          <div\n            id=\"heatmapTooltip\"\n            class=\"heatmap-tooltip\"\n            style=\"\n              display: none;\n              position: absolute;\n              background: #1c2128;\n              border: 1px solid #30363d;\n              padding: 4px 8px;\n              border-radius: 4px;\n              font-size: 11px;\n              color: #c9d1d9;\n              pointer-events: none;\n              z-index: 100;\n            \"\n          ></div>\n        </div>\n      </div>\n\n      <!-- RIGHT PANEL -->\n      <div class=\"details-panel\" id=\"detailsPanel\">\n        <div id=\"detailsContent\"></div>\n      </div>\n    </div>\n\n    <div class=\"footer\">\n      <div>Ended: {{END_DATE}}</div>\n      <span\n        id=\"statsLabel\"\n        style=\"\n          color: var(--text-secondary);\n          font-size: 11px;\n          margin-right: 10px;\n        \"\n      >\n        {{EVENT_COUNT}} Events • {{TOTAL_DURATION}}s\n      </span>\n    </div>\n\n    <!-- Toast Notification -->\n    <div id=\"toast\" class=\"toast-container\">\n      <svg\n        xmlns=\"http://www.w3.org/2000/svg\"\n        width=\"24\"\n        height=\"24\"\n        viewBox=\"0 0 24 24\"\n        fill=\"none\"\n        stroke=\"currentColor\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n        stroke-linejoin=\"round\"\n        class=\"lucide lucide-check\"\n      >\n        <path d=\"M20 6 9 17l-5-5\" />\n      </svg>\n      <span id=\"toastMessage\">Copied to clipboard</span>\n    </div>\n\n    <!-- Data Script -->\n    <script type=\"application/json\" id=\"dictionary-data\">\n      {{DICTIONARY_JSON}}\n    </script>\n    <script type=\"application/json\" id=\"event-data\">\n      {{EVENTS_JSON}}\n    </script>\n\n    <script>\n      // Data Parsing\n      let startTime = {{START_TIME}}; // Seconds\n      const totalDuration = {{DURATION}};\n      const dictionary = JSON.parse(document.getElementById('dictionary-data').textContent);\n      const rawEvents = JSON.parse(document.getElementById('event-data').textContent);\n\n      // Reconstruct Events\n      const allEvents = rawEvents.map(e => ({\n        name: dictionary[e[0]],\n        className: dictionary[e[1]],\n        path: dictionary[e[2]],\n        type: dictionary[e[3]],\n        timestamp: e[4],\n        origin: dictionary[e[5]],\n\n        args: dictionary[e[6]],\n        method: dictionary[e[7]],\n\n        funcName: dictionary[e[8]],\n        funcLine: e[9],\n        funcSource: dictionary[e[10]],\n        isExecutor: e[11] === 1,\n        isActor: e[12] === 1,\n\n        funcHash: dictionary[e[13]],\n        upvalues: dictionary[e[14]],\n        protos: dictionary[e[15]],\n        constants: dictionary[e[16]],\n        isBlocked: e[17] === 1\n      }));\n\n      if (allEvents.length > 0) {\n        const minTimestamp = Math.min(...allEvents.map(e => e.timestamp));\n        if (minTimestamp < startTime) {\n          startTime = minTimestamp;\n        }\n      }\n\n      // Preprocess events\n      allEvents.forEach(evt => {\n        evt.relTime = Math.max(0, evt.timestamp - startTime);\n\n        const typeLower = evt.type.toLowerCase();\n        const methodLower = evt.method ? evt.method.toLowerCase() : '';\n\n        if (methodLower.includes('client') || typeLower.includes('client')) {\n          evt.typeClass = 'incoming';\n        } else {\n          evt.typeClass = 'outgoing';\n        }\n      });\n\n      // State\n      let filteredEvents = allEvents;\n      let zoomLevel = 1;\n      let selectedEvent = null;\n      let filterTimeout = null;\n      let filterMinTime = 0;\n      let filterMaxTime = totalDuration;\n\n      // Initialize Time Inputs\n      document.getElementById('minTimeInput').value = \"0\";\n      document.getElementById('maxTimeInput').value = totalDuration.toFixed(2);\n\n      // Virtual Scroll State\n      let lastStartIndex = -1;\n      let lastEndIndex = -1;\n      let isScrolling = false;\n\n      // DOM Elements\n      const rowsContainer = document.getElementById('rowsContainer');\n      const virtualSpacer = document.getElementById('virtualSpacer');\n      const virtualContent = document.getElementById('virtualContent');\n      const rulerContainer = document.getElementById('ruler');\n      const detailsPanel = document.getElementById('detailsPanel');\n      const detailsContent = document.getElementById('detailsContent');\n      const timelineHeader = document.getElementById('timelineHeader');\n      const statsLabel = document.getElementById('statsLabel');\n\n\n      // Heatmap State\n      let currentView = 'timeline';\n      let heatmapZoom = 1;\n      let detailsWasVisible = false;\n      const heatmapCanvas = document.getElementById('heatmapCanvas');\n      const heatmapTooltip = document.getElementById('heatmapTooltip');\n\n      const timelinePanel = document.getElementById('timelinePanel');\n      const heatmapPanel = document.getElementById('heatmapPanel');\n\n      // Heatmap Interaction\n      heatmapCanvas.addEventListener('wheel', (e) => {\n        if (currentView !== 'heatmap') return;\n        e.preventDefault();\n\n        const delta = e.deltaY > 0 ? 1.1 : 0.9;\n        heatmapZoom = Math.max(1, Math.min(50, heatmapZoom * delta));\n        renderHeatmap();\n      }, { passive: false });\n\n      heatmapCanvas.addEventListener('mousemove', (e) => {\n        if (currentView !== 'heatmap') return;\n        const rect = heatmapCanvas.getBoundingClientRect();\n        const x = e.clientX - rect.left;\n        const y = e.clientY - rect.top;\n\n        if (!window.lastHeatmapData) return;\n\n        const { sortedRemotes, rowHeight, binWidth, remotes, maxBinCount, timeBins, binDuration, margin, scrollLeft } = window.lastHeatmapData;\n        const width = heatmapPanel.clientWidth;\n        const height = heatmapPanel.clientHeight;\n\n        if (x < margin.left || x > width - margin.right || y < margin.top || y > height - margin.bottom) {\n          heatmapTooltip.style.display = 'none';\n          return;\n        }\n\n        const rowIndex = Math.floor((y - margin.top) / rowHeight);\n\n        // Calculate colIndex based on virtual position (x + scrollLeft)\n        const colIndex = Math.floor((x - margin.left + scrollLeft) / binWidth);\n\n        if (rowIndex >= 0 && rowIndex < sortedRemotes.length && colIndex >= 0 && colIndex < timeBins) {\n          const remote = sortedRemotes[rowIndex];\n          // Calculate count for this bin\n          let count = 0;\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            if (binIndex === colIndex) count++;\n          });\n\n          heatmapTooltip.style.display = 'block';\n          heatmapTooltip.innerHTML = `<b>${remote}</b><br>Time: ${(colIndex * binDuration).toFixed(1)}s<br>Count: ${count}`;\n\n          const tooltipWidth = heatmapTooltip.offsetWidth;\n          const panelWidth = heatmapPanel.clientWidth;\n\n          let leftPos = x + 10;\n          if (leftPos + tooltipWidth > panelWidth - 10) {\n            leftPos = x - tooltipWidth - 10;\n          }\n\n          heatmapTooltip.style.left = leftPos + 'px';\n          heatmapTooltip.style.top = (y + 10) + 'px';\n        } else {\n          heatmapTooltip.style.display = 'none';\n        }\n      });\n\n      heatmapCanvas.addEventListener('mouseleave', () => {\n        heatmapTooltip.style.display = 'none';\n      });\n\n      document.getElementById('heatmapScroll').addEventListener('scroll', () => {\n        if (currentView === 'heatmap') {\n          renderHeatmap();\n        }\n      });\n\n      function switchView(view) {\n        currentView = view;\n        document.querySelectorAll('.view-btn').forEach(btn => {\n          btn.classList.toggle('active', btn.innerText.toLowerCase() === view);\n        });\n\n        if (view === 'timeline') {\n          timelinePanel.style.display = 'flex';\n          heatmapPanel.classList.remove('visible');\n\n          if (detailsWasVisible) {\n            detailsPanel.classList.add('visible');\n          }\n\n          renderVirtualRows(true);\n        } else {\n          if (detailsPanel.classList.contains('visible')) {\n            detailsWasVisible = true;\n            detailsPanel.classList.remove('visible');\n          } else {\n            detailsWasVisible = false;\n          }\n\n          timelinePanel.style.display = 'none';\n          heatmapPanel.classList.add('visible');\n          renderHeatmap();\n        }\n      }\n\n      function renderHeatmap() {\n        const ctx = heatmapCanvas.getContext('2d');\n        const containerWidth = heatmapPanel.clientWidth;\n        const height = heatmapPanel.clientHeight;\n        const scrollLeft = document.getElementById('heatmapScroll').scrollLeft;\n\n        // Calculate total virtual width\n        const totalWidth = containerWidth * heatmapZoom;\n\n        // Update Spacer\n        document.getElementById('heatmapSpacer').style.width = totalWidth + 'px';\n\n        const dpr = window.devicePixelRatio || 1;\n\n        // Canvas is always viewport size\n        heatmapCanvas.width = containerWidth * dpr;\n        heatmapCanvas.height = height * dpr;\n        ctx.scale(dpr, dpr);\n\n        ctx.fillStyle = '#0d1117';\n        ctx.fillRect(0, 0, containerWidth, height);\n\n        if (filteredEvents.length === 0) return;\n\n        const remotes = {};\n        filteredEvents.forEach(evt => {\n          if (!remotes[evt.name]) remotes[evt.name] = [];\n          remotes[evt.name].push(evt);\n        });\n\n        const sortedRemotes = Object.keys(remotes).sort((a, b) => remotes[b].length - remotes[a].length);\n\n        const margin = { top: 30, right: 20, bottom: 20, left: 150 };\n\n        // Virtual chart width\n        const chartWidth = totalWidth - margin.left - margin.right;\n        const chartHeight = height - margin.top - margin.bottom;\n\n        // Apply Zoom to time bins\n        const timeBins = Math.floor(100 * heatmapZoom);\n        const binWidth = chartWidth / timeBins;\n        const binDuration = totalDuration / timeBins;\n\n        // Adjust row height to fit\n        const rowHeight = Math.min(30, chartHeight / sortedRemotes.length);\n\n        // Store data for tooltip (adjusted for virtual scroll)\n        window.lastHeatmapData = { sortedRemotes, rowHeight, binWidth, remotes, timeBins, binDuration, margin, scrollLeft };\n\n        ctx.strokeStyle = '#30363d';\n        ctx.lineWidth = 1;\n\n        ctx.font = '11px -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif';\n        ctx.textAlign = 'right';\n        ctx.textBaseline = 'middle';\n\n        let maxBinCount = 0;\n        sortedRemotes.forEach(remote => {\n          const bins = new Array(timeBins).fill(0);\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            bins[binIndex]++;\n          });\n          maxBinCount = Math.max(maxBinCount, ...bins);\n        });\n\n        // Update Legend Labels\n        window.lastHeatmapData.maxBinCount = maxBinCount;\n        window.lastHeatmapData.maxBinCount = maxBinCount;\n\n        sortedRemotes.forEach((remote, i) => {\n          const y = margin.top + (i * rowHeight);\n\n          // Draw Label (Fixed position)\n          ctx.fillStyle = '#8b949e';\n          ctx.fillText(remote.length > 20 ? remote.slice(0, 18) + '...' : remote, margin.left - 10, y + rowHeight / 2);\n\n          // Draw Line\n          ctx.beginPath();\n          ctx.moveTo(margin.left, y);\n          ctx.lineTo(containerWidth - margin.right, y);\n          ctx.stroke();\n\n          const bins = new Array(timeBins).fill(0);\n          remotes[remote].forEach(evt => {\n            const binIndex = Math.min(Math.floor(evt.relTime / binDuration), timeBins - 1);\n            bins[binIndex]++;\n          });\n\n          bins.forEach((count, binIndex) => {\n            if (count === 0) return;\n\n            // Calculate virtual X\n            const virtualX = margin.left + (binIndex * binWidth);\n\n            // Apply scroll offset\n            const screenX = virtualX - scrollLeft;\n\n            // Only draw if visible\n            if (screenX + binWidth < margin.left || screenX > containerWidth - margin.right) return;\n\n            // Clamp to chart area\n            const drawX = Math.max(margin.left, screenX);\n            const drawWidth = Math.min(binWidth, (containerWidth - margin.right) - drawX);\n\n            const intensity = count / maxBinCount;\n            const hue = (1 - intensity) * 240;\n            ctx.fillStyle = `hsla(${hue}, 70%, 50%, 0.8)`;\n\n            ctx.fillRect(drawX, y + 2, drawWidth - 1, rowHeight - 4);\n          });\n        });\n\n        ctx.fillStyle = '#8b949e';\n        ctx.textAlign = 'center';\n        ctx.textBaseline = 'top';\n\n        const numTicks = 5 * Math.ceil(heatmapZoom);\n\n        for (let i = 0; i <= numTicks; i++) {\n          const virtualX = margin.left + (chartWidth * (i / numTicks));\n          const screenX = virtualX - scrollLeft;\n\n          if (screenX < margin.left || screenX > containerWidth - margin.right) continue;\n\n          const time = (totalDuration * (i / numTicks)).toFixed(1) + 's';\n          ctx.fillText(time, screenX, margin.top - 20);\n\n          ctx.beginPath();\n          ctx.moveTo(screenX, margin.top);\n          ctx.lineTo(screenX, height - margin.bottom);\n          ctx.stroke();\n        }\n      }\n\n      // Resize observer for heatmap\n      new ResizeObserver(() => {\n        if (currentView === 'heatmap' && heatmapPanel.classList.contains('visible')) {\n          renderHeatmap();\n        }\n      }).observe(heatmapPanel);\n\n      // Window resize handler for timeline\n      window.addEventListener('resize', () => {\n        if (currentView === 'timeline') {\n          renderVirtualRows(true);\n          renderRuler();\n        }\n      });\n\n      // Virtual Scroll Config\n      const ROW_HEIGHT = 29; // 28px + 1px border\n      const BUFFER_SIZE = 5;\n\n      function formatTime(seconds) {\n        if (seconds < 1) return (seconds * 1000).toFixed(1) + 'ms';\n        return seconds.toFixed(2) + 's';\n      }\n\n      function formatAbsTime(timestamp) {\n        const date = new Date(timestamp * 1000);\n        return date.toLocaleTimeString();\n      }\n\n      function getIconUrl(className) {\n        return `https://robloxapi.github.io/ref/icons/dark/${className}.png`;\n      }\n\n      function escapeHtml(text) {\n        if (!text) return '';\n        return text\n          .replace(/&/g, \"&amp;\")\n          .replace(/</g, \"&lt;\")\n          .replace(/>/g, \"&gt;\")\n          .replace(/\"/g, \"&quot;\")\n          .replace(/'/g, \"&#039;\");\n      }\n\n      function syntaxHighlight(text) {\n        if (!text) return '';\n\n        text = escapeHtml(text);\n        return text\n          .replace(/&quot;((?:[^&]|&(?!(quot;)))*)&quot;/g, '<span class=\"hl-str\">\"$1\"</span>')\n          .replace(/\\b(\\d+(\\.\\d+)?)\\b/g, '<span class=\"hl-num\">$1</span>')\n          .replace(/\\b(true|false)\\b/g, '<span class=\"hl-bool\">$1</span>')\n          .replace(/\\b(nil)\\b/g, '<span class=\"hl-nil\">$1</span>');\n      }\n\n      // Toast Logic\n      function showToast(message) {\n        const toast = document.getElementById('toast');\n        const msgSpan = document.getElementById('toastMessage');\n        msgSpan.innerText = message;\n        toast.classList.add('visible');\n        setTimeout(() => {\n          toast.classList.remove('visible');\n        }, 2000);\n      }\n\n      function copyText(text, message = \"Copied to clipboard\") {\n        navigator.clipboard.writeText(text).then(() => {\n          showToast(message);\n        });\n      }\n\n      function copyArgs(btn) {\n        if (selectedEvent) {\n          navigator.clipboard.writeText(selectedEvent.args).then(() => {\n            btn.classList.add('copied');\n            setTimeout(() => btn.classList.remove('copied'), 2000);\n          });\n        }\n      }\n\n      function toggleCallerDropdown(e) {\n        e.stopPropagation();\n        const menu = document.getElementById('callerDropdown');\n        if (menu) {\n          menu.classList.toggle('visible');\n        }\n      }\n\n      function copyCallerData(type) {\n        if (!selectedEvent) return;\n        let text = \"\";\n        let msg = \"Copied to clipboard\";\n        switch (type) {\n          case 'hash':\n            text = selectedEvent.funcHash || \"N/A\";\n            msg = \"Function Hash copied\";\n            break;\n          case 'upvalues':\n            text = selectedEvent.upvalues || \"{}\";\n            msg = \"Upvalues copied\";\n            break;\n          case 'protos':\n            text = selectedEvent.protos || \"[]\";\n            msg = \"Protos copied\";\n            break;\n          case 'path':\n            text = selectedEvent.origin || \"N/A\";\n            msg = \"Script Path copied\";\n            break;\n          case 'source':\n            text = selectedEvent.funcSource || \"N/A\";\n            msg = \"Source copied\";\n            break;\n        }\n        copyText(text, msg);\n        document.getElementById('callerDropdown').classList.remove('visible');\n      }\n\n      // Render Ruler\n      function renderRuler() {\n        rulerContainer.innerHTML = '';\n        const tickCount = Math.max(5, Math.floor(5 * zoomLevel));\n        for (let i = 0; i <= tickCount; i++) {\n          const pct = (i / tickCount) * 100;\n          const time = (totalDuration * (i / tickCount));\n          const tick = document.createElement('div');\n          tick.className = 'tick';\n          tick.style.left = pct + '%';\n          tick.innerText = formatTime(time);\n          rulerContainer.appendChild(tick);\n        }\n      }\n\n      // Scroll Sync\n      rowsContainer.addEventListener('scroll', () => {\n        timelineHeader.scrollLeft = rowsContainer.scrollLeft;\n      });\n\n      // Virtual Rendering\n      function renderVirtualRows(force = false) {\n        const scrollTop = rowsContainer.scrollTop;\n        const containerHeight = rowsContainer.clientHeight;\n\n        const totalHeight = filteredEvents.length * ROW_HEIGHT;\n        virtualSpacer.style.height = totalHeight + 'px';\n\n        const startIndex = Math.floor(scrollTop / ROW_HEIGHT);\n        const endIndex = Math.min(filteredEvents.length, Math.ceil((scrollTop + containerHeight) / ROW_HEIGHT) + BUFFER_SIZE);\n\n        if (!force && startIndex === lastStartIndex && endIndex === lastEndIndex) {\n          return;\n        }\n\n        lastStartIndex = startIndex;\n        lastEndIndex = endIndex;\n\n        const visibleEvents = filteredEvents.slice(Math.max(0, startIndex - BUFFER_SIZE), endIndex);\n        const startOffset = Math.max(0, startIndex - BUFFER_SIZE) * ROW_HEIGHT;\n\n        virtualContent.style.transform = `translateY(${startOffset}px)`;\n\n        const fragment = document.createDocumentFragment();\n        const zoomWidth = (100 * zoomLevel) + '%';\n\n        // Sync Ruler Width\n        document.getElementById('ruler').style.width = zoomWidth;\n\n        visibleEvents.forEach((evt) => {\n          const row = document.createElement('div');\n          row.className = 'trace-row';\n          if (selectedEvent === evt) row.classList.add('selected');\n\n          row.evtData = evt;\n          row.onclick = function () { selectRow(this, evt); };\n\n          const listCol = document.createElement('div');\n          listCol.className = 'row-list';\n          listCol.innerHTML = `\n                    <div class=\"type-icon\" style=\"background-image: url('${getIconUrl(evt.className)}')\"></div>\n                    <div class=\"remote-name\" title=\"${evt.name}\">${evt.name}</div>\n                `;\n\n          const timelineCol = document.createElement('div');\n          timelineCol.className = 'row-timeline';\n          timelineCol.style.width = zoomWidth;\n          timelineCol.style.flex = 'none';\n\n          const marker = document.createElement('div');\n          marker.className = `timeline-marker ${evt.typeClass}`;\n\n          let leftPct = ((evt.relTime) / totalDuration) * 100;\n          if (leftPct > 99) leftPct = 99;\n\n          let widthPct = (0.05 / totalDuration) * 100;\n          if (widthPct < 1) widthPct = 1;\n\n          marker.style.left = leftPct + '%';\n          marker.style.width = widthPct + '%';\n\n          timelineCol.appendChild(marker);\n          row.appendChild(listCol);\n          row.appendChild(timelineCol);\n          fragment.appendChild(row);\n        });\n\n        virtualContent.innerHTML = '';\n        virtualContent.appendChild(fragment);\n      }\n\n      // Ctrl+F Handler\n      document.addEventListener('keydown', function (e) {\n        if ((e.ctrlKey || e.metaKey) && e.key === 'f') {\n          e.preventDefault();\n          const filterInput = document.getElementById('filterInput');\n          filterInput.focus();\n          filterInput.select();\n        }\n      });\n\n      // Initial Render\n      renderVirtualRows();\n      renderRuler();\n\n      function selectRow(el, evt) {\n        const prev = virtualContent.querySelector('.trace-row.selected');\n        if (prev) prev.classList.remove('selected');\n\n        el.classList.add('selected');\n        selectedEvent = evt;\n\n        detailsPanel.classList.add('visible');\n\n        const isIncoming = evt.typeClass === 'incoming';\n        const badgeClass = isIncoming ? 'incoming' : 'outgoing';\n\n        // Flags with Unified Style\n        let flagsHtml = '';\n        if (evt.isExecutor) {\n          flagsHtml += `<div class=\"badge-pill executor\">Executor</div>`;\n        }\n        if (evt.isActor) {\n          flagsHtml += `<div class=\"badge-pill actor\">Actor</div>`;\n        }\n        if (evt.isBlocked) {\n          flagsHtml += `<div class=\"badge-pill blocked\">Blocked</div>`;\n        }\n        if (!flagsHtml) flagsHtml = '<span style=\"color:var(--text-secondary); font-size:11px;\">None</span>';\n\n        const highlightedArgs = syntaxHighlight(evt.args);\n\n        // Icons\n        const copyIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-copy icon-copy\"><rect width=\"14\" height=\"14\" x=\"8\" y=\"8\" rx=\"2\" ry=\"2\"/><path d=\"M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2\"/></svg>`;\n        const checkIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check icon-check\"><path d=\"M20 6 9 17l-5-5\"/></svg>`;\n        const parenthesesIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-parentheses\"><path d=\"M8 21s-4-3-4-9 4-9 4-9\"/><path d=\"M16 3s4 3 4 9-4 9-4 9\"/></svg>`;\n\n        // Dropdown Icons\n        const hashIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-hash\"><line x1=\"4\" x2=\"20\" y1=\"9\" y2=\"9\"/><line x1=\"4\" x2=\"20\" y1=\"15\" y2=\"15\"/><line x1=\"10\" x2=\"8\" y1=\"3\" y2=\"21\"/><line x1=\"16\" x2=\"14\" y1=\"3\" y2=\"21\"/></svg>`;\n        const upvaluesIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-a-arrow-up\"><path d=\"m14 11 4-4 4 4\"/><path d=\"M18 16V7\"/><path d=\"m2 16 4.039-9.69a.5.5 0 0 1 .923 0L11 16\"/><path d=\"M3.304 13h6.392\"/></svg>`;\n        const protosIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-square-function\"><rect width=\"18\" height=\"18\" x=\"3\" y=\"3\" rx=\"2\" ry=\"2\"/><path d=\"M9 17c2 0 2.8-1 2.8-2.8V10c0-2 1-3.3 3.2-3\"/><path d=\"M9 11.2h5.7\"/></svg>`;\n        const pathIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-route\"><circle cx=\"6\" cy=\"19\" r=\"3\"/><path d=\"M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15\"/><circle cx=\"18\" cy=\"5\" r=\"3\"/></svg>`;\n        const sourceIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-code\"><path d=\"m16 18 6-6-6-6\"/><path d=\"m8 6-6 6 6 6\"/></svg>`;\n        const boxIcon = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-box\"><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22v-9\"/></svg>`;\n\n        detailsContent.innerHTML = `\n                <div class=\"details-header-top\">\n                    <div class=\"details-title-group\">\n                        <div class=\"details-icon-large\" style=\"background-image: url('${getIconUrl(evt.className)}')\"></div>\n                        <div class=\"details-name-large\">${escapeHtml(evt.name)}</div>\n                    </div>\n                    <div class=\"details-actions\">\n                        <div class=\"badge-pill ${badgeClass}\">${evt.typeClass.toUpperCase()}</div>\n                        <div class=\"close-btn\" onclick=\"closeDetails()\">×</div>\n                    </div>\n                </div>\n\n                <div class=\"details-path-row\" onclick=\"copyText('${escapeHtml(evt.path).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Remote Path copied')\" title=\"Click to copy path\"><span class=\"clickable-path\">${escapeHtml(evt.path)}</span></div>\n\n                <div class=\"info-grid\">\n                    <div class=\"info-item\">\n                        <h4>Method</h4>\n                        <div>${escapeHtml(evt.method)}</div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>Timestamp</h4>\n                        <div>${formatAbsTime(evt.timestamp)} <span style=\"color:var(--text-secondary)\">(+${formatTime(evt.relTime)})</span></div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>ClassName</h4>\n                        <div>${escapeHtml(evt.className)}</div>\n                    </div>\n                    <div class=\"info-item\">\n                        <h4>Remote Path</h4>\n                        <div class=\"remote-path-copy clickable-path\" onclick=\"copyText('${escapeHtml(evt.path).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Remote Path copied')\" title=\"Click to copy path\">${escapeHtml(evt.path)}</div>\n                    </div>\n                </div>\n\n                <div class=\"content-box\">\n                    <div class=\"box-title\">Caller Data</div>\n                    <button class=\"copy-icon-btn\" onclick=\"toggleCallerDropdown(event)\" title=\"Copy Caller Info\">${copyIcon}</button>\n\n                    <div id=\"callerDropdown\" class=\"dropdown-menu\">\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('hash')\">${hashIcon} Function Hash</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('upvalues')\">${upvaluesIcon} Upvalues</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('protos')\">${protosIcon} Protos</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('constants')\">${boxIcon} Constants</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('path')\">${pathIcon} Script Path</div>\n                        <div class=\"dropdown-item\" onclick=\"copyCallerData('source')\">${sourceIcon} Func Source</div>\n                    </div>\n\n                    <div class=\"caller-header\">\n                        <div class=\"caller-icon\">${parenthesesIcon}</div>\n                        <div class=\"caller-info\">\n                            <div class=\"caller-name\">${escapeHtml(evt.funcName)} <span class=\"caller-source\">:${evt.funcLine}</span></div>\n                            <div class=\"caller-source\">${escapeHtml(evt.funcSource)}</div>\n                        </div>\n                    </div>\n\n                    <div class=\"info-grid-2\" style=\"margin-bottom:0; gap:10px;\">\n                         <div class=\"info-item-2\" style=\"margin-right: 100px;\">\n                            <h4>Flags</h4>\n                            <div class=\"flags-row\">${flagsHtml}</div>\n                         </div>\n                         <div class=\"info-item-2\">\n                            <h4>Origin</h4>\n                            <div class=\"origin-row clickable-path\" onclick=\"copyText('${escapeHtml(evt.origin).replace(/'/g, \"\\\\'\").replace(/\"/g, \"&quot;\")}', 'Origin copied')\" title=\"Click to copy origin\">${escapeHtml(evt.origin)}</div>\n                         </div>\n                    </div>\n                </div>\n\n                <div class=\"content-box\">\n                    <div class=\"box-title\">Arguments</div>\n                    <button class=\"copy-icon-btn\" onclick=\"copyArgs(this)\" title=\"Copy Arguments\">\n                        ${copyIcon}\n                        ${checkIcon}\n                    </button>\n                    <div class=\"args-content\">${highlightedArgs}</div>\n                </div>\n            `;\n      }\n\n      function closeDetails() {\n        detailsPanel.classList.remove('visible');\n        const prev = virtualContent.querySelector('.trace-row.selected');\n        if (prev) prev.classList.remove('selected');\n        selectedEvent = null;\n      }\n\n      function handleFilterInput() {\n        if (filterTimeout) clearTimeout(filterTimeout);\n        filterTimeout = setTimeout(applyFilters, 300);\n      }\n\n      function toggleSearchOptions() {\n        const widget = document.getElementById('searchChevron').closest('.search-widget');\n        const options = document.getElementById('searchOptions');\n        const chevron = document.getElementById('searchChevron');\n\n        options.classList.toggle('visible');\n        chevron.classList.toggle('expanded');\n        widget.classList.toggle('expanded');\n      }\n\n      function handleTimeInput() {\n        const minVal = parseFloat(document.getElementById('minTimeInput').value);\n        const maxVal = parseFloat(document.getElementById('maxTimeInput').value);\n        const unit = parseFloat(document.getElementById('timeUnitSelect').value);\n\n        filterMinTime = isNaN(minVal) ? 0 : minVal * unit;\n        filterMaxTime = isNaN(maxVal) ? totalDuration : maxVal * unit;\n\n        if (filterTimeout) clearTimeout(filterTimeout);\n        filterTimeout = setTimeout(applyFilters, 300);\n      }\n\n      function applyFilters() {\n        const query = document.getElementById('filterInput').value.toLowerCase();\n        const checkIncoming = document.getElementById('filterIncoming').checked;\n        const checkOutgoing = document.getElementById('filterOutgoing').checked;\n        const checkActor = document.getElementById('filterActor').checked;\n        const checkNonActor = document.getElementById('filterNonActor').checked;\n        const checkArgs = document.getElementById('filterArgs').checked;\n        const checkProto = document.getElementById('filterProto').checked;\n        const checkConst = document.getElementById('filterConst').checked;\n        const checkHash = document.getElementById('filterHash').checked;\n        const checkSource = document.getElementById('filterSource').checked;\n\n        filteredEvents = allEvents.filter(evt => {\n          // Filter by Type (Incoming/Outgoing)\n          if (checkIncoming || checkOutgoing) {\n            const isIncoming = evt.typeClass === 'incoming';\n            const isOutgoing = evt.typeClass === 'outgoing';\n            if (!((checkIncoming && isIncoming) || (checkOutgoing && isOutgoing))) {\n              return false;\n            }\n          }\n\n          // Filter by Actor Status\n          if (checkActor || checkNonActor) {\n            const isActor = evt.isActor;\n            const isNonActor = !evt.isActor;\n            if (!((checkActor && isActor) || (checkNonActor && isNonActor))) {\n              return false;\n            }\n          }\n\n          let matchesText = !query;\n\n          if (!matchesText) {\n            // Default search: Name and Type\n            if (evt.name.toLowerCase().includes(query) || evt.type.toLowerCase().includes(query)) {\n              matchesText = true;\n            }\n            // Advanced search options\n            else {\n              if (checkArgs && evt.args && evt.args.toLowerCase().includes(query)) matchesText = true;\n              else if (checkProto && evt.protos && evt.protos.toLowerCase().includes(query)) matchesText = true;\n              else if (checkConst && evt.constants && evt.constants.toLowerCase().includes(query)) matchesText = true;\n              else if (checkHash && evt.funcHash && evt.funcHash.toLowerCase().includes(query)) matchesText = true;\n              else if (checkSource && evt.funcSource && evt.funcSource.toLowerCase().includes(query)) matchesText = true;\n            }\n          }\n\n          const matchesTime = evt.relTime >= filterMinTime && evt.relTime <= filterMaxTime;\n\n          return matchesText && matchesTime;\n        });\n\n        // Update Stats\n        statsLabel.innerText = `${filteredEvents.length} Events • ${totalDuration.toFixed(2)}s`;\n\n        // Reset Scroll\n        rowsContainer.scrollTop = 0;\n        lastStartIndex = -1;\n        lastEndIndex = -1;\n\n        if (currentView === 'timeline') {\n          renderVirtualRows(true);\n        } else {\n          renderHeatmap();\n        }\n      } function updateZoom() {\n        const width = (100 * zoomLevel) + '%';\n        rulerContainer.style.width = width;\n        renderRuler();\n        lastStartIndex = -1;\n        renderVirtualRows(true);\n      }\n\n      rowsContainer.addEventListener('wheel', (e) => {\n        if (e.ctrlKey) {\n          e.preventDefault();\n          if (e.deltaY < 0) {\n            zoomLevel = Math.min(zoomLevel * 1.1, 20);\n          } else {\n            zoomLevel = Math.max(zoomLevel / 1.1, 1);\n          }\n          updateZoom();\n        }\n      });\n\n      rowsContainer.addEventListener('scroll', () => {\n        timelineHeader.scrollLeft = rowsContainer.scrollLeft;\n\n        if (!isScrolling) {\n          window.requestAnimationFrame(() => {\n            renderVirtualRows();\n            isScrolling = false;\n          });\n          isScrolling = true;\n        }\n      });\n\n      const sessionInfo = document.querySelector('.session-info');\n      const tooltip = document.querySelector('.session-tooltip');\n\n      sessionInfo.addEventListener('click', (e) => {\n        e.stopPropagation();\n        tooltip.classList.toggle('visible');\n      });\n\n      tooltip.addEventListener('click', (e) => {\n        e.stopPropagation();\n      });\n\n      document.addEventListener('click', () => {\n        tooltip.classList.remove('visible');\n        const dropdown = document.getElementById('callerDropdown');\n        if (dropdown) dropdown.classList.remove('visible');\n      });\n    </script>\n  </body>\n</html>\n"
 
 -- Instance to ID mapping
 instance_to_id[root] = 1
 instance_to_id[inst_2] = 3
-instance_to_id[inst_4] = 5
-instance_to_id[inst_14] = 15
-instance_to_id[inst_16] = 17
-instance_to_id[inst_21] = 22
-instance_to_id[inst_23] = 24
-instance_to_id[inst_26] = 27
-instance_to_id[inst_28] = 29
-instance_to_id[inst_31] = 32
-instance_to_id[inst_33] = 34
-instance_to_id[inst_35] = 36
-instance_to_id[inst_37] = 38
-instance_to_id[inst_39] = 40
-instance_to_id[inst_41] = 42
-instance_to_id[inst_44] = 45
-instance_to_id[inst_46] = 47
-instance_to_id[inst_49] = 50
-instance_to_id[inst_51] = 52
-instance_to_id[inst_54] = 55
-instance_to_id[inst_56] = 57
-instance_to_id[inst_58] = 59
-instance_to_id[inst_60] = 61
-instance_to_id[inst_62] = 63
-instance_to_id[inst_64] = 65
-instance_to_id[inst_66] = 67
-instance_to_id[inst_68] = 69
-instance_to_id[inst_70] = 71
-instance_to_id[inst_72] = 73
+instance_to_id[inst_13] = 14
+instance_to_id[inst_15] = 16
+instance_to_id[inst_17] = 18
+instance_to_id[inst_22] = 23
+instance_to_id[inst_24] = 25
+instance_to_id[inst_27] = 28
+instance_to_id[inst_29] = 30
+instance_to_id[inst_32] = 33
+instance_to_id[inst_34] = 35
+instance_to_id[inst_36] = 37
+instance_to_id[inst_38] = 39
+instance_to_id[inst_40] = 41
+instance_to_id[inst_42] = 43
+instance_to_id[inst_45] = 46
+instance_to_id[inst_47] = 48
+instance_to_id[inst_50] = 51
+instance_to_id[inst_52] = 53
+instance_to_id[inst_55] = 56
+instance_to_id[inst_57] = 58
+instance_to_id[inst_59] = 60
+instance_to_id[inst_61] = 62
+instance_to_id[inst_63] = 64
+instance_to_id[inst_65] = 66
+instance_to_id[inst_67] = 68
+instance_to_id[inst_69] = 70
+instance_to_id[inst_71] = 72
+instance_to_id[inst_73] = 74
 
 -- Module Code Definitions
 module_functions[1] = function(wax, script, require)
@@ -525,7 +528,7 @@ wax.shared.SetupLoggingConnection = function()
 		wax.shared.LogConnection:Disconnect()
 	end
 
-	wax.shared.LogFileName = `Cobalt/Logs/{DateTime.now():ToIsoDate():gsub(":", "_")}.log`
+	wax.shared.LogFileName = `NexSpy/Logs/{DateTime.now():ToIsoDate():gsub(":", "_")}.log`
 	local FileLog = FileLogger.new(wax.shared.LogFileName, FileLogger.LOG_LEVELS.INFO, true)
 
 	return function(RemoteInstance, Type, CallOrderInLog)
@@ -596,7 +599,7 @@ wax.shared.SetupLoggingConnection = function()
 			)
 
 			warn(
-				("Cobalt: Failed to log remote communication for %s:%s - %s"):format(
+				("NexSpy: Failed to log remote communication for %s:%s - %s"):format(
 					Type or "UnknownType",
 					instanceNameForError,
 					tostring(err)
@@ -657,7 +660,7 @@ getgenv().Cobalt = wax
 
 task.wait(1)
 if AnticheatData.Disabled then
-	wax.shared.Sonner.success(`Cobalt has bypassed {AnticheatData.Name} (anticheat detected)`)
+	wax.shared.Sonner.success(`NexSpy has bypassed {AnticheatData.Name} (anticheat detected)`)
 end
 
 end
@@ -1169,268 +1172,7 @@ return ExecutorSupport
 
 end
 
-module_functions[5] = function(wax, script, require)
--- START MODULE: Spy
-local LuaEncode = require(script.Parent.Parent.Utils.Serializer.LuaEncode)
-local CodeGen = require(script.Parent.Parent.Utils.CodeGen.Generator)
-
-local Hooks = script.Parent.Hooks
-
--- Main Thread Hooks
-for _, Hook in Hooks.Default:GetChildren() do
-	task.spawn(require, Hook)
-end
-
-getgenv().CobaltInitialized = true
-
--- Actors use a different lua vm
--- This means that our main thread metatable hooks dont apply in the actor's vm
--- So we need to set up the hooks again in the actor lua vm in order to log everything
-local ActorsUtils = script.Parent.Actors
-
-wax.shared.ActorsEnabled = (
-	wax.shared.ExecutorSupport["run_on_actor"].IsWorking
-	and wax.shared.ExecutorSupport["getactors"].IsWorking
-	and wax.shared.ExecutorSupport["create_comm_channel"].IsWorking
-)
-
-if wax.shared.ActorsEnabled then
-	local ActorEnvironmentCode = ActorsUtils.Environment.Value
-
-	local CommunicationChannelID, Channel = create_comm_channel()
-	wax.shared.ActorCommunicator = Channel
-
-	local AlternativeEnabled = wax.shared.SaveManager:GetState("UseAlternativeHooks", false)
-
-	local IgnorePlayerModule = wax.shared.SaveManager:GetState("IgnorePlayerModule", true)
-	local LogBlockedRemotes = wax.shared.SaveManager:GetState("LogBlockedRemotes", false)
-	local IngoredRemotesDropdown = wax.shared.SaveManager:GetState("IgnoredRemotesDropdown", {
-		["BindableEvent"] = true,
-		["BindableFunction"] = true,
-	})
-
-	local ActorData = LuaEncode({
-		Token = wax.shared.CobaltVerificationToken,
-
-		IgnorePlayerModule = IgnorePlayerModule,
-		LogBlockedRemotes = LogBlockedRemotes,
-		IgnoredRemotesDropdown = IngoredRemotesDropdown,
-		UseAlternativeHooks = AlternativeEnabled,
-
-		ExecutorSupport = wax.shared.ExecutorSupport,
-	})
-
-	ActorEnvironmentCode = ActorEnvironmentCode:gsub("COBALT_ACTOR_DATA", ActorData)
-
-	-- Actor Logs Sync Layer
-	local function ReconstructTable(Info, CyclicRefs)
-		local Reconstructed = {}
-
-		for Key, Value in Info do
-			if type(Value) == "table" then
-				if Value["__Function"] and Value["Validation"] == wax.shared.CobaltVerificationToken then
-					local FunctionData = table.clone(Value)
-					FunctionData["__Function"] = nil
-					FunctionData["Validation"] = nil
-
-					Reconstructed[Key] = FunctionData
-					continue
-				end
-
-				-- Check for Cobalt Created Object
-				if not Value["__CyclicRef"] then
-					Reconstructed[Key] = ReconstructTable(Value, CyclicRefs)
-					continue
-				end
-
-				local CyclicId = Value["__Id"]
-
-				if not CyclicRefs[CyclicId] then
-					warn("CyclicRef not found: " .. CyclicId)
-					continue
-				end
-
-				Reconstructed[Key] = CyclicRefs[CyclicId]
-				continue
-			end
-
-			Reconstructed[Key] = Value
-		end
-
-		return Reconstructed
-	end
-
-	local function ReconstructPacked(Packed)
-		if not Packed or not Packed.Data then
-			return Packed
-		end
-
-		local PackedN, PackedData = Packed.n, Packed.Data
-		PackedData.n = PackedN
-		return PackedData
-	end
-
-	wax.shared.Connect(Channel.Event:Connect(function(EventType, ...)
-		local ShouldLogActors = wax.shared.SaveManager:GetState("LogActors", true)
-
-		if not ShouldLogActors then
-			return
-		end
-
-		if EventType ~= "ActorCall" then
-			return
-		end
-
-		local Instance, Type, RawInfo, CyclicRefs = ...
-		if Instance == Channel or Instance == wax.shared.Communicator then
-			return
-		end
-
-		local Method = wax.shared.FunctionForClasses[Type][Instance.ClassName]
-		local Log = wax.shared.Logs[Type][Instance]
-
-		if not Log then
-			Log = wax.shared.NewLog(Instance, Type, Method, RawInfo.Origin)
-		end
-
-		if Log.Blocked then
-			if not wax.shared.SaveManager:GetState("LogBlockedRemotes", false) then
-				return
-			end
-
-			local ReconstructedInfo = ReconstructTable(RawInfo, CyclicRefs)
-			ReconstructedInfo.Blocked = true
-
-			--// Reconstruct Packed Arguments (BindableEvents omit ["n"] for unknown reason) \\--
-			ReconstructedInfo.Arguments = ReconstructPacked(ReconstructedInfo.Arguments)
-			ReconstructedInfo.OriginalInvokeArgs = ReconstructPacked(ReconstructedInfo.OriginalInvokeArgs)
-
-			Log:Call(ReconstructedInfo)
-			wax.shared.Communicator:Fire(Log.Instance, Type, #Log.Calls)
-		elseif not Log.Ignored then
-			local ReconstructedInfo = ReconstructTable(RawInfo, CyclicRefs)
-
-			--// Reconstruct Packed Arguments (BindableEvents omit ["n"] for unknown reason) \\--
-			ReconstructedInfo.Arguments = ReconstructPacked(ReconstructedInfo.Arguments)
-			ReconstructedInfo.OriginalInvokeArgs = ReconstructPacked(ReconstructedInfo.OriginalInvokeArgs)
-
-			Log:Call(ReconstructedInfo)
-			wax.shared.Communicator:Fire(Log.Instance, Type, #Log.Calls)
-		end
-	end))
-
-	-- Actor Hooking Code Generation
-	local CodeToRun = ActorEnvironmentCode
-
-	for _, ActorHook in Hooks.Actors:GetChildren() :: { StringValue } do
-		CodeToRun ..= table.concat({
-			"task.spawn(function()",
-			CodeGen:IndentCode(ActorHook.Value, 1),
-			"end)",
-		}, "\n") .. "\n\n"
-	end
-
-	CodeToRun ..= table.concat({
-		"task.spawn(function()",
-		CodeGen:IndentCode(ActorsUtils.Unload.Value, 1),
-		"end)",
-	}, "\n")
-
-	-- Actual Hooking Logic
-	-- The hooking code wont run again if cobalt is already initialized in that Actor (to address deleted actors aka LuaStateProxy stuff)
-
-	-- `HookActor` is to address Volcano returning non initialized actors inside their `getactors` function.
-	-- God this code is so ass 🥹
-	local function HookActor(TargetActor: Actor)
-		local Hooked = false
-		local Attempts = 0
-
-		repeat
-			Hooked, _ = pcall(run_on_actor,
-				TargetActor,
-				CodeToRun,
-				CommunicationChannelID,
-				TargetActor
-			)
-
-			Attempts += 1
-			task.wait(0.25)
-		until Hooked or Attempts > 10
-	end
-
-	-- FIX: Batasi concurrent actor hooks agar tidak overload memory Android
-	-- Max 8 actor hook berjalan bersamaan (sesuaikan dengan kemampuan device)
-	local CONCURRENT_HOOK_LIMIT = 8
-	local activeHooks = 0
-	local hookQueue = {}
-
-	local function processQueue()
-		while #hookQueue > 0 and activeHooks < CONCURRENT_HOOK_LIMIT do
-			activeHooks += 1
-			local nextActor = table.remove(hookQueue, 1)
-			task.spawn(function()
-				HookActor(nextActor)
-				activeHooks -= 1
-				processQueue()
-			end)
-		end
-	end
-
-	local function QueueHookActor(TargetActor: Actor)
-		table.insert(hookQueue, TargetActor)
-		processQueue()
-	end
-
-	for _, Category in {getactors(), getdeletedactors and getdeletedactors() or {} } do
-		for _, TargetActor in Category do
-			QueueHookActor(TargetActor)
-		end
-	end
-
-	local ActorHookConnection
-	local function HandleInstance(Instance)
-		if typeof(Instance) == "Instance" and not Instance:IsA("Actor") then
-			return
-		end
-
-		HookActor(Instance)
-	end
-
-	if on_actor_state_created then
-		ActorHookConnection = on_actor_state_created:Connect(function(inst)
-			HandleInstance(inst)
-		end)
-	else
-		-- FIX: Throttle DescendantAdded agar tidak spam QueueHookActor di game aktif
-		local pendingActors = {}
-		local processPending = false
-		ActorHookConnection = game.DescendantAdded:Connect(function(inst)
-			if typeof(inst) ~= "Instance" or not inst:IsA("Actor") then
-				return
-			end
-			table.insert(pendingActors, inst)
-			if not processPending then
-				processPending = true
-				task.delay(0.5, function()
-					processPending = false
-					local batch = pendingActors
-					pendingActors = {}
-					for _, actor in batch do
-						QueueHookActor(actor)
-					end
-				end)
-			end
-		end)
-	end
-
-	wax.shared.Connect(ActorHookConnection)
-end
-
-return {}
-
-end
-
-module_functions[15] = function(wax, script, require)
+module_functions[14] = function(wax, script, require)
 -- START MODULE: Incoming
 local ClassesToHook = {
 	RemoteEvent = "OnClientEvent",
@@ -1815,7 +1557,7 @@ end)
 
 end
 
-module_functions[17] = function(wax, script, require)
+module_functions[16] = function(wax, script, require)
 -- START MODULE: Outgoing
 local function CreateLookupTable(table)
 	local LookupTable = {}
@@ -2102,7 +1844,268 @@ end
 
 end
 
-module_functions[22] = function(wax, script, require)
+module_functions[18] = function(wax, script, require)
+-- START MODULE: Init
+local LuaEncode = require(script.Parent.Parent.Utils.Serializer.LuaEncode)
+local CodeGen = require(script.Parent.Parent.Utils.CodeGen.Generator)
+
+local Hooks = script.Parent.Hooks
+
+-- Main Thread Hooks
+for _, Hook in Hooks.Default:GetChildren() do
+	task.spawn(require, Hook)
+end
+
+getgenv().CobaltInitialized = true
+
+-- Actors use a different lua vm
+-- This means that our main thread metatable hooks dont apply in the actor's vm
+-- So we need to set up the hooks again in the actor lua vm in order to log everything
+local ActorsUtils = script.Parent.Actors
+
+wax.shared.ActorsEnabled = (
+	wax.shared.ExecutorSupport["run_on_actor"].IsWorking
+	and wax.shared.ExecutorSupport["getactors"].IsWorking
+	and wax.shared.ExecutorSupport["create_comm_channel"].IsWorking
+)
+
+if wax.shared.ActorsEnabled then
+	local ActorEnvironmentCode = ActorsUtils.Environment.Value
+
+	local CommunicationChannelID, Channel = create_comm_channel()
+	wax.shared.ActorCommunicator = Channel
+
+	local AlternativeEnabled = wax.shared.SaveManager:GetState("UseAlternativeHooks", false)
+
+	local IgnorePlayerModule = wax.shared.SaveManager:GetState("IgnorePlayerModule", true)
+	local LogBlockedRemotes = wax.shared.SaveManager:GetState("LogBlockedRemotes", false)
+	local IngoredRemotesDropdown = wax.shared.SaveManager:GetState("IgnoredRemotesDropdown", {
+		["BindableEvent"] = true,
+		["BindableFunction"] = true,
+	})
+
+	local ActorData = LuaEncode({
+		Token = wax.shared.CobaltVerificationToken,
+
+		IgnorePlayerModule = IgnorePlayerModule,
+		LogBlockedRemotes = LogBlockedRemotes,
+		IgnoredRemotesDropdown = IngoredRemotesDropdown,
+		UseAlternativeHooks = AlternativeEnabled,
+
+		ExecutorSupport = wax.shared.ExecutorSupport,
+	})
+
+	ActorEnvironmentCode = ActorEnvironmentCode:gsub("COBALT_ACTOR_DATA", ActorData)
+
+	-- Actor Logs Sync Layer
+	local function ReconstructTable(Info, CyclicRefs)
+		local Reconstructed = {}
+
+		for Key, Value in Info do
+			if type(Value) == "table" then
+				if Value["__Function"] and Value["Validation"] == wax.shared.CobaltVerificationToken then
+					local FunctionData = table.clone(Value)
+					FunctionData["__Function"] = nil
+					FunctionData["Validation"] = nil
+
+					Reconstructed[Key] = FunctionData
+					continue
+				end
+
+				-- Check for Cobalt Created Object
+				if not Value["__CyclicRef"] then
+					Reconstructed[Key] = ReconstructTable(Value, CyclicRefs)
+					continue
+				end
+
+				local CyclicId = Value["__Id"]
+
+				if not CyclicRefs[CyclicId] then
+					warn("CyclicRef not found: " .. CyclicId)
+					continue
+				end
+
+				Reconstructed[Key] = CyclicRefs[CyclicId]
+				continue
+			end
+
+			Reconstructed[Key] = Value
+		end
+
+		return Reconstructed
+	end
+
+	local function ReconstructPacked(Packed)
+		if not Packed or not Packed.Data then
+			return Packed
+		end
+
+		local PackedN, PackedData = Packed.n, Packed.Data
+		PackedData.n = PackedN
+		return PackedData
+	end
+
+	wax.shared.Connect(Channel.Event:Connect(function(EventType, ...)
+		local ShouldLogActors = wax.shared.SaveManager:GetState("LogActors", true)
+
+		if not ShouldLogActors then
+			return
+		end
+
+		if EventType ~= "ActorCall" then
+			return
+		end
+
+		local Instance, Type, RawInfo, CyclicRefs = ...
+		if Instance == Channel or Instance == wax.shared.Communicator then
+			return
+		end
+
+		local Method = wax.shared.FunctionForClasses[Type][Instance.ClassName]
+		local Log = wax.shared.Logs[Type][Instance]
+
+		if not Log then
+			Log = wax.shared.NewLog(Instance, Type, Method, RawInfo.Origin)
+		end
+
+		if Log.Blocked then
+			if not wax.shared.SaveManager:GetState("LogBlockedRemotes", false) then
+				return
+			end
+
+			local ReconstructedInfo = ReconstructTable(RawInfo, CyclicRefs)
+			ReconstructedInfo.Blocked = true
+
+			--// Reconstruct Packed Arguments (BindableEvents omit ["n"] for unknown reason) \\--
+			ReconstructedInfo.Arguments = ReconstructPacked(ReconstructedInfo.Arguments)
+			ReconstructedInfo.OriginalInvokeArgs = ReconstructPacked(ReconstructedInfo.OriginalInvokeArgs)
+
+			Log:Call(ReconstructedInfo)
+			wax.shared.Communicator:Fire(Log.Instance, Type, #Log.Calls)
+		elseif not Log.Ignored then
+			local ReconstructedInfo = ReconstructTable(RawInfo, CyclicRefs)
+
+			--// Reconstruct Packed Arguments (BindableEvents omit ["n"] for unknown reason) \\--
+			ReconstructedInfo.Arguments = ReconstructPacked(ReconstructedInfo.Arguments)
+			ReconstructedInfo.OriginalInvokeArgs = ReconstructPacked(ReconstructedInfo.OriginalInvokeArgs)
+
+			Log:Call(ReconstructedInfo)
+			wax.shared.Communicator:Fire(Log.Instance, Type, #Log.Calls)
+		end
+	end))
+
+	-- Actor Hooking Code Generation
+	local CodeToRun = ActorEnvironmentCode
+
+	for _, ActorHook in Hooks.Actors:GetChildren() :: { StringValue } do
+		CodeToRun ..= table.concat({
+			"task.spawn(function()",
+			CodeGen:IndentCode(ActorHook.Value, 1),
+			"end)",
+		}, "\n") .. "\n\n"
+	end
+
+	CodeToRun ..= table.concat({
+		"task.spawn(function()",
+		CodeGen:IndentCode(ActorsUtils.Unload.Value, 1),
+		"end)",
+	}, "\n")
+
+	-- Actual Hooking Logic
+	-- The hooking code wont run again if cobalt is already initialized in that Actor (to address deleted actors aka LuaStateProxy stuff)
+
+	-- `HookActor` is to address Volcano returning non initialized actors inside their `getactors` function.
+	-- God this code is so ass 🥹
+	local function HookActor(TargetActor: Actor)
+		local Hooked = false
+		local Attempts = 0
+
+		repeat
+			Hooked, _ = pcall(run_on_actor,
+				TargetActor,
+				CodeToRun,
+				CommunicationChannelID,
+				TargetActor
+			)
+
+			Attempts += 1
+			task.wait(0.25)
+		until Hooked or Attempts > 10
+	end
+
+	-- FIX: Batasi concurrent actor hooks agar tidak overload memory Android
+	-- Max 8 actor hook berjalan bersamaan (sesuaikan dengan kemampuan device)
+	local CONCURRENT_HOOK_LIMIT = 8
+	local activeHooks = 0
+	local hookQueue = {}
+
+	local function processQueue()
+		while #hookQueue > 0 and activeHooks < CONCURRENT_HOOK_LIMIT do
+			activeHooks += 1
+			local nextActor = table.remove(hookQueue, 1)
+			task.spawn(function()
+				HookActor(nextActor)
+				activeHooks -= 1
+				processQueue()
+			end)
+		end
+	end
+
+	local function QueueHookActor(TargetActor: Actor)
+		table.insert(hookQueue, TargetActor)
+		processQueue()
+	end
+
+	for _, Category in {getactors(), getdeletedactors and getdeletedactors() or {} } do
+		for _, TargetActor in Category do
+			QueueHookActor(TargetActor)
+		end
+	end
+
+	local ActorHookConnection
+	local function HandleInstance(Instance)
+		if typeof(Instance) == "Instance" and not Instance:IsA("Actor") then
+			return
+		end
+
+		HookActor(Instance)
+	end
+
+	if on_actor_state_created then
+		ActorHookConnection = on_actor_state_created:Connect(function(inst)
+			HandleInstance(inst)
+		end)
+	else
+		-- FIX: Throttle DescendantAdded agar tidak spam QueueHookActor di game aktif
+		local pendingActors = {}
+		local processPending = false
+		ActorHookConnection = game.DescendantAdded:Connect(function(inst)
+			if typeof(inst) ~= "Instance" or not inst:IsA("Actor") then
+				return
+			end
+			table.insert(pendingActors, inst)
+			if not processPending then
+				processPending = true
+				task.delay(0.5, function()
+					processPending = false
+					local batch = pendingActors
+					pendingActors = {}
+					for _, actor in batch do
+						QueueHookActor(actor)
+					end
+				end)
+			end
+		end)
+	end
+
+	wax.shared.Connect(ActorHookConnection)
+end
+
+return {}
+
+end
+
+module_functions[23] = function(wax, script, require)
 -- START MODULE: Adonis
 local Adonis = {
 	Name = "Adonis",
@@ -2184,7 +2187,7 @@ return Adonis
 
 end
 
-module_functions[24] = function(wax, script, require)
+module_functions[25] = function(wax, script, require)
 -- START MODULE: Main
 --[[
     Bypasses for popular roblox anticheats
@@ -2256,7 +2259,7 @@ return AnticheatData
 
 end
 
-module_functions[27] = function(wax, script, require)
+module_functions[28] = function(wax, script, require)
 -- START MODULE: Generator
 local CodeGen = {
 	CleanTable = { ['"'] = '\\"', ["\\"] = "\\\\" },
@@ -3188,7 +3191,7 @@ return CodeGen
 
 end
 
-module_functions[29] = function(wax, script, require)
+module_functions[30] = function(wax, script, require)
 -- START MODULE: SessionExporter
 local Utils = script.Parent.Parent
 
@@ -3400,7 +3403,7 @@ return SessionExporter
 
 end
 
-module_functions[32] = function(wax, script, require)
+module_functions[33] = function(wax, script, require)
 -- START MODULE: Connect
 wax.shared.Connections = {}
 
@@ -3423,7 +3426,7 @@ end
 return {}
 end
 
-module_functions[34] = function(wax, script, require)
+module_functions[35] = function(wax, script, require)
 -- START MODULE: FileHelper
 local FileHelper = {}
 FileHelper.__index = FileHelper
@@ -3556,7 +3559,7 @@ end
 return FileHelper
 end
 
-module_functions[36] = function(wax, script, require)
+module_functions[37] = function(wax, script, require)
 -- START MODULE: FileLog
 -- Logger
 -- ActualMasterOogway
@@ -3713,7 +3716,7 @@ end
 return Logger
 end
 
-module_functions[38] = function(wax, script, require)
+module_functions[39] = function(wax, script, require)
 -- START MODULE: Hooking
 local Hooking = {}
 
@@ -3809,7 +3812,7 @@ return Hooking
 
 end
 
-module_functions[40] = function(wax, script, require)
+module_functions[41] = function(wax, script, require)
 -- START MODULE: Log
 local Log = {}
 Log.__index = Log
@@ -4062,7 +4065,7 @@ return Log
 
 end
 
-module_functions[42] = function(wax, script, require)
+module_functions[43] = function(wax, script, require)
 -- START MODULE: Pagination
 --[[
 
@@ -4217,7 +4220,7 @@ return Pagination
 
 end
 
-module_functions[45] = function(wax, script, require)
+module_functions[46] = function(wax, script, require)
 -- START MODULE: Manager
 local Manager = {
     Registry = {
@@ -4401,7 +4404,7 @@ local function CreatePluginEnvironement(FilePath: string, PluginCallback: (...an
     function Cobalt.UI:CreateModal(Title: string, Icon: string)
         local ModalFrame = Interface.New("TextButton", {
             AnchorPoint = Vector2.new(0.5, 0.5),
-            BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+            BackgroundColor3 = Color3.fromRGB(8, 4, 12),
             Position = UDim2.fromScale(0.5, 0.5),
             Size = UDim2.new(0.65, 0, 0, 285),
             Text = "",
@@ -4414,7 +4417,7 @@ local function CreatePluginEnvironement(FilePath: string, PluginCallback: (...an
 
             ["UIStroke"] = {
                 ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-                Color = Color3.fromRGB(25, 25, 25),
+                Color = Color3.fromRGB(35, 15, 55),
                 Thickness = 1,
             },
         })
@@ -4489,8 +4492,8 @@ local function CreatePluginEnvironement(FilePath: string, PluginCallback: (...an
                 Content.Visible = false
             end
             
-            TabsState.Buttons[TabName].BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-            TabsState.Buttons[TabName].Mask.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            TabsState.Buttons[TabName].BackgroundColor3 = Color3.fromRGB(35, 15, 55)
+            TabsState.Buttons[TabName].Mask.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
             TabsState.Contents[TabName].Visible = true
             TabsState.CurrentTab = TabName
         end
@@ -4578,7 +4581,7 @@ local function CreatePluginEnvironement(FilePath: string, PluginCallback: (...an
                 Parent = TextWrapper,
             })
             
-            local ButtonColor = TabsState.CurrentTab == TabName and Color3.fromRGB(25, 25, 25) or Color3.fromRGB(0, 0, 0)
+            local ButtonColor = TabsState.CurrentTab == TabName and Color3.fromRGB(35, 15, 55) or Color3.fromRGB(0, 0, 0)
             local TabButton = Interface.New("TextButton", {
                 BackgroundColor3 = ButtonColor,
                 Size = UDim2.fromScale(0, 1),
@@ -4591,7 +4594,7 @@ local function CreatePluginEnvironement(FilePath: string, PluginCallback: (...an
                 },
     
                 ["UIStroke"] = {
-                    Color = Color3.fromRGB(25, 25, 25),
+                    Color = Color3.fromRGB(35, 15, 55),
                     Thickness = 1,
                     ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
                 },
@@ -5114,7 +5117,7 @@ end
 return Manager
 end
 
-module_functions[47] = function(wax, script, require)
+module_functions[48] = function(wax, script, require)
 -- START MODULE: SaveManager
 local FileHelperUtil = require(script.Parent.FileHelper)
 
@@ -5150,7 +5153,7 @@ return SaveManager
 
 end
 
-module_functions[50] = function(wax, script, require)
+module_functions[51] = function(wax, script, require)
 -- START MODULE: LuaEncode
 -- LuaEncode - Fast table serialization library for pure Luau/Lua 5.1+
 -- MIT License | Copyright (c) 2022-2025 Chad Hyatt <chad@hyatt.page>
@@ -6060,7 +6063,7 @@ end
 return LuaEncode
 end
 
-module_functions[52] = function(wax, script, require)
+module_functions[53] = function(wax, script, require)
 -- START MODULE: Signal
 local SignalHandler = {
 	Signals = {},
@@ -6154,7 +6157,7 @@ return SignalHandler
 
 end
 
-module_functions[55] = function(wax, script, require)
+module_functions[56] = function(wax, script, require)
 -- START MODULE: Animations
 local Animations = {
 	TweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Exponential),
@@ -6274,7 +6277,7 @@ return Animations
 
 end
 
-module_functions[57] = function(wax, script, require)
+module_functions[58] = function(wax, script, require)
 -- START MODULE: AssetManager
 local AssetManager = {
 	FallbackMapping = {
@@ -6402,7 +6405,7 @@ return AssetManager
 
 end
 
-module_functions[59] = function(wax, script, require)
+module_functions[60] = function(wax, script, require)
 -- START MODULE: Drag
 local Drag = {
 	Dragging = false,
@@ -6474,7 +6477,7 @@ return Drag
 
 end
 
-module_functions[61] = function(wax, script, require)
+module_functions[62] = function(wax, script, require)
 -- START MODULE: Helper
 local UIHelper = {}
 
@@ -6549,7 +6552,7 @@ return UIHelper
 
 end
 
-module_functions[63] = function(wax, script, require)
+module_functions[64] = function(wax, script, require)
 -- START MODULE: Highlighter
 --[[
 
@@ -6807,7 +6810,7 @@ return Highlighter
 
 end
 
-module_functions[65] = function(wax, script, require)
+module_functions[66] = function(wax, script, require)
 -- START MODULE: Icons
 local Icons = {}
 
@@ -6860,7 +6863,7 @@ return Icons
 
 end
 
-module_functions[67] = function(wax, script, require)
+module_functions[68] = function(wax, script, require)
 -- START MODULE: Interface
 local Interface = {}
 local Icons = require(script.Parent.Icons)
@@ -6987,7 +6990,7 @@ return Interface
 
 end
 
-module_functions[69] = function(wax, script, require)
+module_functions[70] = function(wax, script, require)
 -- START MODULE: Resize
 local Resize = {}
 Resize.__index = Resize
@@ -7288,7 +7291,7 @@ return Resize
 
 end
 
-module_functions[71] = function(wax, script, require)
+module_functions[72] = function(wax, script, require)
 -- START MODULE: Sonner
 --[[[
 
@@ -7626,7 +7629,7 @@ return Sonner
 
 end
 
-module_functions[73] = function(wax, script, require)
+module_functions[74] = function(wax, script, require)
 -- START MODULE: Window
 --[[
 	Main Window Logic for cobalt, all UI elements are created and managed here.
@@ -7704,7 +7707,7 @@ Images = AssetManager.GetRemoteImages(Images)
 local CobaltLogo = AssetManager.GetImage("Logo")
 
 local ScreenGui = Interface.New("ScreenGui", {
-	Name = "Cobalt",
+	Name = "NexSpy",
 	ResetOnSpawn = false,
 	Parent = Interface.GetScreenParent(),
 	ZIndexBehavior = Enum.ZIndexBehavior.Sibling,
@@ -7722,7 +7725,7 @@ local MainUICorner = Interface.New("UICorner", {
 
 local MainFrame = Interface.New("Frame", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(15, 15, 15),
+	BackgroundColor3 = Color3.fromRGB(12, 8, 18),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.fromOffset(640, 420),
 	ZIndex = 0,
@@ -7733,7 +7736,7 @@ local MainFrame = Interface.New("Frame", {
 
 local ShowButton = Interface.New("TextButton", {
 	AnchorPoint = Vector2.new(0.5, 0),
-	BackgroundColor3 = Color3.fromRGB(15, 15, 15),
+	BackgroundColor3 = Color3.fromRGB(12, 8, 18),
 	Position = UDim2.new(0.5, 0, 0, 36),
 	Size = UDim2.fromOffset(36, 36),
 	Text = "",
@@ -7776,7 +7779,7 @@ Resize.new({
 local CurrentContext
 local ContextMenu = Interface.New("Frame", {
 	AutomaticSize = Enum.AutomaticSize.XY,
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	Size = UDim2.fromScale(0, 0),
 	ZIndex = 10000,
 	Visible = false,
@@ -7800,7 +7803,7 @@ local ContextMenu = Interface.New("Frame", {
 
 	["UIStroke"] = {
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-		Color = Color3.fromRGB(25, 25, 25),
+		Color = Color3.fromRGB(35, 15, 55),
 		Thickness = 1,
 	},
 
@@ -7816,7 +7819,7 @@ local function CreateContextMenu(Parent: GuiObject, Options: {}, MouseOnCursorPo
 	local function BuildContextMenu(Options: {})
 		for Order, Data in pairs(Options) do
 			local TextButton = Interface.New("TextButton", {
-				BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+				BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 				BackgroundTransparency = 1,
 				LayoutOrder = Order,
 				Size = UDim2.new(1, 0, 0, 30),
@@ -8140,7 +8143,7 @@ local function CreateModalTop(Title: string, Icon: string, Parent: GuiObject)
 
 	Interface.New("Frame", {
 		Parent = Parent,
-		BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+		BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 		Size = UDim2.new(1, 0, 0, 1),
 		Position = UDim2.fromOffset(0, 36),
 	})
@@ -8151,7 +8154,7 @@ end
 -- Settings
 local SettingsFrame = Interface.New("TextButton", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.new(0.65, 0, 0, 285),
 	Text = "",
@@ -8164,7 +8167,7 @@ local SettingsFrame = Interface.New("TextButton", {
 
 	["UIStroke"] = {
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-		Color = Color3.fromRGB(25, 25, 25),
+		Color = Color3.fromRGB(35, 15, 55),
 		Thickness = 1,
 	},
 })
@@ -8211,7 +8214,7 @@ local SettingsScrollingFrame = Interface.New("ScrollingFrame", {
 -- Plugins
 local PluginsFrame = Interface.New("TextButton", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.new(0.65, 0, 0, 285),
 	Text = "",
@@ -8224,7 +8227,7 @@ local PluginsFrame = Interface.New("TextButton", {
 
 	["UIStroke"] = {
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-		Color = Color3.fromRGB(25, 25, 25),
+		Color = Color3.fromRGB(35, 15, 55),
 		Thickness = 1,
 	},
 })
@@ -8349,7 +8352,7 @@ do
 	-- Section Element Constructors
 	function SectionBuilder:CreateButton(Text: string, Callback: () -> (), TextSize: number?)
 		local Button = Interface.New("TextButton", {
-			BackgroundColor3 = Color3.fromRGB(15, 15, 15),
+			BackgroundColor3 = Color3.fromRGB(12, 8, 18),
 			Size = UDim2.new(1, 0, 0, 24),
 			TextSize = 15,
 			Text = "",
@@ -8360,7 +8363,7 @@ do
 			},
 
 			["UIStroke"] = {
-				Color = Color3.fromRGB(25, 25, 25),
+				Color = Color3.fromRGB(35, 15, 55),
 				Thickness = 1,
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 			},
@@ -8406,7 +8409,7 @@ do
 			Parent = self.Parent,
 		})
 
-		local ToggleOnColor = Color3.fromRGB(52, 199, 89)
+		local ToggleOnColor = Color3.fromRGB(168, 50, 255)
 		local ToggleOffColor = Color3.fromRGB(50, 50, 50)
 
 		local ToggleKnobOffSize = UDim2.fromOffset(16, 16)
@@ -8594,7 +8597,7 @@ do
 
 		local Input = Interface.New("TextBox", {
 			AnchorPoint = Vector2.new(1, 0),
-			BackgroundColor3 = Color3.fromRGB(5, 5, 5),
+			BackgroundColor3 = Color3.fromRGB(6, 3, 10),
 			ClearTextOnFocus = Options.ClearTextOnFocus or false,
 			PlaceholderColor3 = Color3.fromRGB(128, 128, 128),
 			PlaceholderText = Options.Placeholder or "",
@@ -8610,7 +8613,7 @@ do
 			},
 
 			["UIStroke"] = {
-				Color = Color3.fromRGB(25, 25, 25),
+				Color = Color3.fromRGB(35, 15, 55),
 				Thickness = 1,
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 			},
@@ -8740,7 +8743,7 @@ do
 
 			["UIStroke"] = {
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-				Color = Color3.fromRGB(25, 25, 25),
+				Color = Color3.fromRGB(35, 15, 55),
 				Thickness = 1,
 			},
 
@@ -8771,7 +8774,7 @@ do
 		})
 
 		local DisplayDefaultColor = DropdownDisplay.BackgroundColor3
-		local DisplayHoverColor = Color3.fromRGB(12, 12, 12)
+		local DisplayHoverColor = Color3.fromRGB(10, 6, 15)
 
 		local function TweenDisplayColor(TargetColor, TargetTransparency)
 			wax.shared.TweenService
@@ -9014,7 +9017,7 @@ do
 
 			["UIStroke"] = {
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-				Color = Color3.fromRGB(25, 25, 25),
+				Color = Color3.fromRGB(35, 15, 55),
 				Thickness = 1,
 			},
 		})
@@ -9055,7 +9058,7 @@ do
 					},
 
 					["UIStroke"] = {
-						Color = Color3.fromRGB(25, 25, 25),
+						Color = Color3.fromRGB(35, 15, 55),
 						Thickness = 1,
 						ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 					},
@@ -9215,11 +9218,11 @@ do
 	})
 
 	local function CreatePluginCard(IsError: boolean, Title: string, Meta: string, Body: string)
-		local AccentColor = IsError and Color3.fromRGB(220, 55, 55) or Color3.fromRGB(55, 185, 100)
+		local AccentColor = IsError and Color3.fromRGB(220, 55, 55) or Color3.fromRGB(168, 50, 255)
 
 		local Card = Interface.New("Frame", {
 			AutomaticSize = Enum.AutomaticSize.Y,
-			BackgroundColor3 = Color3.fromRGB(18, 18, 18),
+			BackgroundColor3 = Color3.fromRGB(14, 10, 20),
 			Size = UDim2.fromScale(1, 0),
 			Parent = PluginCardsContainer,
 
@@ -9229,7 +9232,7 @@ do
 
 			["UIStroke"] = {
 				ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-				Color = Color3.fromRGB(35, 35, 35),
+				Color = Color3.fromRGB(45, 20, 70),
 				Thickness = 1,
 			},
 		})
@@ -9445,7 +9448,7 @@ if #wax.shared.ExecutorSupport.FailedChecks.NonEssential > 0 then
 	local NoticeTitleInfoSeperator = CreatePaddingText(4)
 
 	Interface.New("TextLabel", {
-		Text = `<font size="16"><b>DETECTION NOTICE ⚠️</b></font>\n{NoticeTitleInfoSeperator}Cobalt can get detected because your executor does not support the following functions/libraries:`,
+		Text = `<font size="16"><b>DETECTION NOTICE ⚠️</b></font>\n{NoticeTitleInfoSeperator}NexSpy can get detected because your executor does not support the following functions/libraries:`,
 		TextSize = 15,
 		Size = UDim2.fromScale(1, 0),
 		AutomaticSize = Enum.AutomaticSize.Y,
@@ -9530,7 +9533,7 @@ CodeGenSection:CreateCheckbox("CacheInstancePaths", {
 })
 
 CodeGenSection:CreateCheckbox("ShowWatermark", {
-	Text = "Show Cobalt Watermark",
+	Text = "Show NexSpy Watermark",
 	Default = true,
 })
 
@@ -9731,7 +9734,7 @@ LoggingSection:CreateCheckbox("EnableLogging", {
 		end
 
 		local LogConnection = wax.shared.SetupLoggingConnection()
-		SessionLog.Text = `Current Session Log: <b>{wax.shared.LogFileName:gsub("Cobalt/Logs/", "")}</b>`
+		SessionLog.Text = `Current Session Log: <b>{wax.shared.LogFileName:gsub("NexSpy/Logs/", "")}</b>`
 		wax.shared.LogConnection = wax.shared.Connect(wax.shared.Communicator.Event:Connect(LogConnection))
 
 		wax.shared.Sonner.success("Successfully enabled file logging")
@@ -9739,11 +9742,11 @@ LoggingSection:CreateCheckbox("EnableLogging", {
 })
 
 SessionLog = LoggingSection:AddLabel(`Current Session Log: <b>{wax.shared.Settings.EnableLogging.Value and wax.shared.LogFileName:gsub(
-	"Cobalt/Logs/",
+	"NexSpy/Logs/",
 	""
 ) or "Not Logging"}</b>`)
 
-LoggingSection:AddLabel(`Logs Path: <b>Cobalt/Logs</b>`)
+LoggingSection:AddLabel(`Logs Path: <b>NexSpy/Logs</b>`)
 
 local SessionButtons = LoggingSection:CreateRow()
 
@@ -9753,7 +9756,7 @@ local CopySessionName = SessionButtons:CreateButton("Copy Session Name", functio
 		return
 	end
 
-	local ActualLogFileName = wax.shared.LogFileName:gsub("Cobalt/Logs/", "")
+	local ActualLogFileName = wax.shared.LogFileName:gsub("NexSpy/Logs/", "")
 	local Success, Error = pcall(setclipboard, ActualLogFileName)
 
 	if not Success then
@@ -9802,7 +9805,7 @@ LoggingSection:CreateButton("Export Logs to HTML", function()
 		)
 
 		--// Export \\--
-		local FileName = `Cobalt_Session_{os.time()}.html`
+		local FileName = `NexSpy_Session_{os.time()}.html`
 		writefile(
 			FileName,
 			SessionExporter:ExportSessionToHTML(Events, StringMap, SessionData)
@@ -9820,11 +9823,11 @@ local CreditsSection = MainSettings:CreateSection("Credits")
 local Credits = {
 	{
 		Credit = "upio",
-		Description = "Cobalt Developer",
+		Description = "NexSpy Developer",
 	},
 	{
 		Credit = "deivid",
-		Description = "Cobalt Developer",
+		Description = "NexSpy Developer",
 	},
 	{
 		Credit = "shadcn",
@@ -9868,7 +9871,7 @@ end
 -- Info
 local InfoFrame = Interface.New("TextButton", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.fromScale(0.65, 0.712),
 	Text = "",
@@ -9881,7 +9884,7 @@ local InfoFrame = Interface.New("TextButton", {
 
 	["UIStroke"] = {
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-		Color = Color3.fromRGB(25, 25, 25),
+		Color = Color3.fromRGB(35, 15, 55),
 		Thickness = 1,
 	},
 })
@@ -9937,7 +9940,7 @@ Interface.New("Frame", {
 	AnchorPoint = Vector2.new(1, 0),
 	Position = UDim2.new(1, -6, 0, 44),
 	Size = UDim2.new(0, 30, 0, 36),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	BorderSizePixel = 0,
 	ZIndex = 10,
 	Parent = InfoFrame,
@@ -9954,7 +9957,7 @@ Interface.New("Frame", {
 local LeftGradient = Interface.New("Frame", {
 	Position = UDim2.new(0, 4, 0, 44),
 	Size = UDim2.new(0, 30, 0, 36),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	BorderSizePixel = 0,
 	ZIndex = 10,
 	Visible = false,
@@ -10290,7 +10293,7 @@ local function CreateInfoDropdownButton(Icon: string, Title: string, Options: {}
 		},
 
 		["UIStroke"] = {
-			Color = Color3.fromRGB(25, 25, 25),
+			Color = Color3.fromRGB(35, 15, 55),
 			Thickness = 1,
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 		},
@@ -10380,7 +10383,7 @@ local function CreateInfoTab(Icon: string, Title: string, TabContents: Frame?)
 		TabContents.Visible = IsTabSelected
 	end
 
-	local ButtonColor = IsTabSelected and Color3.fromRGB(25, 25, 25) or Color3.fromRGB(0, 0, 0)
+	local ButtonColor = IsTabSelected and Color3.fromRGB(35, 15, 55) or Color3.fromRGB(0, 0, 0)
 	local TabButton = Interface.New("TextButton", {
 		BackgroundColor3 = ButtonColor,
 		Size = UDim2.fromScale(0, 1),
@@ -10393,7 +10396,7 @@ local function CreateInfoTab(Icon: string, Title: string, TabContents: Frame?)
 		},
 
 		["UIStroke"] = {
-			Color = Color3.fromRGB(25, 25, 25),
+			Color = Color3.fromRGB(35, 15, 55),
 			Thickness = 1,
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 		},
@@ -10460,8 +10463,8 @@ local function CreateInfoTab(Icon: string, Title: string, TabContents: Frame?)
 		CurrentInfoTab = Title
 		UpdateFooterButtons()
 
-		TabButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-		TabButton.Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+		TabButton.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
+		TabButton.Frame.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 
 		if TabContents then
 			TabContents.Visible = true
@@ -10487,7 +10490,7 @@ local function CreateTabContent()
 		},
 
 		["UIStroke"] = {
-			Color = Color3.fromRGB(25, 25, 25),
+			Color = Color3.fromRGB(35, 15, 55),
 			Thickness = 1,
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
 		},
@@ -10616,7 +10619,7 @@ local SelectedResult = -1
 
 local SearchFrame = Interface.New("TextButton", {
 	AnchorPoint = Vector2.new(0.5, 0.5),
-	BackgroundColor3 = Color3.fromRGB(10, 10, 10),
+	BackgroundColor3 = Color3.fromRGB(8, 4, 12),
 	Position = UDim2.fromScale(0.5, 0.5),
 	Size = UDim2.new(0.5, 0, 0.8, 0),
 	Text = "",
@@ -10629,7 +10632,7 @@ local SearchFrame = Interface.New("TextButton", {
 
 	["UIStroke"] = {
 		ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-		Color = Color3.fromRGB(25, 25, 25),
+		Color = Color3.fromRGB(35, 15, 55),
 		Thickness = 1,
 	},
 })
@@ -10678,7 +10681,7 @@ local SearchCloseImage = Interface.NewIcon("x", {
 ConnectCloseButton(SearchCloseButton, SearchCloseImage, SearchFrame)
 
 Interface.New("Frame", {
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Size = UDim2.new(1, 0, 0, 1),
 	Position = UDim2.fromOffset(0, 36),
 	Parent = SearchFrame,
@@ -10712,7 +10715,7 @@ local ExcludeSearchClass = {}
 local SearchFilterButtons = {}
 
 local FilterAllButton = Interface.New("TextButton", {
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Size = UDim2.fromScale(0, 1),
 	AutomaticSize = Enum.AutomaticSize.X,
 	TextSize = 15,
@@ -10733,16 +10736,16 @@ local FilterAllButton = Interface.New("TextButton", {
 
 FilterAllButton.MouseButton1Click:Connect(function()
 	ExcludeSearchClass = {}
-	FilterAllButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+	FilterAllButton.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 	for _, Button in pairs(SearchFilterButtons) do
-		Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+		Button.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 	end
 	UpdateSearch()
 end)
 
 for Order, ClassName in pairs(ClassOrder) do
 	local ClassNameFilterButton = Interface.New("TextButton", {
-		BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+		BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 		Size = UDim2.fromScale(0, 1),
 		AutomaticSize = Enum.AutomaticSize.X,
 		TextSize = 15,
@@ -10791,10 +10794,10 @@ for Order, ClassName in pairs(ClassOrder) do
 		local FoundIndex = table.find(ExcludeSearchClass, ClassName)
 		if FoundIndex then
 			table.remove(ExcludeSearchClass, FoundIndex)
-			ClassNameFilterButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+			ClassNameFilterButton.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 
 			if #ExcludeSearchClass == 0 then
-				FilterAllButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+				FilterAllButton.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 			end
 
 			UpdateSearch()
@@ -10802,8 +10805,8 @@ for Order, ClassName in pairs(ClassOrder) do
 		end
 
 		table.insert(ExcludeSearchClass, ClassName)
-		ClassNameFilterButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
-		FilterAllButton.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+		ClassNameFilterButton.BackgroundColor3 = Color3.fromRGB(12, 8, 18)
+		FilterAllButton.BackgroundColor3 = Color3.fromRGB(12, 8, 18)
 		UpdateSearch()
 	end)
 
@@ -10811,7 +10814,7 @@ for Order, ClassName in pairs(ClassOrder) do
 end
 
 Interface.New("Frame", {
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Size = UDim2.new(1, 0, 0, 1),
 	Position = UDim2.fromOffset(0, 72),
 	Parent = SearchFrame,
@@ -10844,7 +10847,7 @@ local SearchResults = Interface.New("ScrollingFrame", {
 
 local function CreateSearchResult(Instance: Instance, Type: string)
 	local SearchResult = Interface.New("TextButton", {
-		BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+		BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 		BackgroundTransparency = 1,
 		Name = Instance.Name,
 		Size = UDim2.new(1, 0, 0, 36),
@@ -10907,14 +10910,14 @@ end
 
 -- Topbar
 local TopBar = Interface.New("Frame", {
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Size = UDim2.new(1, 0, 0, 36),
 	ZIndex = 0,
 	MainUICorner,
 	Parent = MainFrame,
 
 	["TextLabel"] = {
-		Text = "Cobalt",
+		Text = "NexSpy",
 		TextSize = 18,
 		Position = UDim2.fromOffset(0, 1),
 		Size = UDim2.new(1, 0, 1, -1),
@@ -11053,7 +11056,7 @@ local LeftList = Interface.New("Frame", {
 
 -- Tabs
 local RemoteTabContainer = Interface.New("Frame", {
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Size = UDim2.new(1, 0, 0, 30),
 	Parent = LeftList,
 
@@ -11071,7 +11074,7 @@ local RemoteTabContainer = Interface.New("Frame", {
 -- Remote List
 local RemoteListWrapper = Interface.New("Frame", {
 	AnchorPoint = Vector2.yAxis,
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Position = UDim2.fromScale(0, 1),
 	Size = UDim2.new(1, 0, 1, -36),
 	Parent = LeftList,
@@ -11111,7 +11114,7 @@ local RemoteList = Interface.New("ScrollingFrame", {
 
 local RemoteListLine = Interface.New("Frame", {
 	AnchorPoint = Vector2.yAxis,
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	Position = UDim2.new(0, 240, 1, 0),
 	Size = UDim2.new(0, 2, 1, -36),
 	Parent = MainFrame,
@@ -11137,7 +11140,7 @@ do
 	RemoteListResize.MouseLeave:Connect(function()
 		wax.shared.TweenService
 			:Create(RemoteListLine, DefaultTweenInfo, {
-				BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+				BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 			})
 			:Play()
 	end)
@@ -11183,7 +11186,7 @@ LogsList = Interface.New("ScrollingFrame", {
 
 local LogsPagination = Interface.New("Frame", {
 	AnchorPoint = Vector2.yAxis,
-	BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+	BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 	BackgroundTransparency = 1,
 	Position = UDim2.fromScale(0, 1),
 	Size = UDim2.new(1, 0, 0, 32),
@@ -11312,7 +11315,7 @@ end
 function CreatePaginationEllipsis(Order: number, Visible: boolean)
 	local Ellipsis = {
 		Ellipsis = Interface.New("TextBox", {
-			BackgroundColor3 = Color3.fromRGB(25, 25, 25),
+			BackgroundColor3 = Color3.fromRGB(35, 15, 55),
 			Size = UDim2.fromScale(1, 1),
 			SizeConstraint = Enum.SizeConstraint.RelativeYY,
 			LayoutOrder = Order,
@@ -11378,7 +11381,7 @@ end
 function CreatePaginationButton(Order: number, Active: boolean, Visible: boolean)
 	local ButtonData = {
 		Button = Interface.New("TextButton", {
-			BackgroundColor3 = Active and Color3.fromRGB(50, 50, 50) or Color3.fromRGB(25, 25, 25),
+			BackgroundColor3 = Active and Color3.fromRGB(50, 50, 50) or Color3.fromRGB(35, 15, 55),
 			Size = UDim2.fromScale(1, 1),
 			SizeConstraint = Enum.SizeConstraint.RelativeYY,
 			Text = tostring(1),
@@ -11393,7 +11396,7 @@ function CreatePaginationButton(Order: number, Active: boolean, Visible: boolean
 	}
 
 	function ButtonData:SetActive(Active: boolean)
-		self.Button.BackgroundColor3 = Active and Color3.fromRGB(50, 50, 50) or Color3.fromRGB(25, 25, 25)
+		self.Button.BackgroundColor3 = Active and Color3.fromRGB(50, 50, 50) or Color3.fromRGB(35, 15, 55)
 	end
 
 	function ButtonData:SetText(Text: string)
@@ -11667,7 +11670,7 @@ end
 
 function CreateArgHolder(Index: number, Value: any, Parent: GuiObject, IsBlockedCall: boolean?)
 	local Holder = Interface.New("Frame", {
-		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(58, 24, 24) else Color3.fromRGB(25, 25, 25),
+		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(58, 24, 24) else Color3.fromRGB(35, 15, 55),
 		LayoutOrder = Index,
 		Size = UDim2.new(1, 0, 0, 27),
 
@@ -11739,7 +11742,7 @@ function CreateCallFrame(CallInfo)
 	local IsBlockedCall = CallInfo.Blocked == true
 	local CallFrame = Interface.New("TextButton", {
 		AutomaticSize = Enum.AutomaticSize.Y,
-		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(34, 18, 18) else Color3.fromRGB(25, 25, 25),
+		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(34, 18, 18) else Color3.fromRGB(35, 15, 55),
 		LayoutOrder = CallInfo.Order,
 		Size = UDim2.fromScale(1, 0),
 		Text = "",
@@ -11898,7 +11901,7 @@ function CreateCallFrame(CallInfo)
 
 	local ArgumentsFrame = Interface.New("Frame", {
 		AutomaticSize = Enum.AutomaticSize.Y,
-		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(24, 13, 13) else Color3.fromRGB(15, 15, 15),
+		BackgroundColor3 = if IsBlockedCall then Color3.fromRGB(24, 13, 13) else Color3.fromRGB(12, 8, 18),
 		Size = UDim2.fromScale(1, 0),
 		Visible = wax.shared.GetTableLength(CallInfo.Arguments) > 0,
 
@@ -12143,8 +12146,8 @@ function OpenInfo(CallInfo)
 		local TabButton = InfoModalTab["Arguments"].TabButton
 		local TabContent = InfoModalTab["Arguments"].TabContents
 
-		TabButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-		TabButton.Frame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+		TabButton.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
+		TabButton.Frame.BackgroundColor3 = Color3.fromRGB(35, 15, 55)
 		TabContent.Visible = true
 	end
 
